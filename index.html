@@ -3,38 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicio JW - Soporte y Privacidad</title>
+    <title>Servicio JW</title>
+    <!-- Etiqueta de verificación de Google ya integrada -->
+    <meta name="google-site-verification" content="googleffe1d5e695eed352" />
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; color: #333; }
-        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        .section { margin-bottom: 30px; padding: 20px; background: #f9f9f9; border-radius: 8px; }
-        a { color: #3498db; text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #2c3e50;
+            --bg-color: #f7f9fc;
+            --text-color: #333;
+            --card-bg: #fff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            color: var(--secondary-color);
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        /* Navegación */
+        nav {
+            background-color: var(--card-bg);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Secciones */
+        .card {
+            background: var(--card-bg);
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            scroll-margin-top: 100px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #e1e8ed;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        strong {
+            color: var(--secondary-color);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #777;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
-    <h1>SERVICIO JW</h1>
-    
-    <div class="section">
-        <h2>Página Principal</h2>
-        <p>Bienvenido a la página oficial de soporte de <strong>Servicio JW</strong>. Nuestra aplicación ayuda a organizar actividades teocráticas de forma sencilla y segura.</p>
-        <p><a href="#privacy">Ver Política de Privacidad</a></p>
+
+    <div class="container">
+        <header>
+            <h1>SERVICIO JW</h1>
+            <p class="subtitle">Herramienta organizativa para tus actividades teocráticas</p>
+        </header>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#privacy">Política de Privacidad</a>
+            <a href="#tos">Condiciones de Servicio</a>
+        </nav>
+
+        <section id="inicio" class="card">
+            <h2>Acerca de la Aplicación</h2>
+            <p><strong>Servicio JW</strong> es una aplicación diseñada para ayudarte a organizar y gestionar tus actividades de manera privada y segura. Nuestra prioridad es mantener tus datos protegidos y bajo tu control exclusivo.</p>
+        </section>
+
+        <section id="privacy" class="card">
+            <h2>Política de Privacidad</h2>
+            <p><em>Última actualización: 19 de marzo de 2026</em></p>
+            <p>En <strong>Servicio JW</strong>, tu privacidad es nuestra máxima prioridad. Por favor, lee atentamente cómo manejamos tu información:</p>
+            <ul>
+                <li><strong>Almacenamiento Local:</strong> Todos los datos de uso de la aplicación y registros se almacenan principalmente de forma local en tu dispositivo.</li>
+                <li><strong>Uso de Google Drive:</strong> La aplicación solicita acceso a tu Google Drive <strong>únicamente</strong> con el propósito de crear copias de seguridad de tus propios datos locales y permitirte restaurarlos si cambias de dispositivo.</li>
+                <li><strong>Privacidad Absoluta:</strong> Nosotros (el desarrollador) <strong>no tenemos acceso</strong>, no recopilamos, no almacenamos en servidores propios y no compartimos tus datos de Google Drive ni tu información personal con terceros en ninguna circunstancia.</li>
+                <li><strong>Seguridad:</strong> La conexión para realizar los respaldos se hace de forma directa entre tu dispositivo y los servidores seguros de Google.</li>
+            </ul>
+        </section>
+
+        <section id="tos" class="card">
+            <h2>Condiciones de Servicio</h2>
+            <p><em>Última actualización: 19 de marzo de 2026</em></p>
+            <p>Al descargar y utilizar <strong>Servicio JW</strong>, aceptas los siguientes términos:</p>
+            <ul>
+                <li><strong>Uso de la Aplicación:</strong> La aplicación es una herramienta organizativa ("tal cual"). El uso de la misma es tu responsabilidad.</li>
+                <li><strong>Cuentas de Google:</strong> Eres responsable de mantener la seguridad y confidencialidad de tu cuenta de Google utilizada para realizar las copias de seguridad en Drive.</li>
+                <li><strong>Pérdida de Datos:</strong> Aunque la app ofrece la función de respaldo, el desarrollador no se hace responsable por la pérdida accidental de datos debido a problemas en tu dispositivo, desinstalación sin respaldo previo, o fallos en el servicio de Google Drive. Conserve siempre sus copias de seguridad.</li>
+                <li><strong>Fines No Comerciales:</strong> Esta aplicación no tiene fines de lucro ni comerciales.</li>
+            </ul>
+        </section>
+
+        <div class="footer">
+            <p>Contacto del desarrollador: ismaeljaircl@gmail.com</p>
+            <p>&copy; 2026 Ismael Castro Luna. Todos los derechos reservados.</p>
+        </div>
     </div>
 
-    <div id="privacy" class="section">
-        <h2>Política de Privacidad</h2>
-        <p>Última actualización: 19 de marzo de 2026</p>
-        <p>En <strong>Servicio JW</strong>, valoramos tu privacidad. Esta aplicación utiliza el acceso a <strong>Google Drive</strong> exclusivamente para permitirte realizar respaldos y restauraciones de tus propios datos locales. No recolectamos, vendemos ni compartimos tu información personal con terceros.</p>
-        <ul>
-            <li><strong>Datos de Google:</strong> Solo accedemos a una carpeta específica diseñada para la app en tu Drive.</li>
-            <li><strong>Seguridad:</strong> Tus datos viajan cifrados directamente entre tu dispositivo y Google.</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Soporte</h2>
-        <p>Si tienes dudas o problemas, contáctanos en: <br>
-        <strong>ismaeljair23@gmail.com</strong></p>
-    </div>
 </body>
 </html>
