@@ -60,7 +60,7 @@
         }
 
         .reference {
-            font-size: 22px;
+            font-size: 20px;
             color: #d8b4fe;
             margin: 16px 0 24px;
             font-weight: 600;
@@ -110,11 +110,14 @@
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        const pub = urlParams.get('pub') || 'Publicación';
+        // Ahora leemos el parámetro 'nombre' que manda la app, si no existe usamos 'pub'
+        const pub = urlParams.get('nombre') || urlParams.get('pub') || 'Publicación';
         const capitulo = urlParams.get('capitulo') || '';
+        const parrafo = urlParams.get('parrafo') || '';
 
         let refStr = pub;
-        if (capitulo) refStr += ` — Capítulo ${capitulo}`;
+        if (capitulo) refStr += ` (Cap. ${capitulo})`;
+        if (parrafo) refStr += ` - Párrafo ${parrafo}`;
 
         document.getElementById('refText').innerText = refStr;
 
