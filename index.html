@@ -26,6 +26,23 @@
             --white: #ffffff;
             --amber: #f59e0b;
         }
+        /* Estilo para el logo de Apple en los botones */
+.icon-apple {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+/* Ajuste para que los botones se vean bien juntos */
+.hero-actions, .cta-btns {
+    display: flex;
+    gap: 15px;
+    justify-content: center; /* En móviles */
+}
+
+@media (min-width: 901px) {
+    .hero-actions { justify-content: flex-start; } /* En escritorio */
+}
         /* Botón específico para App Store */
 .btn-apple {
     background: var(--slate-900);
@@ -233,7 +250,7 @@
         <li><a href="#capturas">Capturas</a></li>
         <li><a href="#privacidad">Privacidad</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="https://play.google.com/store/apps/details?id=com.ismaelcastroluna.juegosbiblicos" target="_blank" class="nav-cta">Descargar gratis</a></li>
+       <li><a href="#descargar" class="nav-cta">Descargar</a></li>
     </ul>
 </nav>
 
