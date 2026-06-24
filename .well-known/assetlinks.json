@@ -1,11 +1,14 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.ismaelcastroluna.juegosbiblicos",
       "sha256_cert_fingerprints": [
-        "FE:7A:63:41:DD:E5:54:C7:0F:17:CD:E4:AA:46:C4:22:11:0E:AA:AA:F5:40:B8:A4:B1:42:10:B9:7F:30:79:67"
+        "5A:24:0E:1D:C9:3D:16:C1:BE:37:AD:06:A3:7D:DF:94:3B:82:97:AC:65:24:AE:92:97:14:67:D5:FD:E9:C5:7E"
       ]
     }
   }
