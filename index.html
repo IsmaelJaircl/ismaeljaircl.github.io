@@ -328,20 +328,20 @@ nav {
 <nav>
     <a href="#" class="nav-logo">Servicio <span>JW</span></a>
     
-    <!-- Agrega este bloque para el icono de hamburguesa -->
+    <!-- Botón hamburguesa -->
     <div class="menu-toggle" id="mobile-menu">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
     </div>
 
+    <!-- Enlaces -->
     <ul class="nav-links">
         <li><a href="#caracteristicas">Características</a></li>
         <li><a href="#capturas">Capturas</a></li>
         <li><a href="#privacidad">Privacidad</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <!-- El botón del nav ahora apunta a la sección de descarga -->
-        <li><a href="#descargar" class="nav-cta">Descargar</a></li>
+        <li><a href="#descargar" class="nav-cta">Descargar gratis</a></li>
     </ul>
 </nav>
 <!-- HERO -->
@@ -653,6 +653,21 @@ nav {
         entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+    <script>
+    const menu = document.querySelector('#mobile-menu');
+    const menuLinks = document.querySelector('.nav-links');
+
+    menu.addEventListener('click', function() {
+        menu.classList.toggle('is-active');
+        menuLinks.classList.toggle('active');
+    });
+
+    // Cerrar el menú automáticamente al hacer click en una opción
+    document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click', () => {
+        menu.classList.remove('is-active');
+        menuLinks.classList.remove('active');
+    }));
 </script>
 </body>
 </html>
