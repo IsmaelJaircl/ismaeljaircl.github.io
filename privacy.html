@@ -36,7 +36,7 @@
 
         /* HERO STRIP */
         .page-hero { background: linear-gradient(135deg, var(--slate-900) 0%, #1e3a8a 100%); padding: 60px 40px; text-align: center; }
-        .page-hero .badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); font-size: 0.95rem; padding: 6px 12px; border-radius: 999px; margin-bottom: 12px; }
+        .page-hero .badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); font-size: 0.78rem; font-weight: 600; padding: 6px 14px; border-radius: 20px; }
         .page-hero h1 { font-family: 'DM Serif Display', serif; font-size: 2.8rem; color: white; margin-bottom: 10px; }
         .page-hero .date { font-size: 0.85rem; color: var(--slate-400); }
 
@@ -77,14 +77,14 @@
 
         /* NO DATA BADGE */
         .no-data-row { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
-        .no-badge { display: inline-flex; align-items: center; gap: 6px; background: #fef2f2; border: 1px solid #fecaca; color: #dc2626; font-size: 0.8rem; font-weight: 600; padding: 5px 12px; border-radius: 999px; }
-        .yes-badge { display: inline-flex; align-items: center; gap: 6px; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; font-size: 0.8rem; font-weight: 600; padding: 5px 12px; border-radius: 999px; }
+        .no-badge { display: inline-flex; align-items: center; gap: 6px; background: #fef2f2; border: 1px solid #fecaca; color: #dc2626; font-size: 0.8rem; font-weight: 600; padding: 5px 12px; border-radius: 8px; }
+        .yes-badge { display: inline-flex; align-items: center; gap: 6px; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; font-size: 0.8rem; font-weight: 600; padding: 5px 12px; border-radius: 8px; }
 
         /* CONTACT */
         .contact-card { background: linear-gradient(135deg, var(--blue-500) 0%, var(--blue-600) 100%); border-radius: 16px; padding: 32px; text-align: center; margin-top: 40px; }
         .contact-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: white; margin-bottom: 8px; font-weight: 400; }
         .contact-card p { color: rgba(255,255,255,0.75); font-size: 0.95rem; margin-bottom: 18px; }
-        .contact-card a { display: inline-block; background: white; color: var(--blue-600); font-weight: 700; font-size: 0.95rem; padding: 12px 28px; border-radius: 10px; text-decoration: none; transition: transform 0.12s; }
+        .contact-card a { display: inline-block; background: white; color: var(--blue-600); font-weight: 700; font-size: 0.95rem; padding: 12px 28px; border-radius: 10px; text-decoration: none; transition: all 0.2s; }
         .contact-card a:hover { background: var(--blue-50); transform: translateY(-1px); }
 
         /* FOOTER */
@@ -128,7 +128,7 @@
     <!-- INTRO -->
     <div class="intro-card">
         <div class="intro-icon">🛡️</div>
-        <p>En <strong>Servicio JW</strong> valoramos tu privacidad y estamos totalmente comprometidos a proteger tus datos personales. Esta política explica de forma clara y transparente cómo maneja la aplicación la información, qué opciones tienes y qué terceros (si los hay) están involucrados.</p>
+        <p>En <strong>Servicio JW</strong> valoramos tu privacidad y estamos totalmente comprometidos a proteger tus datos personales. Esta política explica de forma clara y transparente cómo manejamos, protegemos y respetamos tu información.</p>
     </div>
 
     <!-- SECTION 1 -->
@@ -138,7 +138,7 @@
             <h2>Información que recopilamos</h2>
         </div>
         <div class="section-body">
-            <p>La aplicación recopila y almacena la siguiente información <em>exclusivamente de forma local</em> en tu dispositivo celular. En ningún momento se envía a servidores externos salvo que actives la copia de seguridad en la nube de forma voluntaria (ver sección 2).</p>
+            <p>La aplicación recopila y almacena la siguiente información <em>exclusivamente de forma local</em> en tu dispositivo celular. En ningún momento se envía a servidores externos salvo que actives funciones opcionales de copia en la nube.</p>
             <ul class="policy-list">
                 <li><div><strong>Información del Perfil:</strong> Nombre, congregación, tipo de publicador y privilegios.</div></li>
                 <li><div><strong>Datos de Servicio:</strong> Informes de horas teocráticas, colocaciones, videos y revisitas.</div></li>
@@ -160,13 +160,13 @@
             <h2>Copias de seguridad en la nube (Google Drive e iCloud)</h2>
         </div>
         <div class="section-body">
-            <p>La aplicación ofrece una función opcional de copia de seguridad para que puedas restaurar tus datos si cambias de dispositivo o reinstalas la app. Estas copias de seguridad son siempre opcionales y requieren tu autorización explícita.</p>
+            <p>La aplicación ofrece una función opcional de copia de seguridad para que puedas restaurar tus datos si cambias de dispositivo o reinstalas la app. Estas copias de seguridad son siempre encriptadas y se envían directamente a tus propias cuentas de almacenamiento en la nube.</p>
 
             <h3>Google Drive</h3>
-            <p>Si activas la copia de seguridad en Google Drive, la aplicación solicitará acceso mediante el permiso sensible <code>drive.file</code>. Este permiso permite crear y gestionar un archivo único de respaldo en tu cuenta de Google.</p>
+            <p>Si activas la copia de seguridad en Google Drive, la aplicación solicitará acceso mediante el permiso sensible <code>drive.file</code>. Este permiso permite crear y gestionar un archivo de seguridad específico sin acceder a otros datos personales.</p>
             <ul class="policy-list">
                 <li><div><strong>Propósito:</strong> Crear, subir y restaurar un único archivo de seguridad llamado <code>servicio_backup.json</code> en tu Google Drive.</div></li>
-                <li><div><strong>Alcance / Límites:</strong> La aplicación <strong>NO PUEDE</strong> ver, editar, leer ni eliminar otros archivos personales en tu cuenta de Google fuera del archivo de respaldo creado por la app.</div></li>
+                <li><div><strong>Alcance / Límites:</strong> La aplicación <strong>NO PUEDE</strong> ver, editar, leer ni eliminar otros archivos personales en tu cuenta de Google fuera del archivo de respaldo que gestiona.</div></li>
             </ul>
             <div class="highlight-box">
                 <div class="hi">🔐</div>
@@ -174,18 +174,18 @@
             </div>
 
             <h3 style="margin-top:12px;">iCloud (Apple)</h3>
-            <p>En dispositivos Apple puedes optar por guardar la copia de seguridad en tu iCloud. Si eliges iCloud, la app crea y sincroniza el mismo archivo de respaldo (<code>servicio_backup.json</code>) en tu cuenta de iCloud asociada al dispositivo.</p>
+            <p>En dispositivos Apple puedes optar por guardar la copia de seguridad en tu iCloud. Si eliges iCloud, la app crea y sincroniza el mismo archivo de respaldo (<code>servicio_backup.json</code>) dentro de tu espacio iCloud.</p>
             <ul class="policy-list">
                 <li><div><strong>Propósito:</strong> Crear, subir y restaurar un único archivo de seguridad en tu iCloud Drive o espacio de iCloud utilizado por la app.</div></li>
-                <li><div><strong>Alcance / Límites:</strong> La aplicación <strong>NO PUEDE</strong> acceder a otros archivos o datos de tu iCloud más allá del archivo de respaldo que crea/gestiona para esta app.</div></li>
-                <li><div><strong>Responsabilidad de Apple:</strong> El almacenamiento y las políticas de privacidad de iCloud están sujetas a las condiciones de Apple; te recomendamos revisar la documentación y la política de privacidad de Apple si tienes dudas.</div></li>
+                <li><div><strong>Alcance / Límites:</strong> La aplicación <strong>NO PUEDE</strong> acceder a otros archivos o datos de tu iCloud más allá del archivo de respaldo que crea/gestiona.</div></li>
+                <li><div><strong>Responsabilidad de Apple:</strong> El almacenamiento y las políticas de privacidad de iCloud están sujetas a las condiciones de Apple; te recomendamos revisar la documentación de Apple para más detalles.</div></li>
             </ul>
             <div class="highlight-box">
                 <div class="hi">🧭</div>
                 <p>Las copias en iCloud están sujetas a la seguridad y prácticas de Apple. La app no comparte ni ve el contenido del archivo de respaldo.</p>
             </div>
 
-            <p class="section-body" style="margin-top:12px;">Nota: siempre puedes eliminar manualmente el archivo de respaldo desde tu Google Drive o iCloud en cualquier momento si no quieres conservar copias en la nube.</p>
+            <p class="section-body" style="margin-top:12px;">Nota: siempre puedes eliminar manualmente el archivo de respaldo desde tu Google Drive o iCloud en cualquier momento si no quieres conservar una copia en línea.</p>
         </div>
     </div>
 
@@ -197,9 +197,9 @@
         </div>
         <div class="section-body">
             <ul class="policy-list">
-                <li><div><strong>Almacenamiento Local:</strong> Toda tu información se almacena en una base de datos privada encriptada en tu dispositivo. La encriptación protege los datos en reposo y la aplicación aplica buenas prácticas de seguridad (cifrado y controles de acceso locales).</div></li>
-                <li><div><strong>Terceros:</strong> Nosotros <em>NO vendemos, transamos ni compartimos</em> tus datos con ningún tercero. La sincronización en la nube (Google Drive o iCloud) se realiza únicamente entre tu dispositivo y tu cuenta personal en esos servicios.</div></li>
-                <li><div><strong>Servicios de terceros que podrías utilizar:</strong> Google y Apple (iCloud). Dichos servicios tienen sus propias políticas de privacidad y términos; no controlamos sus prácticas.</div></li>
+                <li><div><strong>Almacenamiento Local:</strong> Toda tu información se almacena en una base de datos privada encriptada en tu dispositivo. La encriptación protege los datos en reposo contra acceso no autorizado.</div></li>
+                <li><div><strong>Terceros:</strong> Nosotros <em>NO vendemos, transamos ni compartimos</em> tus datos con ningún tercero. La sincronización en la nube (Google Drive o iCloud) se realiza directamente entre tu dispositivo y tus cuentas personales.</div></li>
+                <li><div><strong>Servicios de terceros que podrías utilizar:</strong> Google y Apple (iCloud). Dichos servicios tienen sus propias políticas de privacidad y términos; no controlamos sus prácticas, pero respetamos su privacidad.</div></li>
             </ul>
         </div>
     </div>
@@ -211,7 +211,7 @@
             <h2>Tus Derechos y bases legales (GDPR / otras jurisdicciones)</h2>
         </div>
         <div class="section-body">
-            <p>Tienes control total y absoluto sobre tus datos en todo momento. Puedes eliminar permanentemente toda la información simplemente borrando los datos de la aplicación o desinstalándola. También puedes eliminar manualmente la copia de respaldo en Google Drive o iCloud.</p>
+            <p>Tienes control total y absoluto sobre tus datos en todo momento. Puedes eliminar permanentemente toda la información simplemente borrando los datos de la aplicación o desinstalándola.</p>
             <p>Si te encuentras en la Unión Europea u otras jurisdicciones con leyes de protección de datos (por ejemplo, GDPR), puedes ejercer los derechos siguientes:</p>
             <ul class="policy-list">
                 <li><div><strong>Acceso:</strong> Solicitar qué datos almacenamos localmente.</div></li>
@@ -219,7 +219,7 @@
                 <li><div><strong>Supresión:</strong> Eliminar tus datos de la aplicación.</div></li>
                 <li><div><strong>Restricción / Portabilidad:</strong> En la medida en que aplique, pedir una copia exportable de tus datos.</div></li>
             </ul>
-            <p>Las bases legales para el tratamiento de tus datos son, según corresponda: tu consentimiento (cuando habilitas funciones como copia en la nube), la ejecución de un servicio (la funcionalidad de la app) y el cumplimiento de obligaciones legales cuando fuera necesario.</p>
+            <p>Las bases legales para el tratamiento de tus datos son, según corresponda: tu consentimiento (cuando habilitas funciones como copia en la nube), la ejecución de un servicio (la funcionalidad básica de la app) e intereses legítimos (mejorar la experiencia de usuario).</p>
             <div class="no-data-row" style="margin-top:12px;">
                 <span class="yes-badge">✓ Derecho a eliminar tus datos</span>
                 <span class="yes-badge">✓ Control total en todo momento</span>
@@ -235,12 +235,18 @@
             <h2>Contenido de terceros y materiales de jw.org</h2>
         </div>
         <div class="section-body">
-            <p>La aplicación puede incluir o permitir el uso de materiales de terceros, por ejemplo ePub o documentos proporcionados por <a href="https://www.jw.org/es/" target="_blank" rel="noopener noreferrer">jw.org</a>. Al usar esos materiales, tú y la aplicación estáis sujetos a las condiciones y políticas de los propietarios del contenido.</p>
+            <p>La aplicación funciona como <em>lector</em> de materiales de terceros, incluyendo publicaciones, la Biblia, videos y otros contenidos proporcionados por <a href="https://www.jw.org/es/" target="_blank" rel="noopener noreferrer">jw.org</a>.</p>
             <ul class="policy-list">
-                <li><div><strong>Derechos de autor y uso:</strong> Los ePub y otros materiales de jw.org se rigen por las políticas de uso y derechos de jw.org. No redistribuimos los archivos ni los publicamos fuera de las opciones permitidas por jw.org.</div></li>
-                <li><div><strong>Privacidad de jw.org:</strong> Si accedes a jw.org o utilizas herramientas que se conectan a jw.org desde la app, sus prácticas de recopilación de datos y su política de privacidad aplican a esas interacciones — revisa la <a href="https://www.jw.org/es/privacidad/" target="_blank" rel="noopener noreferrer">Política de privacidad de jw.org</a> para más detalles.</div></li>
-                <li><div><strong>Responsabilidad:</strong> No controlamos las prácticas ni el contenido de jw.org; para cuestiones legales, de derechos o de privacidad relacionadas con esos materiales debes dirigirte a los administradores de jw.org.</div></li>
+                <li><div><strong>Función de la App:</strong> Servicio JW es una herramienta de lectura y gestión. <strong>No altera, modifica ni distribuye</strong> ePub, publicaciones, la Biblia, videos ni ningún contenido de terceros.</div></li>
+                <li><div><strong>Derechos de autor y uso:</strong> Los ePub, publicaciones, Biblia, videos y otros materiales de jw.org se rigen por las políticas de uso y derechos de jw.org. La app respeta completamente estos derechos y se limita a funcionar como lector para uso personal.</div></li>
+                <li><div><strong>Sin redistribución:</strong> La aplicación <strong>NO redistribuye, copia, vende ni comparte</strong> ningún contenido de jw.org o de terceros. Todo el contenido permanece bajo la responsabilidad y derechos de sus propietarios.</div></li>
+                <li><div><strong>Privacidad de jw.org:</strong> Si accedes a jw.org o utilizas herramientas que se conectan a jw.org desde la app, sus prácticas de recopilación de datos y su política de privacidad aplican. No controlamos esas interacciones.</div></li>
+                <li><div><strong>Responsabilidad:</strong> No controlamos las prácticas ni el contenido de jw.org; para cuestiones legales, de derechos o de privacidad relacionadas con esos materiales, por favor contacta directamente a jw.org.</div></li>
             </ul>
+            <div class="highlight-box">
+                <div class="hi">📖</div>
+                <p>Servicio JW es un <strong>lector</strong> que respeta completamente los derechos de autor y la propiedad intelectual. Ningún contenido es modificado, alterado o redistribuido.</p>
+            </div>
         </div>
     </div>
 
@@ -251,9 +257,9 @@
             <h2>Seguridad, retención y cambios en la política</h2>
         </div>
         <div class="section-body">
-            <p><strong>Seguridad:</strong> Aplicamos medidas razonables para proteger tus datos en el dispositivo (encriptación, almacenamiento privado). Ten en cuenta que ninguna transmisión o almacenamiento electrónico es 100% seguro; para respaldos en la nube depende también de la seguridad del proveedor (Google/Apple).</p>
+            <p><strong>Seguridad:</strong> Aplicamos medidas razonables para proteger tus datos en el dispositivo (encriptación, almacenamiento privado). Ten en cuenta que ninguna transmisión o almacenamiento es 100% seguro.</p>
             <p><strong>Retención:</strong> Conservamos tus datos en tu dispositivo hasta que los elimines o desinstales la app. Las copias en la nube se conservan mientras tú no las borres.</p>
-            <p><strong>Cambios en esta política:</strong> Podemos actualizar esta política para reflejar cambios en la app o en requisitos legales. Publicaremos la fecha de la última actualización en la parte superior. Si hacemos cambios significativos, intentaremos avisarlo en la app cuando sea posible.</p>
+            <p><strong>Cambios en esta política:</strong> Podemos actualizar esta política para reflejar cambios en la app o en requisitos legales. Publicaremos la fecha de la última actualización en la parte superior del documento. Tu uso continuado de la app constituye aceptación de los cambios.</p>
         </div>
     </div>
 
