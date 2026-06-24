@@ -26,6 +26,7 @@
             --white: #ffffff;
             --amber: #f59e0b;
         }
+        
         /* Estilo para el logo de Apple en los botones */
 .icon-apple {
     width: 24px;
@@ -39,7 +40,19 @@
     gap: 15px;
     justify-content: center; /* En móviles */
 }
-
+/* Estilo del botón hamburguesa */
+.menu-toggle {
+    display: none; /* Oculto en escritorio */
+    cursor: pointer;
+}
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--slate-900);
+}
 @media (min-width: 901px) {
     .hero-actions { justify-content: flex-start; } /* En escritorio */
 }
@@ -207,7 +220,41 @@
 
         /* RESPONSIVE */
         @media (max-width: 900px) {
-            nav { padding: 14px 20px; }
+            nav { padding: 14px 20px; justify-content: space-between; }
+    
+    .menu-toggle { display: block; } /* Mostrar hamburguesa */
+
+    /* Animación a "X" */
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    .nav-links {
+        display: none; /* Se oculta por defecto */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Altura del nav */
+        left: 0;
+        background: rgba(255, 255, 255, 0.98);
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+        gap: 15px;
+        backdrop-filter: blur(10px);
+    }
+
+    .nav-links.active {
+        display: flex; /* Se muestra al hacer click */
+    }
+
+    .nav-links li { width: 100%; text-align: center; }
+    .nav-links a { display: block; padding: 10px; font-size: 1.1rem; }
+    .nav-cta { display: inline-block !important; width: auto; }
+    
+    /* Ajustes del resto del Hero que ya tenías */
+    .hero { grid-template-columns: 1fr; padding: 120px 22px 60px; text-align: center; }
+    /* ... resto de tus estilos @media ... */
+}
             .nav-links { display: none; }
             .hero { grid-template-columns: 1fr; padding: 120px 22px 60px; text-align: center; }
             .hero h1 { font-size: 2.7rem; }
@@ -232,15 +279,23 @@
 <!-- NAV -->
 <nav>
     <a href="#" class="nav-logo">Servicio <span>JW</span></a>
+    
+    <!-- Agrega este bloque para el icono de hamburguesa -->
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
     <ul class="nav-links">
         <li><a href="#caracteristicas">Características</a></li>
         <li><a href="#capturas">Capturas</a></li>
         <li><a href="#privacidad">Privacidad</a></li>
         <li><a href="#faq">FAQ</a></li>
-       <li><a href="#descargar" class="nav-cta">Descargar</a></li>
+        <!-- El botón del nav ahora apunta a la sección de descarga -->
+        <li><a href="#descargar" class="nav-cta">Descargar</a></li>
     </ul>
 </nav>
-
 <!-- HERO -->
 <section>
     <div class="hero">
@@ -522,6 +577,24 @@
 </footer>
 
 <script>
+    // --- Lógica del Menú Hamburguesa ---
+    const menu = document.querySelector('#mobile-menu');
+    const menuLinks = document.querySelector('.nav-links');
+
+    menu.addEventListener('click', function() {
+        menu.classList.toggle('is-active');
+        menuLinks.classList.toggle('active');
+    });
+
+    // Cerrar el menú al hacer click en un enlace
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('is-active');
+            menuLinks.classList.remove('active');
+        });
+    });
+
+    // --- Tu lógica anterior de FAQ y Observer ---
     function tFaq(btn) {
         const item = btn.closest('.faq-item');
         const isOpen = item.classList.contains('open');
