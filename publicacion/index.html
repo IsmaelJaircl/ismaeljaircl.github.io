@@ -25,40 +25,52 @@
             overflow: hidden;
         }
 
-        /* Animated background orbs */
+        /* ─── Fondo animado mejorado ─── */
         body::before, body::after {
             content: '';
             position: fixed;
             border-radius: 50%;
             filter: blur(80px);
-            opacity: 0.3;
-            animation: float 8s ease-in-out infinite;
+            opacity: 0.25;
             z-index: 0;
         }
         body::before {
             width: 300px; height: 300px;
             background: radial-gradient(circle, #7c3aed, transparent);
             top: -100px; right: -80px;
+            animation: floatOrb1 12s ease-in-out infinite;
         }
         body::after {
             width: 250px; height: 250px;
             background: radial-gradient(circle, #2563eb, transparent);
             bottom: -80px; left: -60px;
-            animation-delay: -4s;
+            animation: floatOrb2 14s ease-in-out infinite;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-30px) scale(1.1); }
+        @keyframes floatOrb1 {
+            0% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(-30px, -40px) scale(1.05); }
+            50% { transform: translate(0, -60px) scale(1.1); }
+            75% { transform: translate(30px, -40px) scale(1.05); }
+            100% { transform: translate(0, 0) scale(1); }
         }
 
+        @keyframes floatOrb2 {
+            0% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, 40px) scale(1.05); }
+            50% { transform: translate(0, 60px) scale(1.1); }
+            75% { transform: translate(-30px, 40px) scale(1.05); }
+            100% { transform: translate(0, 0) scale(1); }
+        }
+
+        /* ─── Tarjeta con efecto glassmorphism mejorado ─── */
         .card {
             position: relative;
             z-index: 1;
             background: rgba(255,255,255,0.06);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.12);
             border-radius: 28px;
             padding: 48px 32px 40px;
             max-width: 400px;
@@ -67,28 +79,56 @@
             box-shadow:
                 0 32px 64px rgba(0,0,0,0.4),
                 inset 0 1px 0 rgba(255,255,255,0.08);
-            animation: cardIn 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+            animation: cardEntrance 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
-        @keyframes cardIn {
-            from { opacity: 0; transform: translateY(40px) scale(0.95); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
+        @keyframes cardEntrance {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(0.9);
+                filter: blur(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                filter: blur(0);
+            }
         }
 
-        /* App icon */
+        /* ─── Icono de app mejorado ─── */
         .app-icon {
             width: 88px; height: 88px;
             border-radius: 22px;
             margin: 0 auto 20px;
             background: linear-gradient(135deg, #6b21a8 0%, #4c1d95 50%, #7c3aed 100%);
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             box-shadow: 0 12px 32px rgba(107,33,168,0.4);
             font-size: 40px;
-            animation: iconPulse 3s ease-in-out infinite;
+            animation: iconFloat 3.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+            position: relative;
+            overflow: hidden;
         }
-        @keyframes iconPulse {
-            0%, 100% { box-shadow: 0 12px 32px rgba(107,33,168,0.4); }
-            50% { box-shadow: 0 12px 48px rgba(107,33,168,0.6); }
+
+        .app-icon::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+            border-radius: 22px;
+            opacity: 0;
+            animation: shine 3s ease-in-out infinite;
+        }
+
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-12px) scale(1.02); }
+        }
+
+        @keyframes shine {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 0.3; }
         }
 
         .app-name {
@@ -98,6 +138,7 @@
             text-transform: uppercase;
             color: rgba(255,255,255,0.45);
             margin-bottom: 24px;
+            animation: fadeInUp 0.6s ease 0.2s both;
         }
 
         .pub-name {
@@ -109,6 +150,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            animation: fadeInUp 0.6s ease 0.3s both;
         }
 
         .pub-detail {
@@ -116,9 +158,10 @@
             color: rgba(255,255,255,0.5);
             font-weight: 500;
             margin-bottom: 32px;
+            animation: fadeInUp 0.6s ease 0.4s both;
         }
 
-        /* Status */
+        /* ─── Estado con spinner mejorado ─── */
         .status {
             display: flex;
             align-items: center;
@@ -129,19 +172,43 @@
             color: rgba(255,255,255,0.6);
             font-weight: 500;
             min-height: 24px;
+            animation: fadeInUp 0.6s ease 0.5s both;
         }
+
         .spinner {
-            width: 18px; height: 18px;
+            width: 18px;
+            height: 18px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .spinner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
             border: 2px solid rgba(255,255,255,0.15);
+            border-radius: 50%;
+            animation: spinnerRotate 2s linear infinite;
+        }
+
+        .spinner::after {
+            content: '';
+            position: absolute;
+            inset: 4px;
+            border: 2px solid transparent;
             border-top-color: #7c3aed;
             border-radius: 50%;
-            animation: spin 0.8s linear infinite;
+            animation: spinnerRotate 1.5s linear infinite reverse;
         }
-        @keyframes spin { to { transform: rotate(360deg); } }
+
+        @keyframes spinnerRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
 
         .status.hidden { display: none; }
 
-        /* Buttons */
+        /* ─── Botones mejorados ─── */
         .btn-primary {
             display: inline-flex;
             align-items: center;
@@ -156,8 +223,26 @@
             font-weight: 700;
             cursor: pointer;
             text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
             margin-bottom: 12px;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.6s ease 0.6s both;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: translateX(-100%);
+            animation: buttonShine 2s infinite;
+        }
+
+        @keyframes buttonShine {
+            0% { transform: translateX(-100%); }
+            10%, 90% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
 
         .btn-open {
@@ -165,21 +250,38 @@
             color: #fff;
             box-shadow: 0 8px 24px rgba(107,33,168,0.4);
         }
-        .btn-open:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(107,33,168,0.5); }
-        .btn-open:active { transform: translateY(0); }
 
+        .btn-open:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(107,33,168,0.6);
+        }
+
+        .btn-open:active {
+            transform: translateY(0);
+        }
+
+        /* ─── Botones de tienda ─── */
         .store-buttons {
             display: none;
             flex-direction: column;
             gap: 10px;
             margin-top: 8px;
-            animation: fadeUp 0.5s ease;
         }
-        .store-buttons.visible { display: flex; }
 
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .store-buttons.visible {
+            display: flex;
+            animation: storeButtonsAppear 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes storeButtonsAppear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .btn-store {
@@ -194,23 +296,46 @@
             font-weight: 600;
             cursor: pointer;
             text-decoration: none;
-            transition: all 0.2s ease;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
             border: 1px solid rgba(255,255,255,0.12);
+            position: relative;
+            overflow: hidden;
         }
-        .btn-apple {
+
+        .btn-store::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.1);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            border-radius: inherit;
+        }
+
+        .btn-store:hover::before {
+            transform: scaleX(1);
+        }
+
+        .btn-apple, .btn-google {
             background: rgba(255,255,255,0.08);
             color: #fff;
+            position: relative;
+            z-index: 1;
         }
-        .btn-apple:hover { background: rgba(255,255,255,0.14); }
 
-        .btn-google {
-            background: rgba(255,255,255,0.08);
-            color: #fff;
+        .btn-store svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+            transition: transform 0.3s ease;
         }
-        .btn-google:hover { background: rgba(255,255,255,0.14); }
 
-        .btn-store svg { width: 22px; height: 22px; fill: currentColor; }
+        .btn-store:hover svg {
+            transform: scale(1.1);
+        }
 
+        /* ─── Divisor mejorado ─── */
         .divider {
             display: none;
             align-items: center;
@@ -220,15 +345,21 @@
             font-size: 12px;
             font-weight: 600;
             letter-spacing: 1px;
+            animation: fadeInUp 0.6s ease 0.7s both;
         }
-        .divider.visible { display: flex; }
+
+        .divider.visible {
+            display: flex;
+        }
+
         .divider::before, .divider::after {
             content: '';
             flex: 1;
             height: 1px;
-            background: rgba(255,255,255,0.1);
+            background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.1), rgba(255,255,255,0));
         }
 
+        /* ─── Botón JW.org ─── */
         .btn-jw {
             display: none;
             align-items: center;
@@ -242,17 +373,45 @@
             font-size: 13px;
             font-weight: 600;
             text-decoration: none;
-            transition: color 0.2s;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            animation: fadeInUp 0.6s ease 0.8s both;
         }
-        .btn-jw.visible { display: flex; }
-        .btn-jw:hover { color: rgba(255,255,255,0.7); }
 
-        /* Publication names map */
+        .btn-jw.visible {
+            display: flex;
+        }
+
+        .btn-jw:hover {
+            color: rgba(255,255,255,0.8);
+            transform: translateY(-1px);
+        }
+
+        /* ─── Animación general de fade-in-up ─── */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ─── Animación de pulsación para estado de carga ─── */
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 12px 32px rgba(107,33,168,0.4); }
+            50% { box-shadow: 0 12px 48px rgba(107,33,168,0.7); }
+        }
+
+        .app-icon.loading {
+            animation: iconFloat 3.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite, pulseGlow 2s ease-in-out infinite;
+        }
     </style>
 </head>
 <body>
     <div class="card">
-        <div class="app-icon">📖</div>
+        <div class="app-icon loading">📖</div>
         <div class="app-name">JW Extras</div>
 
         <div class="pub-name" id="pubName">Publicación</div>
@@ -264,18 +423,18 @@
         </div>
 
         <a href="#" class="btn-primary btn-open" id="btnOpen" style="display:none;" onclick="tryOpen()">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V9a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             Abrir en JW Extras
         </a>
 
         <div class="store-buttons" id="storeButtons">
             <!-- REEMPLAZA ESTOS LINKS CON TUS LINKS REALES -->
             <a href="https://apps.apple.com/us/app/servicio-jw-mi-ministerio/id6770139586" class="btn-store btn-apple" id="btnApple">
-                <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.51 2.51-2.48 4.29-2.52 1.28 0 2.49.66 3.28.65.75-.02 1.94-.84 3.32-.73.91.06 1.77.47 2.33 1.16.19.23.37.48.53.75-1.05.64-2.2 1.51-2.27 3.1-.07 1.88 1.34 2.96 2.15 3.5-.29.77-.77 1.51-1.34 2.08z"/><path d="M12 2C12.54 1.34 12.75.36 12.03.04c-.72-.32-1.9.37-2.54 1.16-.46.56-.73 1.18-.66 1.83.67-.1 1.36-.43 1.89-.79.53-.36.96-.92 1.28-1.24z"/></svg>
                 App Store
             </a>
             <a href="https://play.google.com/store/apps/details?id=com.ismaelcastroluna.juegosbiblicos&pcampaignid=web_share" class="btn-store btn-google" id="btnGoogle">
-                <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302c.7.7.7 1.68 0 2.38l-2.302 2.302L15.396 12l2.302-2.492zM5.864 3.471l10.937 6.333-2.302 2.302-8.635-8.635z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302-2.303A1 1 0 0020.89 6.7l-6.928 6.3 6.928 6.3a1 1 0 01-.988 1.696l-2.302-2.303-2.302-2.302L10.89 12l2.816-2.492z" fill="currentColor"/></svg>
                 Google Play
             </a>
         </div>
@@ -364,6 +523,7 @@
             document.getElementById('storeButtons').classList.add('visible');
             document.getElementById('divider').classList.add('visible');
             document.getElementById('btnJw').classList.add('visible');
+            document.querySelector('.app-icon').classList.remove('loading');
         }
 
         // Detectar si la app se abrió (la página se oculta)
