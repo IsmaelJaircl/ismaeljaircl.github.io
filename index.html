@@ -26,6 +26,21 @@
             --white: #ffffff;
             --amber: #f59e0b;
         }
+        /* Botón específico para App Store */
+.btn-apple {
+    background: var(--slate-900);
+}
+
+.btn-apple svg {
+    fill: white;
+    width: 28px;
+    height: 28px;
+}
+
+.btn-apple:hover {
+    background: #000000 !important; /* Negro puro para resaltar la marca Apple */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
         html { scroll-behavior: smooth; }
         body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--slate-900); line-height: 1.7; overflow-x: hidden; }
 
@@ -229,17 +244,25 @@
             <div class="hero-badge">Gratis · Sin anuncios · Android</div>
             <h1>Tu ministerio,<br><em>perfectamente<br>organizado</em></h1>
             <p class="hero-desc">La herramienta integral definitiva diseñada para ayudarte a mantener un control organizado, eficiente y totalmente privado de tus actividades en el ministerio teocrático.</p>
-            <div class="hero-actions">
-                <a href="https://play.google.com/store/apps/details?id=com.ismaelcastroluna.juegosbiblicos" target="_blank" class="btn-hero">
-                    <span style="font-size:1.5rem">▶</span>
-                    <span>
-                        <span class="sl">Disponible en</span>
-                        <span class="sn">Google Play</span>
-                        <span class="sn">App Store</span>
-                    </span>
-                </a>
-                <a href="#caracteristicas" class="hero-link">Ver características →</a>
-            </div>
+         <div class="hero-actions">
+    <!-- Botón App Store -->
+    <a href="https://apps.apple.com/mx/app/servicio-jw-mi-ministerio/id6770139586" target="_blank" class="btn-hero btn-apple">
+        <svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+        <span>
+            <span class="sl">Consíguelo en el</span>
+            <span class="sn">App Store</span>
+        </span>
+    </a>
+
+    <!-- Botón Google Play -->
+    <a href="https://play.google.com/store/apps/details?id=com.ismaelcastroluna.juegosbiblicos" target="_blank" class="btn-hero">
+        <span style="font-size:1.5rem">▶</span>
+        <span>
+            <span class="sl">Disponible en</span>
+            <span class="sn">Google Play</span>
+        </span>
+    </a>
+</div>
         </div>
         <div class="hero-visual">
             <div class="hero-bg-blob"></div>
@@ -466,14 +489,23 @@
         <h2 class="section-title">Empieza hoy mismo</h2>
         <p class="section-desc">Disponible para Android y IOS. Gratis, sin anuncios y con todas las funciones desde el primer día.</p>
         <div class="cta-btns">
-            <a href="https://play.google.com/store/apps/details?id=com.ismaelcastroluna.juegosbiblicos" target="_blank" class="btn-play">
-                <span class="si">▶</span>
-                <span class="bt">
-                    <span class="bl">Disponible en</span>
-                    <span class="bn">Google Play</span>
-                    <span class="sn">App Store</span>
-                </span>
-            </a>
+             <!-- Botón App Store -->
+    <a href="https://apps.apple.com/mx/app/servicio-jw-mi-ministerio/id6770139586" target="_blank" class="btn-play btn-apple">
+        <svg viewBox="0 0 384 512" style="width:22px;height:22px;fill:white;"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+        <span class="bt">
+            <span class="bl">Consíguelo en el</span>
+            <span class="bn">App Store</span>
+        </span>
+    </a>
+
+    <!-- Botón Google Play -->
+    <a href="https://play.google.com/store/apps/details?id=com.ismaelcastroluna.juegosbiblicos" target="_blank" class="btn-play">
+        <span class="si">▶</span>
+        <span class="bt">
+            <span class="bl">Disponible en</span>
+            <span class="bn">Google Play</span>
+        </span>
+    </a>
             <a href="https://ismaeljaircl.github.io/privacy.html" target="_blank" class="btn-play btn-play-outline">
                 <span class="si">🔒</span>
                 <span class="bt">
