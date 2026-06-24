@@ -73,87 +73,31 @@
 }
         html { scroll-behavior: smooth; }
         body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--slate-900); line-height: 1.7; overflow-x: hidden; }
-/* NAV */
-nav { 
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100; 
-    padding: 16px 40px; display: flex; align-items: center; 
-    justify-content: space-between; background: rgba(255,255,255,0.9); 
-    backdrop-filter: blur(14px); border-bottom: 1px solid rgba(0,0,0,0.06); 
-}
-.nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--blue-500); text-decoration: none; }
-.nav-logo span { color: var(--slate-900); }
 
-/* Esta es la parte clave para escritorio */
-.nav-links { 
-    display: flex; 
-    gap: 28px; 
-    list-style: none; 
-    align-items: center;
-}
-.nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--slate-700); text-decoration: none; transition: color 0.2s; }
-.nav-links a:hover { color: var(--blue-500); }
-.nav-cta { background: var(--blue-500) !important; color: white !important; padding: 8px 20px; border-radius: 100px; font-weight: 600 !important; }
+        /* NAV */
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 16px 40px; display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.9); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(0,0,0,0.06); }
+        .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--blue-500); text-decoration: none; }
+        .nav-logo span { color: var(--slate-900); }
+        .nav-links { display: flex; gap: 28px; list-style: none; }
+        .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--slate-700); text-decoration: none; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--blue-500); }
+        .nav-cta { background: var(--blue-500) !important; color: white !important; padding: 8px 20px; border-radius: 100px; font-weight: 600 !important; }
+        .nav-cta:hover { background: var(--blue-400) !important; }
 
-/* Botón hamburguesa oculto en escritorio */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-}
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--slate-900);
-    transition: 0.3s;
-    border-radius: 2px;
-}
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    nav { padding: 14px 20px; }
-    
-    /* Mostrar botón hamburguesa */
-    .menu-toggle { display: flex; }
-
-    /* Menú móvil tipo dropdown */
-    .nav-links {
-        display: none; /* Se oculta por defecto en móvil */
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 20px 0;
-        gap: 20px;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    }
-
-    /* Clase que activará el JS */
-    .nav-links.active { display: flex; }
-
-    /* Animación de hamburguesa a X */
-    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
-    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-
-    /* Ajustes del Hero que ya tenías */
-    .hero { grid-template-columns: 1fr; padding: 120px 22px 60px; text-align: center; }
-    .hero h1 { font-size: 2.7rem; }
-    .hero-desc { margin: 0 auto 30px; }
-    .hero-actions { justify-content: center; }
-    .hero-visual { order: -1; }
-    .stats-inner { grid-template-columns: repeat(2, 1fr); }
-    .features-grid { grid-template-columns: 1fr; }
-    .about-inner { grid-template-columns: 1fr; gap: 40px; }
-    .privacy-inner { grid-template-columns: 1fr; gap: 40px; }
-    .faq-grid { grid-template-columns: 1fr; }
-    .section { padding: 68px 22px; }
-    .screens-track { gap: 12px; }
-    .screen-card { width: 145px; }
-    .screen-card:nth-child(2), .screen-card:nth-child(4) { transform: translateY(-14px); }
-    .about-screens { grid-template-columns: 1fr 1fr; }
-}
+        /* HERO */
+        .hero { padding: 150px 40px 90px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1200px; margin: 0 auto; align-items: center; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--blue-50); border: 1px solid var(--blue-100); color: var(--blue-600); font-size: 0.78rem; font-weight: 700; padding: 5px 14px; border-radius: 100px; margin-bottom: 22px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .hero-badge::before { content: ''; width: 7px; height: 7px; background: var(--blue-500); border-radius: 50%; }
+        .hero h1 { font-family: 'DM Serif Display', serif; font-size: 3.6rem; line-height: 1.1; color: var(--slate-900); margin-bottom: 22px; }
+        .hero h1 em { font-style: italic; color: var(--blue-500); }
+        .hero-desc { font-size: 1.08rem; color: var(--slate-500); max-width: 480px; margin-bottom: 36px; line-height: 1.8; }
+        .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+        .btn-hero { display: inline-flex; align-items: center; gap: 10px; background: var(--slate-900); color: white; padding: 14px 26px; border-radius: 14px; text-decoration: none; font-weight: 700; font-size: 0.95rem; transition: all 0.25s; }
+        .btn-hero:hover { background: var(--blue-600); transform: translateY(-2px); box-shadow: 0 10px 25px rgba(37,99,235,0.25); }
+        .btn-hero .sl { font-size: 0.68rem; font-weight: 400; opacity: 0.65; display: block; line-height: 1; }
+        .btn-hero .sn { font-size: 0.98rem; font-weight: 700; display: block; line-height: 1.3; }
+        .hero-link { color: var(--slate-500); font-size: 0.92rem; text-decoration: none; transition: color 0.2s; }
+        .hero-link:hover { color: var(--blue-500); }
 
         /* PHONE */
         .hero-visual { display: flex; justify-content: center; position: relative; }
@@ -336,7 +280,7 @@ nav {
 <nav>
     <a href="#" class="nav-logo">Servicio <span>JW</span></a>
     
-    <!-- BOTÓN HAMBURGUESA -->
+    <!-- Agrega este bloque para el icono de hamburguesa -->
     <div class="menu-toggle" id="mobile-menu">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -348,7 +292,8 @@ nav {
         <li><a href="#capturas">Capturas</a></li>
         <li><a href="#privacidad">Privacidad</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#descargar" class="nav-cta">Descargar gratis</a></li>
+        <!-- El botón del nav ahora apunta a la sección de descarga -->
+        <li><a href="#descargar" class="nav-cta">Descargar</a></li>
     </ul>
 </nav>
 <!-- HERO -->
@@ -630,8 +575,9 @@ nav {
     <hr class="fdiv">
     <p class="fcopy">Desarrollado con dedicación por <strong style="color:white;">Ismael Castro Luna</strong> · ismaeljair22@gmail.com · © 2026 Servicio JW · Esta es una aplicación de uso personal creada para facilitar la gestión teocrática y no tiene fines de lucro.</p>
 </footer>
+
 <script>
-    // Lógica Menú Hamburguesa
+    // --- Lógica del Menú Hamburguesa ---
     const menu = document.querySelector('#mobile-menu');
     const menuLinks = document.querySelector('.nav-links');
 
@@ -640,21 +586,21 @@ nav {
         menuLinks.classList.toggle('active');
     });
 
-    // Cerrar menú al tocar un enlace (Móvil)
-    document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click', () => {
-        menu.classList.remove('is-active');
-        menuLinks.classList.remove('active');
-    }));
+    // Cerrar el menú al hacer click en un enlace
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('is-active');
+            menuLinks.classList.remove('active');
+        });
+    });
 
-    // Lógica FAQ
+    // --- Tu lógica anterior de FAQ y Observer ---
     function tFaq(btn) {
         const item = btn.closest('.faq-item');
         const isOpen = item.classList.contains('open');
         document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
         if (!isOpen) item.classList.add('open');
     }
-
-    // Animación Fade-in
     const obs = new IntersectionObserver(entries => {
         entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });
