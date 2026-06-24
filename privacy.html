@@ -4,110 +4,277 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidad - Servicio JW</title>
+    <meta name="google-site-verification" content="19ADT_-SKQlU1AkqNYKCh8eRjh7qXYHI87OiJlvJvzQ" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
             --blue-600: #1d4ed8;
             --blue-500: #2563eb;
+            --blue-400: #3b82f6;
+            --blue-100: #dbeafe;
+            --blue-50: #eff6ff;
             --slate-900: #0f172a;
             --slate-700: #334155;
             --slate-500: #64748b;
+            --slate-400: #94a3b8;
+            --slate-300: #cbd5e1;
             --slate-100: #f1f5f9;
             --white: #ffffff;
         }
-        body { font-family: 'DM Sans', sans-serif; line-height: 1.7; color: var(--slate-900); margin: 0; padding: 0; background-color: var(--white); }
-        nav { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate-100); background: white; position: sticky; top: 0; z-index: 100; }
-        .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: var(--blue-500); text-decoration: none; }
-        .container { max-width: 850px; margin: 60px auto; padding: 0 25px; }
-        h1 { font-family: 'DM Serif Display', serif; font-size: 2.8rem; margin-bottom: 10px; color: var(--slate-900); }
-        h2 { font-family: 'DM Serif Display', serif; color: var(--slate-900); margin-top: 45px; border-bottom: 2px solid var(--slate-100); padding-bottom: 10px; font-size: 1.8rem; }
-        h3 { font-size: 1.2rem; margin-top: 25px; color: var(--blue-600); }
-        .last-update { color: var(--slate-500); font-size: 0.95rem; margin-bottom: 40px; font-weight: 500; }
-        .highlight-box { background: var(--slate-100); padding: 25px; border-radius: 14px; border-left: 6px solid var(--blue-500); margin: 35px 0; font-size: 1rem; }
-        ul { padding-left: 20px; list-style-type: disc; }
-        li { margin-bottom: 12px; }
-        p { margin-bottom: 18px; text-align: justify; }
-        a { color: var(--blue-500); text-decoration: none; font-weight: 500; }
-        a:hover { text-decoration: underline; }
-        footer { margin-top: 80px; padding: 50px; background: var(--slate-900); color: var(--white); text-align: center; font-size: 0.9rem; }
-        .section-number { color: var(--blue-500); font-weight: bold; margin-right: 8px; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'DM Sans', sans-serif; background: var(--slate-100); color: var(--slate-900); line-height: 1.7; min-height: 100vh; }
+
+        /* NAV */
+        nav { background: rgba(255,255,255,0.92); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(0,0,0,0.06); padding: 16px 40px; display: flex; align-items: center; justify-content: space-between; }
+        .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--blue-500); text-decoration: none; }
+        .nav-logo span { color: var(--slate-900); }
+        .btn-back { display: inline-flex; align-items: center; gap: 8px; color: var(--slate-500); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+        .btn-back:hover { color: var(--blue-500); }
+
+        /* HERO STRIP */
+        .page-hero { background: linear-gradient(135deg, var(--slate-900) 0%, #1e3a8a 100%); padding: 60px 40px; text-align: center; }
+        .page-hero .badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); font-size: 0.95rem; padding: 6px 12px; border-radius: 999px; margin-bottom: 12px; }
+        .page-hero h1 { font-family: 'DM Serif Display', serif; font-size: 2.8rem; color: white; margin-bottom: 10px; }
+        .page-hero .date { font-size: 0.85rem; color: var(--slate-400); }
+
+        /* CONTENT */
+        .content-wrap { max-width: 820px; margin: 0 auto; padding: 48px 24px 80px; }
+
+        /* INTRO CARD */
+        .intro-card { background: var(--blue-50); border: 1px solid var(--blue-100); border-radius: 16px; padding: 28px 32px; margin-bottom: 40px; display: flex; gap: 18px; align-items: flex-start; }
+        .intro-icon { font-size: 2rem; flex-shrink: 0; margin-top: 2px; }
+        .intro-card p { font-size: 1rem; color: var(--slate-700); line-height: 1.8; margin: 0; }
+        .intro-card strong { color: var(--blue-600); }
+
+        /* SECTIONS */
+        .policy-section { background: var(--white); border-radius: 16px; border: 1px solid #e5eaf4; margin-bottom: 20px; overflow: hidden; }
+        .section-header { padding: 24px 28px; display: flex; align-items: center; gap: 16px; border-bottom: 1px solid #f1f5f9; }
+        .section-num { width: 36px; height: 36px; min-width: 36px; background: var(--blue-500); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+        .section-header h2 { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--slate-900); font-weight: 400; }
+        .section-body { padding: 24px 28px; }
+        .section-body p { font-size: 0.97rem; color: var(--slate-500); line-height: 1.85; margin-bottom: 14px; }
+        .section-body p:last-child { margin-bottom: 0; }
+        .section-body strong { color: var(--slate-900); font-weight: 600; }
+        .section-body em { color: var(--blue-600); font-style: normal; font-weight: 500; }
+
+        /* LIST */
+        .policy-list { list-style: none; display: flex; flex-direction: column; gap: 12px; padding-left: 0; margin: 12px 0; }
+        .policy-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.97rem; color: var(--slate-500); line-height: 1.7; }
+        .policy-list li::before { content: ''; width: 8px; height: 8px; min-width: 8px; background: var(--blue-400); border-radius: 50%; margin-top: 8px; }
+        .policy-list li strong { color: var(--slate-900); font-weight: 600; }
+
+        /* BADGE INLINE */
+        code { background: var(--blue-50); border: 1px solid var(--blue-100); padding: 2px 8px; border-radius: 6px; color: var(--blue-600); font-family: monospace; font-size: 0.88rem; }
+
+        /* HIGHLIGHT BOX */
+        .highlight-box { background: var(--slate-900); border-radius: 12px; padding: 20px 24px; margin-top: 16px; display: flex; gap: 14px; align-items: center; }
+        .highlight-box .hi { font-size: 1.5rem; flex-shrink: 0; }
+        .highlight-box p { color: var(--slate-300); font-size: 0.92rem; line-height: 1.7; margin: 0; }
+        .highlight-box strong { color: white; }
+
+        /* NO DATA BADGE */
+        .no-data-row { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+        .no-badge { display: inline-flex; align-items: center; gap: 6px; background: #fef2f2; border: 1px solid #fecaca; color: #dc2626; font-size: 0.8rem; font-weight: 600; padding: 5px 12px; border-radius: 999px; }
+        .yes-badge { display: inline-flex; align-items: center; gap: 6px; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; font-size: 0.8rem; font-weight: 600; padding: 5px 12px; border-radius: 999px; }
+
+        /* CONTACT */
+        .contact-card { background: linear-gradient(135deg, var(--blue-500) 0%, var(--blue-600) 100%); border-radius: 16px; padding: 32px; text-align: center; margin-top: 40px; }
+        .contact-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: white; margin-bottom: 8px; font-weight: 400; }
+        .contact-card p { color: rgba(255,255,255,0.75); font-size: 0.95rem; margin-bottom: 18px; }
+        .contact-card a { display: inline-block; background: white; color: var(--blue-600); font-weight: 700; font-size: 0.95rem; padding: 12px 28px; border-radius: 10px; text-decoration: none; transition: transform 0.12s; }
+        .contact-card a:hover { background: var(--blue-50); transform: translateY(-1px); }
+
+        /* FOOTER */
+        .page-footer { background: var(--slate-900); padding: 30px 40px; text-align: center; }
+        .page-footer .logo { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: white; margin-bottom: 6px; }
+        .page-footer .logo span { color: var(--blue-400); }
+        .page-footer p { font-size: 0.78rem; color: var(--slate-500); }
+        .page-footer .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 12px 0; }
+        .page-footer .footer-links a { color: var(--slate-400); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
+        .page-footer .footer-links a:hover { color: var(--blue-400); }
+
+        @media (max-width: 700px) {
+            nav { padding: 14px 20px; }
+            .page-hero { padding: 50px 22px; }
+            .page-hero h1 { font-size: 2rem; }
+            .content-wrap { padding: 32px 16px 60px; }
+            .intro-card { flex-direction: column; gap: 10px; padding: 22px; }
+            .section-header { padding: 20px 22px; }
+            .section-body { padding: 20px 22px; }
+        }
     </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
     <a href="index.html" class="nav-logo">Servicio <span>JW</span></a>
-    <a href="index.html" style="font-weight: 600; color: var(--slate-700); text-decoration: none;">← Volver</a>
+    <a href="index.html" class="btn-back">← Volver al inicio</a>
 </nav>
 
-<div class="container">
+<!-- HERO -->
+<div class="page-hero">
+    <div class="badge">🔒 Documento legal</div>
     <h1>Política de Privacidad</h1>
-    <p class="last-update">Última actualización: 23 de mayo de 2024</p>
-
-    <p>La presente Política de Privacidad establece los términos en que <strong>Servicio JW</strong> (en adelante, "la Aplicación"), desarrollada por <strong>Ismael Castro Luna</strong>, usa y protege la información que es proporcionada por sus usuarios al momento de utilizarla en dispositivos Android e iOS.</p>
-
-    <div class="highlight-box">
-        <strong>AVISO DE NO AFILIACIÓN:</strong> Servicio JW es un proyecto independiente desarrollado para el beneficio personal de los publicadores cristianos. Esta aplicación <strong>NO es una aplicación oficial</strong> de la Watch Tower Bible and Tract Society of Pennsylvania, ni de ninguna de sus entidades legales o del sitio web jw.org.
-    </div>
-
-    <h2>1. Compromiso de Privacidad</h2>
-    <p>Esta Aplicación ha sido construida bajo el principio de "Privacidad por Diseño". Esto significa que el desarrollador no tiene interés, ni capacidad técnica por diseño, de recolectar datos masivos de los usuarios. La soberanía de la información reside 100% en el usuario.</p>
-
-    <h2>2. Información que Procesamos</h2>
-    <h3>A. Datos del Ministerio</h3>
-    <p>La Aplicación procesa información relativa a su actividad en el ministerio, tales como: horas de servicio, publicaciones distribuidas, videos reproducidos, revisitas y cursos bíblicos. <strong>Esta información se almacena localmente en la base de datos interna de su dispositivo.</strong></p>
-    
-    <h3>B. Datos de Contacto y Personas Interesadas</h3>
-    <p>Usted puede ingresar nombres y direcciones de personas interesadas. Al ser información sensible, le recordamos que es su responsabilidad tratar dichos datos conforme a las leyes de protección de datos de su país y las instrucciones teocráticas locales.</p>
-
-    <h3>C. Archivos de Publicaciones (ePub/PDF)</h3>
-    <p>La Aplicación actúa como un lector de archivos. Los archivos cargados por el usuario se gestionan dentro del espacio de almacenamiento privado de la app. La app no "escanea" el resto de sus archivos personales.</p>
-
-    <h2>3. Servicios de Terceros y Sincronización</h2>
-    <p>Aunque la Aplicación no utiliza servidores propios para almacenar sus datos, ofrece integración con servicios de terceros para respaldos:</p>
-    <ul>
-        <li><strong>Google Drive (Android):</strong> Se utiliza para almacenar el archivo de respaldo en una carpeta privada. La Aplicación solo accede a los archivos que ella misma ha creado.</li>
-        <li><strong>iCloud (iOS/iPadOS):</strong> Se utiliza para la sincronización entre dispositivos Apple y el almacenamiento de copias de seguridad. Apple Inc. es el responsable del tratamiento de estos datos en la nube.</li>
-        <li><strong>Analíticas:</strong> La Aplicación no utiliza Google Analytics, Firebase u otros rastreadores de comportamiento.</li>
-    </ul>
-
-    <h2>4. Propiedad Intelectual y Contenido de JW.ORG</h2>
-    <p>Servicio JW permite la visualización de contenido descargado de jw.org. Respecto a esto, el usuario reconoce que:</p>
-    <ul>
-        <li>La Watch Tower Bible and Tract Society of Pennsylvania retiene todos los derechos de propiedad intelectual sobre las publicaciones, Biblias, imágenes y audios.</li>
-        <li>La Aplicación **no distribuye** contenido. Es responsabilidad exclusiva del usuario obtener legalmente los archivos de jw.org para su uso personal conforme a los <a href="https://www.jw.org/es/terminos-de-uso/" target="_blank">Términos de Uso</a> de la organización.</li>
-        <li>La Aplicación no altera el mensaje ni el contenido de las publicaciones originales.</li>
-    </ul>
-
-    <h2>5. Permisos Requeridos</h2>
-    <p>Para su correcto funcionamiento, la Aplicación requiere:</p>
-    <ul>
-        <li><strong>Acceso al Almacenamiento:</strong> Para leer las publicaciones importadas y guardar la base de datos de horas.</li>
-        <li><strong>Acceso a Internet:</strong> Exclusivamente para realizar los respaldos en la nube y abrir enlaces externos.</li>
-        <li><strong>Seguridad Biométrica:</strong> Para permitir el desbloqueo de la app mediante FaceID o Huella dactilar (la app no recibe sus datos biométricos, solo la confirmación del sistema operativo).</li>
-    </ul>
-
-    <h2>6. Derechos del Usuario</h2>
-    <p>Dado que no almacenamos sus datos en nuestros servidores, usted tiene el control total para:</p>
-    <ul>
-        <li><strong>Acceso y Rectificación:</strong> Ver y modificar sus registros directamente en la app.</li>
-        <li><strong>Eliminación:</strong> Borrar la aplicación eliminará permanentemente todos los datos locales (a menos que tenga un respaldo en la nube, el cual deberá borrar manualmente desde Google Drive o iCloud).</li>
-    </ul>
-
-    <h2>7. Seguridad de la Información</h2>
-    <p>Estamos comprometidos con la seguridad de su información. Le recomendamos encarecidamente activar la protección biométrica o por PIN dentro de los ajustes de la Aplicación para evitar que personas no autorizadas accedan a sus registros de servicio en caso de pérdida del dispositivo.</p>
-
-    <h2>8. Contacto</h2>
-    <p>Para cualquier duda o reclamación sobre esta política, puede ponerse en contacto directo con el desarrollador:</p>
-    <p><strong>Ismael Castro Luna</strong><br>
-    Email: <a href="mailto:ismaeljair22@gmail.com">ismaeljair22@gmail.com</a></p>
+    <p class="date">Última actualización: 24 de junio de 2026</p>
 </div>
 
-<footer>
-    © 2024 Servicio JW · Esta política está diseñada para proteger la privacidad de los publicadores de todo el mundo.
-</footer>
+<!-- CONTENT -->
+<div class="content-wrap">
+
+    <!-- INTRO -->
+    <div class="intro-card">
+        <div class="intro-icon">🛡️</div>
+        <p>En <strong>Servicio JW</strong> valoramos tu privacidad y estamos totalmente comprometidos a proteger tus datos personales. Esta política explica de forma clara y transparente cómo maneja la aplicación la información, qué opciones tienes y qué terceros (si los hay) están involucrados.</p>
+    </div>
+
+    <!-- SECTION 1 -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">1</div>
+            <h2>Información que recopilamos</h2>
+        </div>
+        <div class="section-body">
+            <p>La aplicación recopila y almacena la siguiente información <em>exclusivamente de forma local</em> en tu dispositivo celular. En ningún momento se envía a servidores externos salvo que actives la copia de seguridad en la nube de forma voluntaria (ver sección 2).</p>
+            <ul class="policy-list">
+                <li><div><strong>Información del Perfil:</strong> Nombre, congregación, tipo de publicador y privilegios.</div></li>
+                <li><div><strong>Datos de Servicio:</strong> Informes de horas teocráticas, colocaciones, videos y revisitas.</div></li>
+                <li><div><strong>Datos de Territorio:</strong> Mapas, notas e historial de actividades para la gestión de territorios.</div></li>
+            </ul>
+            <div class="no-data-row">
+                <span class="no-badge">✕ Sin rastreo de ubicación (por defecto)</span>
+                <span class="no-badge">✕ Sin analíticas de uso</span>
+                <span class="no-badge">✕ Sin publicidad</span>
+                <span class="yes-badge">✓ 100% local en tu dispositivo</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">2</div>
+            <h2>Copias de seguridad en la nube (Google Drive e iCloud)</h2>
+        </div>
+        <div class="section-body">
+            <p>La aplicación ofrece una función opcional de copia de seguridad para que puedas restaurar tus datos si cambias de dispositivo o reinstalas la app. Estas copias de seguridad son siempre opcionales y requieren tu autorización explícita.</p>
+
+            <h3>Google Drive</h3>
+            <p>Si activas la copia de seguridad en Google Drive, la aplicación solicitará acceso mediante el permiso sensible <code>drive.file</code>. Este permiso permite crear y gestionar un archivo único de respaldo en tu cuenta de Google.</p>
+            <ul class="policy-list">
+                <li><div><strong>Propósito:</strong> Crear, subir y restaurar un único archivo de seguridad llamado <code>servicio_backup.json</code> en tu Google Drive.</div></li>
+                <li><div><strong>Alcance / Límites:</strong> La aplicación <strong>NO PUEDE</strong> ver, editar, leer ni eliminar otros archivos personales en tu cuenta de Google fuera del archivo de respaldo creado por la app.</div></li>
+            </ul>
+            <div class="highlight-box">
+                <div class="hi">🔐</div>
+                <p>Tu respaldo viaja <strong>cifrado</strong> entre tu celular y tu propia cuenta de Google. Nosotros nunca vemos ni tocamos ese archivo.</p>
+            </div>
+
+            <h3 style="margin-top:12px;">iCloud (Apple)</h3>
+            <p>En dispositivos Apple puedes optar por guardar la copia de seguridad en tu iCloud. Si eliges iCloud, la app crea y sincroniza el mismo archivo de respaldo (<code>servicio_backup.json</code>) en tu cuenta de iCloud asociada al dispositivo.</p>
+            <ul class="policy-list">
+                <li><div><strong>Propósito:</strong> Crear, subir y restaurar un único archivo de seguridad en tu iCloud Drive o espacio de iCloud utilizado por la app.</div></li>
+                <li><div><strong>Alcance / Límites:</strong> La aplicación <strong>NO PUEDE</strong> acceder a otros archivos o datos de tu iCloud más allá del archivo de respaldo que crea/gestiona para esta app.</div></li>
+                <li><div><strong>Responsabilidad de Apple:</strong> El almacenamiento y las políticas de privacidad de iCloud están sujetas a las condiciones de Apple; te recomendamos revisar la documentación y la política de privacidad de Apple si tienes dudas.</div></li>
+            </ul>
+            <div class="highlight-box">
+                <div class="hi">🧭</div>
+                <p>Las copias en iCloud están sujetas a la seguridad y prácticas de Apple. La app no comparte ni ve el contenido del archivo de respaldo.</p>
+            </div>
+
+            <p class="section-body" style="margin-top:12px;">Nota: siempre puedes eliminar manualmente el archivo de respaldo desde tu Google Drive o iCloud en cualquier momento si no quieres conservar copias en la nube.</p>
+        </div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">3</div>
+            <h2>Almacenamiento de Datos y Terceros</h2>
+        </div>
+        <div class="section-body">
+            <ul class="policy-list">
+                <li><div><strong>Almacenamiento Local:</strong> Toda tu información se almacena en una base de datos privada encriptada en tu dispositivo. La encriptación protege los datos en reposo y la aplicación aplica buenas prácticas de seguridad (cifrado y controles de acceso locales).</div></li>
+                <li><div><strong>Terceros:</strong> Nosotros <em>NO vendemos, transamos ni compartimos</em> tus datos con ningún tercero. La sincronización en la nube (Google Drive o iCloud) se realiza únicamente entre tu dispositivo y tu cuenta personal en esos servicios.</div></li>
+                <li><div><strong>Servicios de terceros que podrías utilizar:</strong> Google y Apple (iCloud). Dichos servicios tienen sus propias políticas de privacidad y términos; no controlamos sus prácticas.</div></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">4</div>
+            <h2>Tus Derechos y bases legales (GDPR / otras jurisdicciones)</h2>
+        </div>
+        <div class="section-body">
+            <p>Tienes control total y absoluto sobre tus datos en todo momento. Puedes eliminar permanentemente toda la información simplemente borrando los datos de la aplicación o desinstalándola. También puedes eliminar manualmente la copia de respaldo en Google Drive o iCloud.</p>
+            <p>Si te encuentras en la Unión Europea u otras jurisdicciones con leyes de protección de datos (por ejemplo, GDPR), puedes ejercer los derechos siguientes:</p>
+            <ul class="policy-list">
+                <li><div><strong>Acceso:</strong> Solicitar qué datos almacenamos localmente.</div></li>
+                <li><div><strong>Rectificación:</strong> Corregir datos inexactos.</div></li>
+                <li><div><strong>Supresión:</strong> Eliminar tus datos de la aplicación.</div></li>
+                <li><div><strong>Restricción / Portabilidad:</strong> En la medida en que aplique, pedir una copia exportable de tus datos.</div></li>
+            </ul>
+            <p>Las bases legales para el tratamiento de tus datos son, según corresponda: tu consentimiento (cuando habilitas funciones como copia en la nube), la ejecución de un servicio (la funcionalidad de la app) y el cumplimiento de obligaciones legales cuando fuera necesario.</p>
+            <div class="no-data-row" style="margin-top:12px;">
+                <span class="yes-badge">✓ Derecho a eliminar tus datos</span>
+                <span class="yes-badge">✓ Control total en todo momento</span>
+                <span class="yes-badge">✓ Sin dependencia de terceros para la operación básica</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 5: JW.ORG -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">5</div>
+            <h2>Contenido de terceros y materiales de jw.org</h2>
+        </div>
+        <div class="section-body">
+            <p>La aplicación puede incluir o permitir el uso de materiales de terceros, por ejemplo ePub o documentos proporcionados por <a href="https://www.jw.org/es/" target="_blank" rel="noopener noreferrer">jw.org</a>. Al usar esos materiales, tú y la aplicación estáis sujetos a las condiciones y políticas de los propietarios del contenido.</p>
+            <ul class="policy-list">
+                <li><div><strong>Derechos de autor y uso:</strong> Los ePub y otros materiales de jw.org se rigen por las políticas de uso y derechos de jw.org. No redistribuimos los archivos ni los publicamos fuera de las opciones permitidas por jw.org.</div></li>
+                <li><div><strong>Privacidad de jw.org:</strong> Si accedes a jw.org o utilizas herramientas que se conectan a jw.org desde la app, sus prácticas de recopilación de datos y su política de privacidad aplican a esas interacciones — revisa la <a href="https://www.jw.org/es/privacidad/" target="_blank" rel="noopener noreferrer">Política de privacidad de jw.org</a> para más detalles.</div></li>
+                <li><div><strong>Responsabilidad:</strong> No controlamos las prácticas ni el contenido de jw.org; para cuestiones legales, de derechos o de privacidad relacionadas con esos materiales debes dirigirte a los administradores de jw.org.</div></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECTION 6: SEGURIDAD, RETENCIÓN, CAMBIOS -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">6</div>
+            <h2>Seguridad, retención y cambios en la política</h2>
+        </div>
+        <div class="section-body">
+            <p><strong>Seguridad:</strong> Aplicamos medidas razonables para proteger tus datos en el dispositivo (encriptación, almacenamiento privado). Ten en cuenta que ninguna transmisión o almacenamiento electrónico es 100% seguro; para respaldos en la nube depende también de la seguridad del proveedor (Google/Apple).</p>
+            <p><strong>Retención:</strong> Conservamos tus datos en tu dispositivo hasta que los elimines o desinstales la app. Las copias en la nube se conservan mientras tú no las borres.</p>
+            <p><strong>Cambios en esta política:</strong> Podemos actualizar esta política para reflejar cambios en la app o en requisitos legales. Publicaremos la fecha de la última actualización en la parte superior. Si hacemos cambios significativos, intentaremos avisarlo en la app cuando sea posible.</p>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact-card">
+        <h3>¿Tienes alguna duda?</h3>
+        <p>Si tienes alguna pregunta técnica o sobre esta Política de Privacidad, escríbenos directamente.</p>
+        <a href="mailto:ismaeljair22@gmail.com">ismaeljair22@gmail.com</a>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="page-footer">
+    <div class="logo">Servicio <span>JW</span></div>
+    <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="tos.html">Condiciones de Servicio</a>
+    </div>
+    <p>© 2026 Servicio JW · Desarrollado por Ismael Castro Luna · Sin fines de lucro</p>
+</div>
 
 </body>
 </html>
