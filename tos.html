@@ -29,7 +29,7 @@
         body { font-family: 'DM Sans', sans-serif; background: var(--slate-100); color: var(--slate-900); line-height: 1.7; min-height: 100vh; }
 
         /* NAV */
-        nav { background: rgba(255,255,255,0.92); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(0,0,0,0.06); padding: 16px 40px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+        nav { background: rgba(255,255,255,0.92); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(0,0,0,0.06); padding: 16px 40px; display: flex; align-items: center; justify-content: space-between; }
         .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--blue-500); text-decoration: none; }
         .nav-logo span { color: var(--slate-900); }
         .btn-back { display: inline-flex; align-items: center; gap: 8px; color: var(--slate-500); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
@@ -37,7 +37,7 @@
 
         /* HERO */
         .page-hero { background: linear-gradient(135deg, var(--slate-900) 0%, #1e3a8a 100%); padding: 60px 40px; text-align: center; }
-        .page-hero .badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); font-size: 0.75rem; font-weight: 700; padding: 5px 14px; border-radius: 100px; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 0.06em; }
+        .page-hero .badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); font-size: 0.82rem; font-weight: 600; padding: 8px 16px; border-radius: 20px; margin-bottom: 18px; }
         .page-hero h1 { font-family: 'DM Serif Display', serif; font-size: 2.8rem; color: white; margin-bottom: 10px; }
         .page-hero .date { font-size: 0.85rem; color: var(--slate-400); }
 
@@ -53,7 +53,7 @@
         /* SECTIONS */
         .policy-section { background: var(--white); border-radius: 16px; border: 1px solid #e5eaf4; margin-bottom: 20px; overflow: hidden; }
         .section-header { padding: 24px 28px; display: flex; align-items: center; gap: 16px; border-bottom: 1px solid #f1f5f9; }
-        .section-num { width: 36px; height: 36px; min-width: 36px; background: var(--slate-900); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; }
+        .section-num { width: 36px; height: 36px; min-width: 36px; background: var(--slate-900); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; }
         .section-header h2 { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--slate-900); font-weight: 400; }
         .section-body { padding: 24px 28px; }
         .section-body p { font-size: 0.97rem; color: var(--slate-500); line-height: 1.85; margin-bottom: 14px; }
@@ -74,10 +74,14 @@
         .warning-box strong { color: #78350f; }
 
         /* INFO BOX */
-        .info-box { background: var(--slate-900); border-radius: 12px; padding: 20px 24px; margin-top: 16px; display: flex; gap: 14px; align-items: center; }
+        .info-box { background: var(--slate-900); border-radius: 12px; padding: 20px 24px; margin-top: 16px; display: flex; gap: 14px; align-items: flex-start; }
         .info-box .ii { font-size: 1.5rem; flex-shrink: 0; }
         .info-box p { color: var(--slate-300); font-size: 0.92rem; line-height: 1.7; margin: 0; }
         .info-box strong { color: white; }
+
+        /* SUBSECTION */
+        .subsection { margin-top: 20px; padding-top: 20px; border-top: 1px solid #f1f5f9; }
+        .subsection h3 { font-size: 1.1rem; color: var(--slate-900); font-weight: 600; margin-bottom: 12px; }
 
         /* CONTACT */
         .contact-card { background: linear-gradient(135deg, var(--slate-900) 0%, #1e3a8a 100%); border-radius: 16px; padding: 32px; text-align: center; margin-top: 40px; }
@@ -121,7 +125,7 @@
 <div class="page-hero">
     <div class="badge">📄 Documento legal</div>
     <h1>Condiciones de Servicio</h1>
-    <p class="date">Fecha de entrada en vigor: 19 de marzo de 2026</p>
+    <p class="date">Última actualización: 24 de junio de 2026</p>
 </div>
 
 <!-- CONTENT -->
@@ -130,7 +134,7 @@
     <!-- INTRO -->
     <div class="intro-card">
         <div class="intro-icon">📋</div>
-        <p>Al utilizar la aplicación <strong>Servicio JW</strong>, usted acepta los siguientes términos y condiciones de uso. Por favor léelos con atención antes de continuar usando la aplicación.</p>
+        <p>Al utilizar la aplicación <strong>Servicio JW</strong>, usted acepta los siguientes términos y condiciones de uso. Por favor léelos con atención antes de continuar usando la aplicación. Si no estás de acuerdo con alguno de estos términos, te pedimos que no uses esta aplicación.</p>
     </div>
 
     <!-- SECTION 1 -->
@@ -140,10 +144,20 @@
             <h2>Descripción del Servicio</h2>
         </div>
         <div class="section-body">
-            <p>Servicio JW es una aplicación y herramienta personal diseñada para ayudar a los usuarios a organizar e ingresar de manera limpia sus actividades ministeriales personales, incluyendo de forma opcional los informes de horas, metas y la gestión de territorios.</p>
+            <p>Servicio JW es una aplicación y herramienta personal diseñada para ayudar a los usuarios a organizar e ingresar de manera limpia sus actividades ministeriales personales, incluyendo reportes de horas teocráticas, colocaciones, revisitas, videos compartidos y gestión de territorios.</p>
             <div class="info-box">
                 <div class="ii">📱</div>
-                <p>La aplicación es <strong>completamente gratuita</strong>, sin anuncios ni compras dentro de la app. Disponible para Android en Google Play.</p>
+                <p>La aplicación es <strong>completamente gratuita</strong>, sin anuncios ni compras dentro de la app. Disponible para Android en Google Play y próximamente en otras plataformas.</p>
+            </div>
+            <div class="subsection">
+                <h3>Funcionalidades principales</h3>
+                <ul class="policy-list">
+                    <li><strong>Registro de actividades ministeriales:</strong> Mantén un control detallado de tus horas, colocaciones, revisitas y videos compartidos.</li>
+                    <li><strong>Gestión de territorios:</strong> Organiza mapas, notas e historial de actividades por territorio.</li>
+                    <li><strong>Copias de seguridad en la nube:</strong> Sincroniza tus datos con Google Drive o iCloud de forma segura y encriptada.</li>
+                    <li><strong>Exportación de datos:</strong> Descarga tus datos en formato JSON para análisis personal.</li>
+                    <li><strong>Almacenamiento local:</strong> Todos tus datos se guardan de forma encriptada en tu dispositivo.</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -152,10 +166,20 @@
     <div class="policy-section">
         <div class="section-header">
             <div class="section-num">2</div>
-            <h2>Solo para Uso Personal</h2>
+            <h2>Licencia de Uso y Derechos</h2>
         </div>
         <div class="section-body">
-            <p>Esta aplicación está destinada para uso estricta y puramente personal, <strong>sin fines comerciales u organizativos</strong>. El usuario es el único propietario y responsable de la veracidad y el uso de la información introducida en la aplicación.</p>
+            <p>La aplicación Servicio JW se proporciona bajo una <em>licencia personal, no transferible e intransferible</em> para tu uso exclusivo. Esto significa:</p>
+            <ul class="policy-list">
+                <li><strong>Licencia Personal:</strong> La aplicación es solo para ti. No puedes transferir, vender, regalar ni compartir tu acceso a terceros.</li>
+                <li><strong>No comercial:</strong> La aplicación está prohibida para cualquier uso comercial, organizativo o de lucro. Es únicamente para gestión personal.</li>
+                <li><strong>Sin modificación:</strong> No puedes modificar, descompilar, hacer ingeniería inversa ni alterar el código fuente de la aplicación.</li>
+                <li><strong>Propiedad intelectual:</strong> Todos los derechos de autor, marcas registradas y propiedad intelectual de Servicio JW pertenecen al desarrollador. Solo adquieres el derecho de uso, no la propiedad.</li>
+            </ul>
+            <div class="warning-box">
+                <div class="wi">⚠️</div>
+                <p>La distribución no autorizada, venta o alquiler de la aplicación constituye una violación de estos términos y puede resultar en consecuencias legales.</p>
+            </div>
         </div>
     </div>
 
@@ -163,18 +187,16 @@
     <div class="policy-section">
         <div class="section-header">
             <div class="section-num">3</div>
-            <h2>Datos y Copias de Seguridad</h2>
+            <h2>Solo para Uso Personal</h2>
         </div>
         <div class="section-body">
+            <p>Esta aplicación está destinada para uso estricta y puramente personal, <strong>sin fines comerciales u organizativos</strong>. El usuario es el único propietario y responsable de la información que ingresa en la aplicación.</p>
             <ul class="policy-list">
-                <li><div>La aplicación proporciona una función nativa para hacer una copia de seguridad o respaldo rápido de los datos directamente hacia su propia cuenta personal de Google Drive.</div></li>
-                <li><div>El desarrollador <strong>no se hace responsable</strong> por ninguna pérdida de datos derivada de rotura del dispositivo, borrado accidental, desinstalación de la app, o por interrupciones y fallos de Google Drive.</div></li>
-                <li><div>Es <strong>responsabilidad total del usuario</strong> gestionar de forma segura sus accesos, credenciales de cuenta y respaldos periódicos.</div></li>
+                <li><strong>Uso permitido:</strong> Registrar y gestionar tus propias actividades ministeriales, mantener estadísticas personales y planificar tu servicio ministerial.</li>
+                <li><strong>Uso no permitido:</strong> Usar la aplicación en nombre de una organización, congregación, empresa, o para cualquier propósito comercial o de lucro.</li>
+                <li><strong>Responsabilidad del usuario:</strong> Tú eres responsable de cualquier actividad realizada con tu cuenta o dispositivo.</li>
+                <li><strong>Contenido de terceros:</strong> La aplicación puede incluir referencias a contenido de jw.org. El uso de dicho contenido está sujeto a las políticas de jw.org, no de Servicio JW.</li>
             </ul>
-            <div class="warning-box">
-                <div class="wi">⚠️</div>
-                <p>Se recomienda <strong>realizar respaldos periódicos</strong> en Google Drive para evitar pérdida de datos ante cualquier eventualidad con tu dispositivo.</p>
-            </div>
         </div>
     </div>
 
@@ -182,11 +204,30 @@
     <div class="policy-section">
         <div class="section-header">
             <div class="section-num">4</div>
-            <h2>Limitación de Responsabilidad</h2>
+            <h2>Datos y Copias de Seguridad</h2>
         </div>
         <div class="section-body">
-            <p>La aplicación se proporciona <em>"tal cual" (as is)</em>, de manera gratuita, sin garantías de ningún tipo —tanto de funcionamiento perpetuo como comercial—.</p>
-            <p>El desarrollador no será legalmente responsable por ningún daño directo o indirecto, pérdida de información temporal o permanente que resulte del uso o la incapacidad de usar la aplicación.</p>
+            <ul class="policy-list">
+                <li><div><strong>Copias de seguridad opcionales:</strong> La aplicación proporciona una función nativa para hacer una copia de seguridad o respaldo rápido de los datos directamente hacia tu propia cuenta personal de Google Drive o iCloud. Esta funcionalidad es completamente opcional.</div></li>
+                <li><div><strong>Seguridad de respaldos:</strong> Todos los respaldos viajan cifrados entre tu dispositivo y tu cuenta de nube personal. El desarrollador nunca tiene acceso a estos archivos.</div></li>
+                <li><div><strong>No responsabilidad del desarrollador:</strong> El desarrollador <strong>no se hace responsable</strong> por ninguna pérdida de datos derivada de rotura del dispositivo, borrado accidental, desinstalación de la app, fallos de sincronización en la nube, o cambios en las políticas de Google o Apple.</div></li>
+                <li><div><strong>Responsabilidad del usuario:</strong> Es <strong>responsabilidad total del usuario</strong> gestionar de forma segura sus accesos, credenciales de cuenta y respaldos periódicos en múltiples plataformas.</div></li>
+                <li><div><strong>Restauración de datos:</strong> La aplicación proporciona herramientas para restaurar datos desde tus respaldos. Sin embargo, en caso de corrupción de archivos o problemas técnicos, el desarrollador no está obligado a recuperar datos perdidos.</div></li>
+            </ul>
+            <div class="warning-box">
+                <div class="wi">⚠️</div>
+                <p>Se recomienda <strong>realizar respaldos periódicos</strong> en Google Drive e iCloud simultaneamente para crear redundancia y evitar pérdida total de datos ante cualquier eventualidad con tu dispositivo o cuenta de nube.</p>
+            </div>
+            <div class="subsection">
+                <h3>Mejores prácticas de seguridad</h3>
+                <ul class="policy-list">
+                    <li>Realiza respaldos semanales como mínimo.</li>
+                    <li>Mantén tus credenciales de Google/Apple en un lugar seguro.</li>
+                    <li>Usa contraseñas fuertes y autenticación de dos factores.</li>
+                    <li>Verifica periódicamente que tus respaldos se completaron correctamente.</li>
+                    <li>Considera tener copias de seguridad en múltiples servicios de nube.</li>
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -194,10 +235,156 @@
     <div class="policy-section">
         <div class="section-header">
             <div class="section-num">5</div>
+            <h2>Limitación de Responsabilidad</h2>
+        </div>
+        <div class="section-body">
+            <p>La aplicación se proporciona <em>"tal cual" (as is)</em>, de manera gratuita, sin garantías de ningún tipo —tanto de funcionamiento perpetuo como comercial—.</p>
+            <p>El desarrollador no será legalmente responsable por ningún daño directo o indirecto, pérdida de información temporal o permanente que resulte del uso o la incapacidad de usar la aplicación, incluyendo pero no limitado a:</p>
+            <ul class="policy-list">
+                <li>Fallos de sincronización o pérdida de datos en la nube.</li>
+                <li>Incompatibilidad con versiones futuras del sistema operativo Android, iOS o iPadOS.</li>
+                <li>Daños por malware, virus o acceso no autorizado a tu dispositivo.</li>
+                <li>Pérdida de datos por actualizaciones del sistema operativo.</li>
+                <li>Cualquier daño económico, moral o reputacional derivado del uso de la aplicación.</li>
+                <li>Interrupción del servicio debido a razones técnicas, mantenimiento o cambios no previstos.</li>
+            </ul>
+            <div class="info-box">
+                <div class="ii">ℹ️</div>
+                <p>La responsabilidad total del desarrollador, en la medida permitida por la ley, se limita a un reembolso de lo que pagaste por la aplicación (en este caso, cero, porque es gratuita).</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 6 -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">6</div>
+            <h2>Privacidad y Protección de Datos</h2>
+        </div>
+        <div class="section-body">
+            <p>Tu privacidad es importante para nosotros. La aplicación fue diseñada con <strong>privacidad por defecto</strong>. Para más detalles sobre cómo manejamos tus datos, por favor consulta nuestra <a href="privacy.html"><strong>Política de Privacidad</strong></a>.</p>
+            <div class="subsection">
+                <h3>Puntos clave sobre privacidad</h3>
+                <ul class="policy-list">
+                    <li><strong>Almacenamiento local:</strong> Todos tus datos se guardan encriptados en tu dispositivo, no en servidores remotos del desarrollador.</li>
+                    <li><strong>Sin rastreo:</strong> La aplicación no recopila datos de ubicación, analíticas de uso ni información de comportamiento.</li>
+                    <li><strong>Sin publicidad:</strong> No hay anuncios, banners ni rastreadores de terceros.</li>
+                    <li><strong>No compartir datos:</strong> El desarrollador no vende, alquila ni comparte tus datos personales con terceros.</li>
+                    <li><strong>Copias de seguridad opcionales:</strong> Si activas respaldos en Google Drive o iCloud, tus datos se sincronizan directamente con tu cuenta personal, no con servidores del desarrollador.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 7 -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">7</div>
+            <h2>Actualizaciones y Cambios de la Aplicación</h2>
+        </div>
+        <div class="section-body">
+            <p>Nos reservamos el derecho de actualizar, modificar o descontinuar la aplicación en cualquier momento sin previo aviso. Aunque intentaremos mantener la aplicación funcional y segura, no podemos garantizar que estará disponible indefinidamente.</p>
+            <div class="subsection">
+                <h3>Compatibilidad futura</h3>
+                <ul class="policy-list">
+                    <li><strong>Actualizaciones del SO:</strong> No podemos garantizar que la aplicación será compatible con futuras versiones de Android, iOS o iPadOS.</li>
+                    <li><strong>Discontinuación:</strong> En caso de que la aplicación sea descontinuada, te notificaremos con la máxima anticipación posible.</li>
+                    <li><strong>Mejoras de seguridad:</strong> Realizaremos actualizaciones periódicas para mantener la seguridad de la aplicación.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 8 -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">8</div>
+            <h2>Conducta del Usuario y Términos Prohibidos</h2>
+        </div>
+        <div class="section-body">
+            <p>Al usar esta aplicación, aceptas no:</p>
+            <ul class="policy-list">
+                <li><strong>Usar la app ilegalmente:</strong> Para cualquier propósito ilegal, fraudulento o que viole leyes locales, nacionales o internacionales.</li>
+                <li><strong>Distribuir sin autorización:</strong> Compartir, vender, regalar o modificar la aplicación sin consentimiento del desarrollador.</li>
+                <li><strong>Dañar sistemas:</strong> Intentar hacer daño, descomponer o infiltrarse en los sistemas o servidores asociados con la aplicación.</li>
+                <li><strong>Acoso o abuso:</strong> Usar la aplicación para acosar, intimidar o abusar de terceros.</li>
+                <li><strong>Contenido ofensivo:</strong> Ingresar, compartir o distribuir contenido ilegal, ofensivo, odioso o discriminatorio.</li>
+                <li><strong>Uso abusivo:</strong> Sobrecargar deliberadamente la aplicación o los servidores de sincronización con tráfico anómalo.</li>
+            </ul>
+            <div class="warning-box">
+                <div class="wi">⚠️</div>
+                <p>El incumplimiento de estos términos puede resultar en la revocación de tu acceso a la aplicación y en acciones legales según corresponda.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 9 -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">9</div>
+            <h2>Derechos de Autor y Contenido de Terceros</h2>
+        </div>
+        <div class="section-body">
+            <p>Servicio JW respeta completamente los derechos de autor y la propiedad intelectual de terceros. La aplicación puede incluir o hacer referencia a contenido de jw.org, la Biblia y otros materiales protegidos.</p>
+            <div class="subsection">
+                <h3>Uso de contenido de terceros</h3>
+                <ul class="policy-list">
+                    <li><strong>Función de lector:</strong> Servicio JW actúa como herramienta de lectura y gestión personal, no como distribuidor ni repositorio.</li>
+                    <li><strong>Respeto de derechos:</strong> No alteramos, modificamos, copiamos de forma no autorizada ni redistribuimos contenido protegido.</li>
+                    <li><strong>Responsabilidad del usuario:</strong> Tú eres responsable de asegurar que tu uso de contenido de terceros cumple con sus términos y licencias.</li>
+                    <li><strong>Contenido de jw.org:</strong> Para dudas sobre el uso de materiales de jw.org, consulta sus políticas directamente en jw.org.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 10 -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">10</div>
             <h2>Cambios a estos Términos</h2>
         </div>
         <div class="section-body">
-            <p>Nos reservamos el derecho de modificar estos términos de uso sin previo aviso. El uso continuado de la aplicación tras cualquier cambio constituye la aceptación tácita de los términos actualizados.</p>
+            <p>Nos reservamos el derecho de modificar estos términos de uso sin previo aviso. El uso continuado de la aplicación tras cualquier cambio constituye la aceptación tácita de los términos modificados. Es tu responsabilidad revisar esta página periódicamente para estar consciente de cualquier cambio.</p>
+            <div class="subsection">
+                <h3>Cambios significativos</h3>
+                <p>En caso de cambios significativos que afecten tu privacidad o tus derechos, intentaremos notificarte a través de la aplicación o por correo electrónico a la dirección que proporcionaste, si aplica.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 11 -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">11</div>
+            <h2>Jurisdicción y Ley Aplicable</h2>
+        </div>
+        <div class="section-body">
+            <p>Estos términos y condiciones se rigen por las leyes de <strong>México</strong>, sin consideración de sus disposiciones sobre conflicto de leyes. Cualquier disputa derivada de estos términos será resuelta bajo la jurisdicción de los tribunales competentes de México.</p>
+            <div class="info-box">
+                <div class="ii">⚖️</div>
+                <p>Si eres residente de otra jurisdicción, es posible que otras leyes también se apliquen a tu uso de la aplicación, especialmente leyes de protección de datos como el GDPR en la UE.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 12 -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">12</div>
+            <h2>Resolución de Disputas y Contacto</h2>
+        </div>
+        <div class="section-body">
+            <p>Si tienes alguna disputa, reclamo o inquietud sobre estos términos, por favor contáctanos antes de tomar acciones legales. Intentaremos resolver el asunto de buena fe.</p>
+            <div class="subsection">
+                <h3>Pasos para resolver disputas</h3>
+                <ul class="policy-list">
+                    <li><strong>Paso 1:</strong> Envía un correo detallado a ismaeljair22@gmail.com describiendo el problema.</li>
+                    <li><strong>Paso 2:</strong> Esperaremos una respuesta en un plazo de 15 días hábiles.</li>
+                    <li><strong>Paso 3:</strong> Si no se resuelve, ambas partes pueden optar por mediación o arbitraje.</li>
+                    <li><strong>Paso 4:</strong> Solo después de agotados estos recursos se puede proceder con acciones legales formales.</li>
+                </ul>
+            </div>
         </div>
     </div>
 
