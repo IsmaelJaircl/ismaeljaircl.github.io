@@ -1,5 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+    <script>
+  // Redirigir a la app nativa si está instalada (fallback para cuando el Universal Link no interceptó)
+  (function() {
+    var params = window.location.search; // ?libro=Levítico&capitulo=15&versiculo=10
+    var appUrl = 'serviciojw://biblia' + params;
+    
+    // Intentar abrir la app
+    var start = Date.now();
+    window.location.href = appUrl;
+    
+    // Si después de 1.5s seguimos aquí, la app no está instalada → no hacer nada,
+    // el usuario verá la landing page normalmente.
+    setTimeout(function() {
+      if (Date.now() - start < 2000) {
+        // La app se abrió (el timer se pausó), no hacer nada
+      }
+    }, 1500);
+  })();
+</script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
