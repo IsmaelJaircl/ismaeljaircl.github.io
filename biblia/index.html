@@ -1,25 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-    <script>
-  // Redirigir a la app nativa si está instalada (fallback para cuando el Universal Link no interceptó)
-  (function() {
-    var params = window.location.search; // ?libro=Levítico&capitulo=15&versiculo=10
-    var appUrl = 'serviciojw://biblia' + params;
-    
-    // Intentar abrir la app
-    var start = Date.now();
-    window.location.href = appUrl;
-    
-    // Si después de 1.5s seguimos aquí, la app no está instalada → no hacer nada,
-    // el usuario verá la landing page normalmente.
-    setTimeout(function() {
-      if (Date.now() - start < 2000) {
-        // La app se abrió (el timer se pausó), no hacer nada
-      }
-    }, 1500);
-  })();
-</script>
 <head>
+    <script>
+      (function() {
+        var params = window.location.search;
+        window.location.href = 'serviciojw://biblia' + params;
+      })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>JW Extras — Biblia</title>
@@ -28,6 +15,11 @@
     <meta property="og:description" content="Abre este pasaje bíblico directamente en la app JW Extras">
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
