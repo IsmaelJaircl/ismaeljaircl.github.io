@@ -820,6 +820,116 @@
             border-radius: 999px;
         }
 
+        /* Sección Módulo de Congregación */
+        .congregation-section {
+            background: linear-gradient(180deg, #ffffff 0%, #f8faff 50%, #ffffff 100%);
+            padding: 110px 0;
+            border-top: 1px solid var(--slate-200);
+            position: relative;
+        }
+
+        .congregation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .congregation-card {
+            background: #ffffff;
+            border-radius: var(--radius-xl);
+            padding: 36px 32px;
+            border: 1px solid rgba(123, 110, 246, 0.16);
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .congregation-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(123, 110, 246, 0.35);
+            box-shadow: 0 18px 45px rgba(123, 110, 246, 0.1);
+        }
+
+        .congregation-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .congregation-card-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+        }
+
+        .congregation-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--dark-900);
+            margin-bottom: 10px;
+            letter-spacing: -0.3px;
+        }
+
+        .congregation-card p {
+            font-size: 0.95rem;
+            color: var(--slate-600);
+            line-height: 1.65;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .congregation-card .card-chip {
+            align-self: flex-start;
+            padding: 5px 14px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .congregation-banner {
+            margin-top: 36px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(123, 110, 246, 0.08));
+            border: 1px solid rgba(123, 110, 246, 0.2);
+            border-radius: var(--radius-lg);
+            padding: 24px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .congregation-banner-text {
+            font-size: 0.95rem;
+            color: var(--dark-800);
+            line-height: 1.6;
+        }
+
+        .congregation-banner-text strong {
+            color: var(--primary);
+        }
+
+        @media (max-width: 900px) {
+            .congregation-grid {
+                grid-template-columns: 1fr;
+            }
+            .congregation-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
         /* Sección de Fotos Reales del Ministerio (Lifestyle / In-Action) */
         .photo-gallery-section {
             background: #f8fafc;
@@ -1440,7 +1550,7 @@
         <header class="navbar">
             <a href="#" class="brand-logo">
                 <div class="brand-logo-icon">
-                    <img src="assets/images/nuevo_app_icon.png" alt="Mi Servicio Icono" onerror="this.onerror=null; this.src='assets/images/nuevo_app_icon.png';">
+                    <img src="assets/images/icono.png" alt="Mi Servicio Icono" onerror="this.onerror=null; this.src='assets/images/nuevo_app_icon.png';">
                 </div>
                 <span>Mi Servicio<em>: Mi Ministerio</em></span>
             </a>
@@ -1448,6 +1558,7 @@
             <nav>
                 <ul class="nav-menu">
                     <li><a href="#caracteristicas">Características</a></li>
+                    <li><a href="#congregacion">Congregación</a></li>
                     <li><a href="#galeria">Experiencia</a></li>
                     <li><a href="#faq">Preguntas</a></li>
                     <li><a href="privacy.html" class="badge-nav">🛡️ Privacidad</a></li>
@@ -1466,6 +1577,7 @@
     <div id="mobileMenuPanel" style="display:none; position:fixed; top:80px; left:20px; right:20px; background:rgba(255,255,255,0.98); backdrop-filter:blur(20px); border-radius:24px; padding:24px; box-shadow:0 20px 50px rgba(0,0,0,0.15); z-index:999; border:1px solid #e2e8f0;">
         <ul style="list-style:none; display:flex; flex-direction:column; gap:16px; font-size:1.05rem; font-weight:700;">
             <li><a href="#caracteristicas" onclick="toggleMobileMenu()" style="text-decoration:none; color:#0f172a;">Características</a></li>
+            <li><a href="#congregacion" onclick="toggleMobileMenu()" style="text-decoration:none; color:#7b6ef6;">🏛️ Congregación</a></li>
             <li><a href="#galeria" onclick="toggleMobileMenu()" style="text-decoration:none; color:#0f172a;">Experiencia y Fotos</a></li>
             <li><a href="#faq" onclick="toggleMobileMenu()" style="text-decoration:none; color:#0f172a;">Preguntas Frecuentes</a></li>
             <li><a href="privacy.html" onclick="toggleMobileMenu()" style="text-decoration:none; color:#2563eb;">🛡️ Política de Privacidad</a></li>
@@ -1647,6 +1759,85 @@
         </div>
     </section>
 
+    <!-- Módulo de Congregación: Tablero, Asignaciones, Salidas y Territorios -->
+    <section id="congregacion" class="congregation-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" style="background:rgba(123, 110, 246, 0.12); color:#6366f1; border-color:rgba(123, 110, 246, 0.25);">🏛️ Módulo de Congregación</span>
+                <h2 class="section-title">Tu congregación organizada en un solo lugar</h2>
+                <p class="section-desc">
+                    Herramientas especializadas para coordinar asignaciones, mantener informada a la congregación mediante el tablero digital y gestionar salidas a la predicación con orden teocrático.
+                </p>
+            </div>
+
+            <div class="congregation-grid">
+                <!-- Tarjeta 1: Tablero de Anuncios Digital -->
+                <div class="congregation-card">
+                    <div class="congregation-card-header">
+                        <div class="congregation-card-icon" style="background:#f5f3ff; color:#7b6ef6;">
+                            📌
+                        </div>
+                        <span class="card-chip" style="background:#f5f3ff; color:#7b6ef6;">Tablero Digital</span>
+                    </div>
+                    <h3>Tablero de Anuncios en Tiempo Real</h3>
+                    <p>
+                        Avisos semanales, cartas de sucursal, rol de aseo del Salón del Reino y recordatorios importantes al alcance de todos. Los publicadores acceden con un código QR o PIN seguro sin necesidad de cuentas complejas.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 2: Asignaciones de Reunión & S-89 -->
+                <div class="congregation-card">
+                    <div class="congregation-card-header">
+                        <div class="congregation-card-icon" style="background:#eff6ff; color:#2563eb;">
+                            📋
+                        </div>
+                        <span class="card-chip" style="background:#eff6ff; color:#2563eb;">Hojas S-89 en PDF</span>
+                    </div>
+                    <h3>Programa de Reuniones & Asignaciones S-89</h3>
+                    <p>
+                        Control integral de las reuniones de entre semana y fin de semana: oradores, lectores de La Atalaya, sonido, micrófonos, acomodadores y presidencia. Genera y exporta hojas de asignación S-89 en PDF listas para imprimir o enviar.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 3: Salidas a la Predicación & Carritos -->
+                <div class="congregation-card">
+                    <div class="congregation-card-header">
+                        <div class="congregation-card-icon" style="background:#ecfdf5; color:#10b981;">
+                            🚗
+                        </div>
+                        <span class="card-chip" style="background:#ecfdf5; color:#10b981;">Salidas & Carritos</span>
+                    </div>
+                    <h3>Salidas de Grupo & Testimonio Público</h3>
+                    <p>
+                        Organización de puntos de reunión para la predicación diaria, asignación de capitanes y coordinación de turnos de exhibidores portátiles (carritos) con control de horarios para evitar traslapes.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 4: Territorios de Congregación & Cobertura -->
+                <div class="congregation-card">
+                    <div class="congregation-card-header">
+                        <div class="congregation-card-icon" style="background:#fffbeb; color:#d97706;">
+                            🗺️
+                        </div>
+                        <span class="card-chip" style="background:#fffbeb; color:#d97706;">Control de Territorios</span>
+                    </div>
+                    <h3>Mapa Maestro de Territorios de Congregación</h3>
+                    <p>
+                        Seguimiento riguroso de cada territorio asignado y devuelto. Visualiza el porcentaje de cobertura de la congregación, mapas detallados de manzanas y fechas de trabajo para no dejar ninguna zona sin predicar.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Banner de Respaldo y Roles Teocráticos -->
+            <div class="congregation-banner">
+                <div style="font-size:28px;">🔐</div>
+                <div class="congregation-banner-text">
+                    <strong>Privacidad y Orden Teocrático Garantizados:</strong> Compatible con roles definidos para Ancianos, Siervos Ministeriales y Publicadores. Los datos de la congregación se sincronizan de forma cifrada mediante nube teocrática protegida.
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Galería Visual con Fotos Reales del Ministerio -->
     <section id="galeria" class="photo-gallery-section">
         <div class="container">
@@ -1777,6 +1968,17 @@
                     </div>
                 </div>
 
+                <!-- FAQ 3: Módulo de Congregación -->
+                <div class="faq-accordion-item">
+                    <button class="faq-header-btn" onclick="toggleFaq(this)">
+                        <span>¿Qué incluye el Módulo de Congregación y cómo se conecta mi salón?</span>
+                        <div class="faq-icon-chevron">▼</div>
+                    </button>
+                    <div class="faq-content-panel">
+                        El Módulo de Congregación permite a los hermanos coordinadores organizar de forma centralizada las actividades del Salón del Reino: tablero digital de anuncios y cartas, programa semanal de reuniones con asignaciones (oradores, lectores, sonido, acomodadores y generación automática de hojas S-89 en PDF), coordinación de salidas de predicación con capitanes, turnos de carritos de testimonio público y control maestro de territorios de congregación. Funciona con roles protegidos por PIN y QR para máxima seguridad teocrática.
+                    </div>
+                </div>
+
                 <!-- FAQ 3 -->
                 <div class="faq-accordion-item">
                     <button class="faq-header-btn" onclick="toggleFaq(this)">
@@ -1862,6 +2064,7 @@
                     <h4>Navegación</h4>
                     <ul class="footer-links">
                         <li><a href="#caracteristicas">Características</a></li>
+                        <li><a href="#congregacion">Módulo de Congregación</a></li>
                         <li><a href="#galeria">Experiencia Visual</a></li>
                         <li><a href="#privacidad">Pilares de Privacidad</a></li>
                         <li><a href="#faq">Preguntas Frecuentes</a></li>
