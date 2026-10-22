@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - Mi Servicio:Mi Ministerio</title>
+    <title>Política de Privacidad — Mi Servicio: Mi Ministerio</title>
     <meta name="google-site-verification" content="19ADT_-SKQlUU1AkqNYKCh8eRjh7qXYHI87OiJlvJvzQ" />
+    <meta name="description" content="Política de privacidad oficial y transparente de Mi Servicio: Mi Ministerio. Protección estricta de datos, almacenamiento local cifrado y cero publicidad.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
@@ -18,6 +19,7 @@
             --blue-50: #eff6ff;
             --slate-900: #0f172a;
             --slate-700: #334155;
+            --slate-600: #475569;
             --slate-500: #64748b;
             --slate-400: #94a3b8;
             --slate-300: #cbd5e1;
@@ -44,7 +46,7 @@
         .content-wrap { max-width: 820px; margin: 0 auto; padding: 48px 24px 80px; }
 
         /* INTRO CARD */
-        .intro-card { background: var(--blue-50); border: 1px solid var(--blue-100); border-radius: 16px; padding: 28px 32px; margin-bottom: 40px; display: flex; gap: 18px; align-items: flex-start; }
+        .intro-card { background: var(--blue-50); border: 1px solid var(--blue-100); border-radius: 16px; padding: 28px 32px; margin-bottom: 32px; display: flex; gap: 18px; align-items: flex-start; }
         .intro-icon { font-size: 2rem; flex-shrink: 0; margin-top: 2px; }
         .intro-card p { font-size: 1rem; color: var(--slate-700); line-height: 1.8; margin: 0; }
         .intro-card strong { color: var(--blue-600); }
@@ -52,22 +54,20 @@
         /* SECTIONS */
         .policy-section { background: var(--white); border-radius: 16px; border: 1px solid #e5eaf4; margin-bottom: 20px; overflow: hidden; }
         .section-header { padding: 24px 28px; display: flex; align-items: center; gap: 16px; border-bottom: 1px solid #f1f5f9; }
-        .section-num { width: 36px; height: 36px; min-width: 36px; background: var(--blue-500); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+        .section-num { width: 36px; height: 36px; min-width: 36px; background: var(--blue-500); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem; }
         .section-header h2 { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--slate-900); font-weight: 400; }
         .section-body { padding: 24px 28px; }
-        .section-body p { font-size: 0.97rem; color: var(--slate-500); line-height: 1.85; margin-bottom: 14px; }
+        .section-body p { font-size: 0.97rem; color: var(--slate-600); line-height: 1.85; margin-bottom: 14px; }
         .section-body p:last-child { margin-bottom: 0; }
         .section-body strong { color: var(--slate-900); font-weight: 600; }
         .section-body em { color: var(--blue-600); font-style: normal; font-weight: 500; }
+        .section-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--slate-900); margin: 18px 0 10px; }
 
         /* LIST */
         .policy-list { list-style: none; display: flex; flex-direction: column; gap: 12px; padding-left: 0; margin: 12px 0; }
-        .policy-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.97rem; color: var(--slate-500); line-height: 1.7; }
+        .policy-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.97rem; color: var(--slate-600); line-height: 1.7; }
         .policy-list li::before { content: ''; width: 8px; height: 8px; min-width: 8px; background: var(--blue-400); border-radius: 50%; margin-top: 8px; }
         .policy-list li strong { color: var(--slate-900); font-weight: 600; }
-
-        /* BADGE INLINE */
-        code { background: var(--blue-50); border: 1px solid var(--blue-100); padding: 2px 8px; border-radius: 6px; color: var(--blue-600); font-family: monospace; font-size: 0.88rem; }
 
         /* HIGHLIGHT BOX */
         .highlight-box { background: var(--slate-900); border-radius: 12px; padding: 20px 24px; margin-top: 16px; display: flex; gap: 14px; align-items: center; }
@@ -75,15 +75,15 @@
         .highlight-box p { color: var(--slate-300); font-size: 0.92rem; line-height: 1.7; margin: 0; }
         .highlight-box strong { color: white; }
 
-        /* NO DATA BADGE */
-        .no-data-row { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+        /* BADGES */
+        .no-data-row { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
         .no-badge { display: inline-flex; align-items: center; gap: 6px; background: #fef2f2; border: 1px solid #fecaca; color: #dc2626; font-size: 0.8rem; font-weight: 600; padding: 5px 12px; border-radius: 999px; }
         .yes-badge { display: inline-flex; align-items: center; gap: 6px; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; font-size: 0.8rem; font-weight: 600; padding: 5px 12px; border-radius: 999px; }
 
         /* CONTACT */
         .contact-card { background: linear-gradient(135deg, var(--blue-500) 0%, var(--blue-600) 100%); border-radius: 16px; padding: 32px; text-align: center; margin-top: 40px; }
         .contact-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: white; margin-bottom: 8px; font-weight: 400; }
-        .contact-card p { color: rgba(255,255,255,0.75); font-size: 0.95rem; margin-bottom: 18px; }
+        .contact-card p { color: rgba(255,255,255,0.85); font-size: 0.95rem; margin-bottom: 18px; line-height: 1.6; }
         .contact-card a { display: inline-block; background: white; color: var(--blue-600); font-weight: 700; font-size: 0.95rem; padding: 12px 28px; border-radius: 10px; text-decoration: none; transition: transform 0.2s; }
         .contact-card a:hover { background: var(--blue-50); transform: translateY(-1px); }
 
@@ -117,9 +117,9 @@
 
 <!-- HERO -->
 <div class="page-hero">
-    <div class="badge">🔒 Documento legal</div>
+    <div class="badge">🔒 Documento Legal Oficial</div>
     <h1>Política de Privacidad</h1>
-    <p class="date">Última actualización: 7 de octubre de 2026</p>
+    <p class="date">Última actualización: 22 de octubre de 2026</p>
 </div>
 
 <!-- CONTENT -->
@@ -128,165 +128,193 @@
     <!-- INTRO -->
     <div class="intro-card">
         <div class="intro-icon">🛡️</div>
-        <p>En <strong>Mi Servicio:Mi Ministerio</strong> valoramos tu privacidad y estamos totalmente comprometidos a proteger tus datos personales. Esta política explica de forma clara y transparente cómo manejamos tu información y qué datos se recopilan o no se recopilan.</p>
+        <p>En <strong>Mi Servicio: Mi Ministerio</strong> valoramos profundamente la confidencialidad de tu labor ministerial y estamos 100% comprometidos a salvaguardar tu información. Esta política describe de forma transparente cómo se gestionan tus datos bajo el principio estricto de <em>Privacidad por Diseño</em>.</p>
     </div>
 
     <div class="highlight-box" style="margin-bottom: 28px;">
         <div class="hi">📱</div>
-        <p><strong>Privacidad por defecto:</strong> Mi Servicio:Mi Ministerio funciona de manera completamente local y sin conexión en tu dispositivo. Tus registros de predicación, notas, horas, territorios y lecturas se mantienen bajo tu control total.</p>
+        <p><strong>Privacidad local por defecto:</strong> La aplicación funciona de manera autónoma, local y sin conexión a internet en tu dispositivo. Tus horas, notas personales, revisitas y territorios se mantienen bajo tu control absoluto.</p>
     </div>
 
-    <!-- SECTION 1 -->
+    <!-- SECCIÓN 1: Almacenamiento local -->
     <div class="policy-section">
         <div class="section-header">
             <div class="section-num">1</div>
-            <h2>Almacenamiento local y seguridad</h2>
+            <h2>Almacenamiento local y seguridad de datos</h2>
         </div>
         <div class="section-body">
-            <p>La aplicación almacena toda tu información <em>exclusivamente de forma local</em> en tu dispositivo celular. En ningún momento se envía a servidores externos salvo que actives explícitamente una función de respaldo o sincronización.</p>
+            <p>La aplicación almacena tus datos <em>exclusivamente de forma local</em> en la memoria de tu dispositivo móvil mediante una base de datos SQLite segura. En ningún momento se envían datos personales a servidores externos a menos que actives voluntariamente una función de respaldo o sincronización de congregación.</p>
             <ul class="policy-list">
-                <li><div><strong>Datos almacenados localmente:</strong> Información de perfil, registros de predicación, horas teocráticas, colocaciones, territorios, notas y lecturas.</div></li>
-                <li><div><strong>Encriptación:</strong> Todos los datos se almacenan en una base de datos privada y cifrada en tu dispositivo.</div></li>
-                <li><div><strong>Protección física:</strong> Tu información está protegida por el sistema de seguridad de tu teléfono (PIN, huella dactilar, Face ID, etc.).</div></li>
+                <li><div><strong>Datos almacenados localmente:</strong> Registro de horas de predicación, notas personales, revisitas, estudios bíblicos, asignaciones de territorio, marcadores bíblicos y preferencias de interfaz.</div></li>
+                <li><div><strong>Cifrado y sandbox de la plataforma:</strong> La información reside dentro del contenedor protegido de la aplicación (sandbox) de iOS o Android.</div></li>
+                <li><div><strong>Protección biométrica:</strong> Tu información está protegida por los mecanismos de seguridad nativos de tu dispositivo (Face ID, Touch ID o código de bloqueo).</div></li>
             </ul>
             <div class="no-data-row">
-                <span class="no-badge">✕ Sin rastreo de ubicación</span>
-                <span class="no-badge">✕ Sin analíticas de uso</span>
+                <span class="no-badge">✕ Sin rastreadores comerciales</span>
+                <span class="no-badge">✕ Sin analíticas de terceros</span>
                 <span class="no-badge">✕ Sin publicidad</span>
                 <span class="yes-badge">✓ 100% local en tu dispositivo</span>
             </div>
         </div>
     </div>
 
-    <!-- SECTION 2 -->
+    <!-- SECCIÓN 2: Permisos del dispositivo (App Store & Google Play) -->
     <div class="policy-section">
         <div class="section-header">
             <div class="section-num">2</div>
-            <h2>Servicios opcionales en la nube</h2>
+            <h2>Permisos del dispositivo y finalidad de uso</h2>
         </div>
         <div class="section-body">
-            <p>Si decides utilizar funciones opcionales de respaldo o sincronización, la aplicación puede conectarse a servicios en la nube para gestionar copias de seguridad y autenticación. Esto solo ocurre si tú lo autorizas expresamente.</p>
-
-            <h3>Qué se transmite y cómo</h3>
-            <ul class="policy-list">
-                <li><div><strong>Identificadores técnicos:</strong> Cuando activas un respaldo, se transmite un identificador único del dispositivo y/o tu correo electrónico asociado.</div></li>
-                <li><div><strong>Cifrado en tránsito:</strong> Todos los datos viajan mediante conexiones seguras cifradas (HTTPS/TLS).</div></li>
-                <li><div><strong>Tu control:</strong> Puedes desactivar o eliminar cualquier copia de seguridad en la nube en cualquier momento directamente desde los Ajustes de la aplicación.</div></li>
-            </ul>
-
-            <h3 style="margin-top: 16px;">Servicios e infraestructura involucrada</h3>
-            <p>Dependiendo de las funciones que elijas utilizar, la aplicación puede interactuar con:</p>
-            <ul class="policy-list">
-                <li><div><strong>Servidores seguros en la nube:</strong> Para validar la sincronización y alojar copias de respaldo cifradas de forma segura.</div></li>
-                <li><div><strong>Google Drive / iCloud (Opcional):</strong> Si decides exportar o sincronizar respaldos directamente con tus cuentas personales de Google o Apple.</div></li>
-            </ul>
-            <p style="margin-top: 12px; font-size: 0.92rem; color: var(--slate-600);">Nota: Todos los datos se transfieren de forma cifrada (HTTPS/TLS) y se utilizan exclusivamente para la operación del respaldo que tú autorizaste.</p>
-
-            <h3 style="margin-top: 20px;">Notificaciones y funciones de congregación</h3>
-            <p>Mi Servicio:Mi Ministerio funciona de manera completamente privada y en tu propio dispositivo. Solo si tú decides activar voluntariamente las notificaciones o unirte a tu congregación, se gestiona la información necesaria.</p>
-            
+            <p>Para brindar sus funciones teocráticas, la aplicación puede solicitar los siguientes permisos en tu dispositivo móvil. Cada permiso se utiliza estrictamente para su propósito declarado:</p>
             <ul class="policy-list">
                 <li>
                     <div>
-                        <strong>Avisos y notificaciones en tu celular:</strong> Si aceptas recibir notificaciones, se crea una clave anónima de tu dispositivo para que puedas recibir avisos de reuniones o recordatorios.
+                        <strong>Cámara (Escáner de código QR):</strong> Se utiliza <em>únicamente</em> cuando decides escanear un código QR para unirte a tu congregación o vincular el tablero digital de anuncios. La cámara procesa el código de forma óptica en tiempo real; <strong>jamás</strong> captura, guarda ni transmite fotos o videos a ningún servidor.
                     </div>
                 </li>
                 <li>
                     <div>
-                        <strong>Coordinación con tu congregación (Opcional):</strong> Si decides unirte al grupo de tu congregación con tu código, solo se comparten los datos básicos necesarios para la coordinación.
+                        <strong>Notificaciones locales:</strong> Se utilizan exclusivamente para enviarte avisos programados por ti mismo dentro de la app (recordatorios de revisitas, alertas de horario de predicación o avisos de tu congregación). No se utilizan para telemetría ni mensajes promocionales.
                     </div>
                 </li>
                 <li>
                     <div>
-                        <strong>Tú tienes el control total:</strong> Puedes salirte de la congregación o dejar de compartir datos en cualquier momento desde la aplicación.
+                        <strong>Almacenamiento y Galería de Fotos:</strong> Solo se accede cuando tú decides voluntariamente elegir una fotografía de perfil local, exportar una tarjeta de territorio o un formulario S-89 en PDF, o crear/restaurar un archivo de respaldo manual en tu teléfono.
                     </div>
                 </li>
             </ul>
-
-            <div class="highlight-box">
-                <div class="hi">🔐</div>
-                <p>Tu respaldo viaja <strong>cifrado</strong> entre tu celular y tu cuenta en la nube. Nosotros nunca vemos ni modificamos ese archivo.</p>
-            </div>
         </div>
     </div>
 
-    <!-- SECTION 3 -->
+    <!-- SECCIÓN 3: Custodia de revisitas y contactos -->
     <div class="policy-section">
         <div class="section-header">
             <div class="section-num">3</div>
-            <h2>No compartimos ni vendemos tus datos</h2>
+            <h2>Tratamiento y custodia de revisitas y personas contactadas</h2>
         </div>
         <div class="section-body">
+            <p>Como publicador o precursor, puedes utilizar la aplicación para registrar nombres, direcciones o temas tratados con personas interesadas en el ministerio de casa en casa.</p>
             <ul class="policy-list">
-                <li><div><strong>Política de no venta:</strong> Nosotros <em>NO vendemos, alquilamos, transamos ni compartimos</em> tus datos personales con terceros.</div></li>
-                <li><div><strong>Sin rastreo externo:</strong> No utilizamos tu información con fines publicitarios, de marketing, analíticas ni de rastreo de usuario.</div></li>
-                <li><div><strong>Sin datos comerciales:</strong> Tus registros de predicación y datos de servicio nunca serán utilizados comercialmente ni cedidos a terceras partes.</div></li>
-                <li><div><strong>Sincronización controlada:</strong> Si utilizas respaldos en la nube, esa sincronización se realiza exclusivamente entre tu dispositivo y tu propia cuenta en Google Drive o iCloud.</div></li>
+                <li><div><strong>Custodia exclusiva del usuario:</strong> La información sobre personas visitadas se almacena bajo la responsabilidad y custodia directa del publicador, quien actúa como titular exclusivo de su libreta personal.</div></li>
+                <li><div><strong>Sin acceso de terceros:</strong> El desarrollador no tiene acceso, visibilidad ni capacidad técnica para leer o recuperar los nombres o direcciones de tus revisitas.</div></li>
+                <li><div><strong>No comerciable:</strong> Dichos datos jamás son transferidos, vendidos ni compartidos con empresas de publicidad, marketing ni bases de datos comerciales.</div></li>
             </ul>
         </div>
     </div>
 
-    <!-- SECTION 4 -->
+    <!-- SECCIÓN 4: Servicios opcionales en la nube y Congregación -->
     <div class="policy-section">
         <div class="section-header">
             <div class="section-num">4</div>
-            <h2>Tus derechos y control de datos</h2>
+            <h2>Servicios opcionales en la nube y Módulo de Congregación</h2>
         </div>
         <div class="section-body">
-            <p>Tienes <strong>control total y absoluto</strong> sobre tus datos en todo momento. Puedes ejercer los siguientes derechos:</p>
+            <p>Si decides utilizar funciones de respaldo personal o unirte al Módulo de Congregación de tu Salón del Reino, la app se conecta a servicios de nube segura bajo tu consentimiento expreso.</p>
+
+            <h3>Copias de seguridad personales (Google Drive / iCloud)</h3>
+            <p>Los respaldos personales se realizan de forma directa entre tu dispositivo y tu propia cuenta en la nube (Google Drive o iCloud). El archivo viaja cifrado mediante protocolo seguro HTTPS/TLS y se almacena en tu almacenamiento privado.</p>
+
+            <h3 style="margin-top: 18px;">Módulo de Congregación y Tablero Digital</h3>
             <ul class="policy-list">
-                <li><div><strong>Acceso:</strong> Todos tus datos están visibles directamente en la aplicación.</div></li>
-                <li><div><strong>Rectificación:</strong> Puedes corregir, actualizar o modificar cualquier información en cualquier momento.</div></li>
-                <li><div><strong>Supresión:</strong> Puedes eliminar permanentemente todos los datos borrando los datos de la aplicación o desinstalándola.</div></li>
-                <li><div><strong>Portabilidad:</strong> Puedes exportar tus datos locales desde la aplicación en formatos estándar.</div></li>
-                <li><div><strong>Restricción de sincronización:</strong> Puedes desactivar cualquier función de copia de seguridad en la nube sin afectar el uso local de la app.</div></li>
-                <li><div><strong>Eliminación de cuenta y datos en la nube:</strong> Si vinculaste una cuenta o realizaste respaldos en la nube, puedes solicitar la eliminación permanente y definitiva de esos datos.</div></li>
+                <li><div><strong>Acceso restringido por roles:</strong> Las funciones de congregación (tablero de anuncios, programa semanal de reuniones, salidas de predicación y territorios de grupo) requieren un código de unión o PIN asignado por los coordinadores de tu congregación.</div></li>
+                <li><div><strong>Aislamiento de datos:</strong> La información de cada congregación se mantiene estrictamente aislada y protegida en infraestructura cifrada en reposo y en tránsito.</div></li>
+                <li><div><strong>Control de salida:</strong> Puedes desvincularte de la congregación en cualquier momento desde los Ajustes de la aplicación, cesando de inmediato cualquier sincronización.</div></li>
             </ul>
-            <div class="no-data-row" style="margin-top: 12px;">
-                <span class="yes-badge">✓ Derecho a eliminar tus datos</span>
-                <span class="yes-badge">✓ Control total en todo momento</span>
-                <span class="yes-badge">✓ Sin dependencia de terceros para operación básica</span>
-            </div>
         </div>
     </div>
 
-    <!-- SECTION 5 -->
+    <!-- SECCIÓN 5: No venta de datos -->
     <div class="policy-section">
         <div class="section-header">
             <div class="section-num">5</div>
-            <h2>Retención de datos y cambios en esta política</h2>
+            <h2>No compartimos ni vendemos tu información</h2>
         </div>
         <div class="section-body">
-            <p><strong>Retención local:</strong> Conservamos tus datos en tu dispositivo hasta que los elimines o desinstales la app.</p>
-            <p><strong>Retención en la nube:</strong> Las copias de seguridad en Google Drive o iCloud se conservan mientras tú las mantengas. Puedes eliminarlas manualmente en cualquier momento.</p>
-            <p><strong>Eliminación en la congregación:</strong> Si decides abandonar un grupo o dejar de compartir información con tu congregación, esa visibilidad se elimina desde la aplicación.</p>
-            <p><strong>Cambios en esta política:</strong> Podemos actualizar esta política de privacidad para reflejar cambios en la app, mejoras en seguridad o cambios en requisitos legales. La fecha de la última actualización será revisada en esta página.</p>
+            <ul class="policy-list">
+                <li><div><strong>Cero comercialización:</strong> No vendemos, alquilamos ni comercializamos datos personales con ninguna entidad o corporación.</div></li>
+                <li><div><strong>Sin perfiles de usuario:</strong> No creamos perfiles de comportamiento, publicidad dirigida ni monetización basada en datos.</div></li>
+                <li><div><strong>Proyecto sin fines de lucro:</strong> Mi Servicio: Mi Ministerio es una herramienta teocrática creada de manera independiente para apoyar la obra del ministerio cristiano.</div></li>
+            </ul>
         </div>
     </div>
 
-    <!-- SECTION 6 -->
+    <!-- SECCIÓN 6: Derechos y Eliminación definitiva de datos (Apple 5.1.1) -->
     <div class="policy-section">
         <div class="section-header">
             <div class="section-num">6</div>
-            <h2>Contenido de terceros</h2>
+            <h2>Tus derechos y mecanismo para eliminar tus datos</h2>
         </div>
         <div class="section-body">
-            <p>Mi Servicio:Mi Ministerio es una aplicación que te permite organizar y gestionar tus datos personales y tu información de servicio. La aplicación respeta completamente los derechos de autor y la propiedad intelectual.</p>
+            <p>Conforme a las directrices de privacidad de Apple (App Store Review Guideline 5.1.1) y el Reglamento General de Protección de Datos (GDPR), tú mantienes el derecho pleno e irrestricto sobre tus datos:</p>
             <ul class="policy-list">
-                <li><div><strong>Función de la app:</strong> Mi Servicio:Mi Ministerio no modifica, altera, redistribuye ni comercializa contenido de terceros.</div></li>
-                <li><div><strong>Responsabilidad:</strong> Para cuestiones legales o de derechos de autor relacionadas con contenido de terceros, consulta directamente con los propietarios o editores correspondientes.</div></li>
+                <li><div><strong>Acceso y rectificación:</strong> Puedes consultar, editar o corregir cualquier dato directamente en las pantallas de la app.</div></li>
+                <li><div><strong>Eliminación local instantánea:</strong> Puedes borrar la totalidad de tus datos locales en cualquier momento desinstalando la app o accediendo a <em>Ajustes ➔ Administrar Espacio ➔ Vaciar datos</em>.</div></li>
+                <li><div><strong>Eliminación de datos en la nube:</strong> Si vinculaste tu cuenta para respaldos o perteneces a una congregación, puedes solicitar la supresión definitiva de tus registros en servidores enviando un correo a <a href="mailto:ismaeljair22@gmail.com" style="color:var(--blue-500); text-decoration:none; font-weight:600;">ismaeljair22@gmail.com</a> con el asunto <em>"Solicitud de Eliminación de Datos"</em>. Tu solicitud será atendida y procesada en un plazo máximo de 30 días hábiles.</div></li>
             </ul>
-            <div class="highlight-box">
-                <div class="hi">📖</div>
-                <p>Mi Servicio:Mi Ministerio es una herramienta <strong>de gestión de datos personales</strong> que respeta completamente los derechos de autor y la propiedad intelectual.</p>
+            <div class="no-data-row" style="margin-top: 14px;">
+                <span class="yes-badge">✓ Derecho a la eliminación definitiva</span>
+                <span class="yes-badge">✓ Control total y portabilidad</span>
+                <span class="yes-badge">✓ Solicitud de baja en un clic</span>
             </div>
         </div>
     </div>
 
-    <!-- CONTACT -->
+    <!-- SECCIÓN 7: Protección de menores (COPPA / GDPR-K) -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">7</div>
+            <h2>Protección de la privacidad de menores</h2>
+        </div>
+        <div class="section-body">
+            <p>La aplicación no está dirigida a menores de 13 años (o la edad mínima legal en su país de residencia) sin la supervisión y autorización expresa de sus padres o tutores legales.</p>
+            <p>No recopilamos deliberadamente información personal identificable de menores de edad. Si un padre, madre o tutor tiene conocimiento de que su hijo nos ha proporcionado información personal en la nube sin su consentimiento, puede contactarnos para proceder a su eliminación inmediata.</p>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 8: Retención y conservación de datos -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">8</div>
+            <h2>Periodo de retención y conservación</h2>
+        </div>
+        <div class="section-body">
+            <p><strong>Datos locales:</strong> Permanecen en tu dispositivo únicamente mientras conserves la aplicación instalada o hasta que decidas borrarlos.</p>
+            <p><strong>Copias de respaldo en Google Drive / iCloud:</strong> Se mantienen en tu nube personal según las políticas de tu proveedor de cuenta y hasta que decidas eliminarlas.</p>
+            <p><strong>Datos de congregación:</strong> Los avisos y asignaciones se conservan durante el periodo teocrático relevante y se depuran conforme a las necesidades de la congregación.</p>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 9: Contenido de terceros y propiedad intelectual -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">9</div>
+            <h2>Propiedad intelectual y contenido de terceros</h2>
+        </div>
+        <div class="section-body">
+            <p>Mi Servicio: Mi Ministerio es una herramienta de software auxiliar para uso personal. No modifica, redistribuye ni comercializa publicaciones ni materiales protegidos por derechos de autor de terceros.</p>
+            <div class="highlight-box">
+                <div class="hi">📖</div>
+                <p>Todos los derechos sobre publicaciones, traducciones de la Biblia o marcas corresponden a sus respectivos titulares. La aplicación respeta rigurosamente los derechos de autor y normas de propiedad intelectual.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 10: Cambios en esta política y contacto -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">10</div>
+            <h2>Actualizaciones de la política y contacto directo</h2>
+        </div>
+        <div class="section-body">
+            <p>Podemos actualizar periódicamente esta Política de Privacidad para reflejar mejoras en la seguridad de la aplicación, nuevas funciones o actualizaciones en normativas legales de la App Store y Google Play.</p>
+            <p>Cualquier cambio entrará en vigor en la fecha de su publicación en esta página web oficial.</p>
+        </div>
+    </div>
+
+    <!-- TARJETA DE CONTACTO -->
     <div class="contact-card">
-        <h3>¿Tienes alguna duda?</h3>
-        <p>Si tienes preguntas sobre esta Política de Privacidad o deseas ejercer cualquiera de tus derechos, contáctanos directamente.</p>
+        <h3>¿Tienes preguntas o deseas ejercer tus derechos?</h3>
+        <p>Para dudas sobre esta política, aclaraciones sobre tus datos o solicitar la eliminación definitiva de tu información, contáctanos directamente:</p>
         <a href="mailto:ismaeljair22@gmail.com">ismaeljair22@gmail.com</a>
     </div>
 
@@ -297,9 +325,9 @@
     <div class="logo">Mi Servicio:<span>Mi Ministerio</span></div>
     <div class="footer-links">
         <a href="index.html">Inicio</a>
-        <a href="tos.html">Condiciones de Servicio</a>
+        <a href="tos.html">Términos de Servicio (TOS)</a>
     </div>
-    <p>© 2026 Mi Servicio:Mi Ministerio · Desarrollado por Ismael Castro Luna · Sin fines de lucro</p>
+    <p>© 2024 Ismael Jair Castro Luna · Todos los derechos reservados · Sin fines de lucro</p>
 </div>
 
 </body>
