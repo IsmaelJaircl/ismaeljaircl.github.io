@@ -3,113 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Condiciones de Servicio - Mi Servicio:Mi Ministerio</title>
-    <meta name="google-site-verification" content="19ADT_-SKQlU1AkqNYKCh8eRjh7qXYHI87OiJlvJvzQ" />
+    <title>Términos y Condiciones de Uso — Mi Servicio: Mi Ministerio</title>
+    <meta name="google-site-verification" content="19ADT_-SKQlUU1AkqNYKCh8eRjh7qXYHI87OiJlvJvzQ" />
+    <meta name="description" content="Términos y Condiciones de Uso y Contrato de Licencia de Usuario Final (EULA) de Mi Servicio: Mi Ministerio. Reglas de uso, custodia de datos, módulo de congregación, deslinde institucional y limitación de responsabilidad conforme a directrices internacionales.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
-            --blue-600: #1d4ed8;
-            --blue-500: #2563eb;
-            --blue-400: #3b82f6;
-            --blue-100: #dbeafe;
-            --blue-50: #eff6ff;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #3b82f6;
+            --primary-soft: #eff6ff;
+            --primary-border: #bfdbfe;
+            --slate-950: #020617;
             --slate-900: #0f172a;
+            --slate-850: #172033;
+            --slate-800: #1e293b;
             --slate-700: #334155;
+            --slate-600: #475569;
             --slate-500: #64748b;
             --slate-400: #94a3b8;
             --slate-300: #cbd5e1;
+            --slate-200: #e2e8f0;
             --slate-100: #f1f5f9;
+            --slate-50: #f8fafc;
             --white: #ffffff;
+            --emerald: #10b981;
+            --emerald-soft: #ecfdf5;
             --amber: #f59e0b;
+            --amber-soft: #fffbeb;
+            --indigo: #6366f1;
+            --indigo-soft: #eef2ff;
         }
         html { scroll-behavior: smooth; }
-        body { font-family: 'DM Sans', sans-serif; background: var(--slate-100); color: var(--slate-900); line-height: 1.7; min-height: 100vh; }
+        body { font-family: 'DM Sans', sans-serif; background: #f8fafc; color: var(--slate-900); line-height: 1.85; min-height: 100vh; }
 
         /* NAV */
-        nav { background: rgba(255,255,255,0.92); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(0,0,0,0.06); padding: 16px 40px; display: flex; align-items: center; justify-content: space-between; }
-        .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--blue-500); text-decoration: none; }
+        nav { background: rgba(255,255,255,0.96); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(226,232,240,0.8); padding: 18px 48px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 20px rgba(15,23,42,0.03); }
+        .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.4rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
         .nav-logo span { color: var(--slate-900); }
-        .btn-back { display: inline-flex; align-items: center; gap: 8px; color: var(--slate-500); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
-        .btn-back:hover { color: var(--blue-500); }
+        .btn-back { display: inline-flex; align-items: center; gap: 8px; color: var(--slate-600); text-decoration: none; font-size: 0.9rem; font-weight: 600; padding: 8px 16px; border-radius: 999px; background: var(--slate-100); transition: all 0.2s; }
+        .btn-back:hover { background: var(--primary-soft); color: var(--primary); }
 
-        /* HERO */
-        .page-hero { background: linear-gradient(135deg, var(--slate-900) 0%, #1e3a8a 100%); padding: 60px 40px; text-align: center; }
-        .page-hero .badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; padding: 8px 14px; border-radius: 999px; margin-bottom: 18px; }
-        .page-hero h1 { font-family: 'DM Serif Display', serif; font-size: 2.8rem; color: white; margin-bottom: 10px; }
-        .page-hero .date { font-size: 0.85rem; color: var(--slate-400); }
+        /* HERO STRIP */
+        .page-hero { background: linear-gradient(135deg, var(--slate-950) 0%, #0f2454 50%, var(--slate-900) 100%); padding: 80px 24px; text-align: center; position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .page-hero::before { content: ''; position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(37,99,235,0.18), transparent 70%); top: -200px; left: 50%; transform: translateX(-50%); pointer-events: none; }
+        .page-hero .badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.95); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; padding: 8px 18px; border-radius: 999px; margin-bottom: 18px; }
+        .page-hero h1 { font-family: 'DM Serif Display', serif; font-size: 3.4rem; color: white; margin-bottom: 14px; letter-spacing: -0.5px; line-height: 1.15; }
+        .page-hero .hero-desc { max-width: 720px; margin: 0 auto 16px; color: var(--slate-300); font-size: 1.1rem; line-height: 1.7; }
+        .page-hero .meta-bar { display: inline-flex; gap: 24px; font-size: 0.88rem; color: var(--slate-400); flex-wrap: wrap; justify-content: center; }
 
-        /* CONTENT */
-        .content-wrap { max-width: 820px; margin: 0 auto; padding: 48px 24px 80px; }
+        /* LAYOUT */
+        .content-wrap { max-width: 980px; margin: 0 auto; padding: 48px 24px 120px; }
+
+        /* ÍNDICE INTERACTIVO */
+        .toc-box { background: white; border: 1px solid var(--slate-200); border-radius: 20px; padding: 32px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(15,23,42,0.03); }
+        .toc-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--slate-100); }
+        .toc-header h3 { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--slate-900); }
+        .toc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 24px; }
+        .toc-grid a { color: var(--slate-600); text-decoration: none; font-size: 0.92rem; font-weight: 500; transition: all 0.2s; display: flex; align-items: center; gap: 8px; }
+        .toc-grid a:hover { color: var(--primary); transform: translateX(3px); }
+        .toc-grid a .toc-num { color: var(--primary); font-weight: 700; font-size: 0.82rem; min-width: 22px; }
 
         /* INTRO CARD */
-        .intro-card { background: var(--blue-50); border: 1px solid var(--blue-100); border-radius: 16px; padding: 28px 32px; margin-bottom: 40px; display: flex; gap: 18px; align-items: flex-start; }
-        .intro-icon { font-size: 2rem; flex-shrink: 0; margin-top: 2px; }
-        .intro-card p { font-size: 1rem; color: var(--slate-700); line-height: 1.8; margin: 0; }
-        .intro-card strong { color: var(--blue-600); }
+        .intro-card { background: linear-gradient(135deg, var(--primary-soft) 0%, #ffffff 100%); border: 1px solid var(--primary-border); border-radius: 20px; padding: 36px; margin-bottom: 36px; display: flex; gap: 24px; align-items: flex-start; box-shadow: 0 8px 24px rgba(37,99,235,0.06); }
+        .intro-icon { font-size: 2.8rem; flex-shrink: 0; line-height: 1; }
+        .intro-card p { font-size: 1.05rem; color: var(--slate-700); line-height: 1.85; margin: 0; }
+        .intro-card strong { color: var(--primary-dark); }
 
-        /* SECTIONS */
-        .policy-section { background: var(--white); border-radius: 16px; border: 1px solid #e5eaf4; margin-bottom: 20px; overflow: hidden; }
-        .section-header { padding: 24px 28px; display: flex; align-items: center; gap: 16px; border-bottom: 1px solid #f1f5f9; }
-        .section-num { width: 36px; height: 36px; min-width: 36px; background: var(--slate-900); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.86rem; }
-        .section-header h2 { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--slate-900); font-weight: 400; }
-        .section-body { padding: 24px 28px; }
-        .section-body p { font-size: 0.97rem; color: var(--slate-500); line-height: 1.85; margin-bottom: 14px; }
+        /* SECCIONES Y ARTÍCULOS */
+        .policy-section { background: var(--white); border-radius: 20px; border: 1px solid #e2e8f0; margin-bottom: 28px; overflow: hidden; box-shadow: 0 6px 18px rgba(15,23,42,0.02); }
+        .section-header { padding: 28px 36px; display: flex; align-items: center; gap: 20px; border-bottom: 1px solid #f1f5f9; background: #ffffff; }
+        .section-num { width: 44px; height: 44px; min-width: 44px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; box-shadow: 0 6px 14px rgba(37,99,235,0.25); }
+        .section-header h2 { font-family: 'DM Serif Display', serif; font-size: 1.55rem; color: var(--slate-900); font-weight: 400; letter-spacing: -0.2px; }
+        
+        .section-body { padding: 32px 36px; }
+        .section-body p { font-size: 1rem; color: var(--slate-600); line-height: 1.88; margin-bottom: 18px; }
         .section-body p:last-child { margin-bottom: 0; }
         .section-body strong { color: var(--slate-900); font-weight: 600; }
-        .section-body em { color: var(--blue-600); font-style: normal; font-weight: 500; }
+        .section-body em { color: var(--primary); font-style: normal; font-weight: 600; }
+        .section-body h3 { font-size: 1.18rem; font-weight: 700; color: var(--slate-900); margin: 26px 0 12px; display: flex; align-items: center; gap: 8px; }
+        .section-body h4 { font-size: 1.02rem; font-weight: 700; color: var(--slate-800); margin: 18px 0 8px; }
 
         /* LIST */
-        .policy-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-        .policy-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.97rem; color: var(--slate-500); line-height: 1.7; }
-        .policy-list li::before { content: ''; width: 8px; height: 8px; min-width: 8px; background: var(--slate-400); border-radius: 50%; margin-top: 8px; }
+        .policy-list { list-style: none; display: flex; flex-direction: column; gap: 14px; padding-left: 0; margin: 18px 0; }
+        .policy-list li { display: flex; gap: 14px; align-items: flex-start; font-size: 0.98rem; color: var(--slate-600); line-height: 1.8; }
+        .policy-list li::before { content: ''; width: 8px; height: 8px; min-width: 8px; background: var(--primary); border-radius: 50%; margin-top: 11px; }
         .policy-list li strong { color: var(--slate-900); font-weight: 600; }
 
+        /* TABLA / MATRIZ DE RESPONSABILIDADES */
+        .table-responsive { overflow-x: auto; margin: 24px 0; border-radius: 14px; border: 1px solid var(--slate-200); box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+        .tos-matrix { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.92rem; background: white; }
+        .tos-matrix th { background: var(--slate-900); color: white; padding: 14px 18px; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .tos-matrix td { padding: 14px 18px; border-bottom: 1px solid var(--slate-100); color: var(--slate-600); vertical-align: top; line-height: 1.6; }
+        .tos-matrix tr:last-child td { border-bottom: none; }
+        .tos-matrix tr:hover td { background: var(--slate-50); }
+        .badge-role { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 0.78rem; font-weight: 700; }
+        .badge-dev { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+        .badge-user { background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; }
+
+        /* GLOSARIO */
+        .glossary-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 20px 0; }
+        .glossary-card { background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 14px; padding: 20px; }
+        .glossary-card h4 { color: var(--primary-dark); font-size: 1rem; margin-bottom: 8px; font-weight: 700; }
+        .glossary-card p { font-size: 0.92rem; color: var(--slate-600); margin: 0; line-height: 1.65; }
+
+        /* CASOS PRÁCTICOS / ESCENARIOS */
+        .scenario-box { background: white; border-left: 4px solid var(--primary); border-radius: 0 14px 14px 0; padding: 20px 24px; margin: 16px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.02); border-top: 1px solid var(--slate-100); border-right: 1px solid var(--slate-100); border-bottom: 1px solid var(--slate-100); }
+        .scenario-box h4 { color: var(--slate-900); font-size: 1.05rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        .scenario-box p { font-size: 0.95rem; color: var(--slate-600); margin: 0; line-height: 1.7; }
+
+        /* SUB-BOX TABLE / CARD */
+        .policy-subbox { background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 14px; padding: 22px 26px; margin: 18px 0; }
+        .policy-subbox h4 { font-size: 1.05rem; font-weight: 700; color: var(--slate-900); margin-bottom: 8px; }
+        .policy-subbox p { margin-bottom: 10px; font-size: 0.95rem; }
+        .policy-subbox p:last-child { margin-bottom: 0; }
+
+        /* HIGHLIGHT BOX */
+        .highlight-box { background: var(--slate-900); border-radius: 16px; padding: 24px 28px; margin: 24px 0; display: flex; gap: 18px; align-items: center; }
+        .highlight-box .hi { font-size: 2rem; flex-shrink: 0; line-height: 1; }
+        .highlight-box p { color: #e2e8f0; font-size: 0.96rem; line-height: 1.75; margin: 0; }
+        .highlight-box strong { color: white; }
+
         /* WARNING BOX */
-        .warning-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: 12px; padding: 18px 22px; margin-top: 16px; display: flex; gap: 12px; align-items: flex-start; }
-        .warning-box .wi { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
-        .warning-box p { color: #92400e; font-size: 0.92rem; line-height: 1.7; margin: 0; }
-        .warning-box strong { color: #78350f; }
+        .warning-card { background: #fffbeb; border: 1px solid #fde68a; border-radius: 16px; padding: 24px 28px; margin: 20px 0; display: flex; gap: 18px; align-items: flex-start; }
+        .warning-card .wi { font-size: 1.8rem; flex-shrink: 0; line-height: 1; color: #d97706; }
+        .warning-card p { color: #92400e; font-size: 0.96rem; line-height: 1.75; margin: 0; }
+        .warning-card strong { color: #78350f; font-weight: 700; }
 
-        /* INFO BOX */
-        .info-box { background: var(--slate-900); border-radius: 12px; padding: 20px 24px; margin-top: 16px; display: flex; gap: 14px; align-items: flex-start; }
-        .info-box .ii { font-size: 1.5rem; flex-shrink: 0; }
-        .info-box p { color: var(--slate-300); font-size: 0.92rem; line-height: 1.7; margin: 0; }
-        .info-box strong { color: white; }
-
-        /* SUBSECTION */
-        .subsection { margin-top: 20px; padding-top: 20px; border-top: 1px solid #f1f5f9; }
-        .subsection h3 { font-size: 1.1rem; color: var(--slate-900); font-weight: 600; margin-bottom: 12px; }
+        /* FAQ ACCORDION EN TOS */
+        .tos-faq-item { border: 1px solid var(--slate-200); border-radius: 14px; margin-bottom: 12px; overflow: hidden; background: white; }
+        .tos-faq-header { padding: 18px 22px; font-weight: 700; color: var(--slate-900); font-size: 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; background: #ffffff; transition: background 0.2s; }
+        .tos-faq-header:hover { background: var(--slate-50); color: var(--primary); }
+        .tos-faq-body { padding: 18px 22px; color: var(--slate-600); font-size: 0.95rem; line-height: 1.75; border-top: 1px solid var(--slate-100); background: #fafafa; }
 
         /* CONTACT */
-        .contact-card { background: linear-gradient(135deg, var(--slate-900) 0%, #1e3a8a 100%); border-radius: 16px; padding: 32px; text-align: center; margin-top: 40px; }
-        .contact-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: white; margin-bottom: 8px; font-weight: 400; }
-        .contact-card p { color: rgba(255,255,255,0.65); font-size: 0.92rem; margin-bottom: 20px; line-height: 1.7; }
-        .contact-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-        .contact-card a.btn-email { display: inline-block; background: white; color: var(--slate-900); font-weight: 700; font-size: 0.92rem; padding: 11px 26px; border-radius: 10px; text-decoration: none; transition: transform 0.2s, background 0.2s; }
-        .contact-card a.btn-email:hover { background: var(--blue-50); transform: translateY(-1px); }
-        .contact-card a.btn-privacy { display: inline-block; background: transparent; color: white; border: 1.5px solid rgba(255,255,255,0.35); font-weight: 600; font-size: 0.92rem; padding: 11px 26px; border-radius: 10px; text-decoration: none; transition: background 0.2s; }
-        .contact-card a.btn-privacy:hover { background: rgba(255,255,255,0.08); }
+        .contact-card { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); border-radius: 20px; padding: 44px; text-align: center; margin-top: 56px; box-shadow: 0 16px 36px rgba(37,99,235,0.25); color: white; }
+        .contact-card h3 { font-family: 'DM Serif Display', serif; font-size: 2rem; color: white; margin-bottom: 12px; font-weight: 400; }
+        .contact-card p { color: rgba(255,255,255,0.92); font-size: 1.05rem; margin-bottom: 26px; line-height: 1.7; max-width: 640px; margin-left: auto; margin-right: auto; }
+        .contact-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+        .contact-card a.btn-primary-action { display: inline-block; background: white; color: var(--primary-dark); font-weight: 700; font-size: 1rem; padding: 14px 34px; border-radius: 14px; text-decoration: none; transition: all 0.2s ease; box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
+        .contact-card a.btn-primary-action:hover { background: var(--primary-soft); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,0.2); }
+        .contact-card a.btn-outline-action { display: inline-block; background: transparent; color: white; border: 1.5px solid rgba(255,255,255,0.4); font-weight: 600; font-size: 1rem; padding: 14px 32px; border-radius: 14px; text-decoration: none; transition: all 0.2s ease; }
+        .contact-card a.btn-outline-action:hover { background: rgba(255,255,255,0.12); border-color: white; }
 
         /* FOOTER */
-        .page-footer { background: var(--slate-900); padding: 30px 40px; text-align: center; }
-        .page-footer .logo { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: white; margin-bottom: 6px; }
-        .page-footer .logo span { color: var(--blue-400); }
-        .page-footer .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 12px 0; }
-        .page-footer .footer-links a { color: var(--slate-400); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
-        .page-footer .footer-links a:hover { color: var(--blue-400); }
-        .page-footer p { font-size: 0.78rem; color: var(--slate-500); }
+        .page-footer { background: var(--slate-950); padding: 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.08); }
+        .page-footer .logo { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: white; margin-bottom: 8px; }
+        .page-footer .logo span { color: var(--primary-light); }
+        .page-footer p { font-size: 0.85rem; color: var(--slate-400); max-width: 700px; margin: 0 auto; line-height: 1.6; }
+        .page-footer .footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin: 16px 0; }
+        .page-footer .footer-links a { color: var(--slate-300); text-decoration: none; font-size: 0.88rem; font-weight: 600; transition: color 0.2s; }
+        .page-footer .footer-links a:hover { color: var(--primary-light); }
 
-        @media (max-width: 700px) {
+        @media (max-width: 768px) {
             nav { padding: 14px 20px; }
-            .page-hero { padding: 50px 22px; }
-            .page-hero h1 { font-size: 2rem; }
+            .page-hero { padding: 50px 20px; }
+            .page-hero h1 { font-size: 2.3rem; }
             .content-wrap { padding: 32px 16px 60px; }
-            .intro-card { flex-direction: column; gap: 10px; padding: 22px; }
-            .section-header { padding: 20px 22px; }
-            .section-body { padding: 20px 22px; }
+            .toc-grid { grid-template-columns: 1fr; }
+            .glossary-grid { grid-template-columns: 1fr; }
+            .intro-card { flex-direction: column; gap: 16px; padding: 24px; }
+            .section-header { padding: 22px 24px; }
+            .section-body { padding: 24px; }
+            .contact-card { padding: 30px 20px; }
         }
     </style>
 </head>
@@ -118,281 +177,412 @@
 <!-- NAV -->
 <nav>
     <a href="index.html" class="nav-logo">Mi Servicio:<span>Mi Ministerio</span></a>
-    <a href="index.html" class="btn-back">← Volver al inicio</a>
+    <a href="index.html" class="btn-back">← Volver al portal oficial</a>
 </nav>
 
 <!-- HERO -->
 <div class="page-hero">
-    <div class="badge">📄 Documento legal</div>
-    <h1>Condiciones de Servicio</h1>
-    <p class="date">Última actualización: 7 de octubre de 2026</p>
+    <div class="badge">⚖️ Acuerdo Legal y Contrato de Licencia de Usuario Final (EULA)</div>
+    <h1>Términos y Condiciones de Uso</h1>
+    <p class="hero-desc">Marco contractual vinculante que regula el uso de la aplicación móvil, los módulos de organización ministerial y congregacional, y las directrices de responsabilidad legal.</p>
+    <div class="meta-bar">
+        <span>📅 Última actualización: 22 de octubre de 2026</span>
+        <span>🏛️ Versión Legal: 3.2.0</span>
+        <span>🌐 Ámbito: Internacional (Conforme a normativas de App Store y Google Play)</span>
+    </div>
 </div>
 
 <!-- CONTENT -->
 <div class="content-wrap">
 
-    <!-- INTRO -->
+    <!-- INTRO CARD -->
     <div class="intro-card">
         <div class="intro-icon">📋</div>
-        <p>Al utilizar la aplicación <strong>Mi Servicio:Mi Ministerio</strong>, usted acepta los siguientes términos y condiciones de uso. Por favor léelos con atención antes de continuar usando la aplicación.</p>
+        <div>
+            <p>El presente documento constituye un <strong>contrato vinculante de Términos y Condiciones de Uso y Contrato de Licencia de Usuario Final (EULA)</strong> celebrado entre usted («el Usuario») y el desarrollador titular, <strong>Ismael Jair Castro Luna</strong>. Al descargar, instalar, actualizar o utilizar la aplicación <strong>Mi Servicio: Mi Ministerio</strong>, usted declara de manera informada y expresa haber leído, comprendido y aceptado en su totalidad las cláusulas, estipulaciones y alcances jurídicos contenidos en este instrumento legal.</p>
+        </div>
     </div>
 
-    <!-- SECTION 1 -->
-    <div class="policy-section">
+    <!-- ÍNDICE DE CONTENIDOS -->
+    <div class="toc-box">
+        <div class="toc-header">
+            <span>📑</span>
+            <h3>Índice General de Artículos Contractuales</h3>
+        </div>
+        <div class="toc-grid">
+            <a href="#art1"><span class="toc-num">01.</span> Naturaleza del Acuerdo y Consentimiento</a>
+            <a href="#art2"><span class="toc-num">02.</span> Glosario Operativo y Definiciones</a>
+            <a href="#art3"><span class="toc-num">03.</span> Licencia Limitada de Software (EULA)</a>
+            <a href="#art4"><span class="toc-num">04.</span> Capacidad Jurídica y Menores</a>
+            <a href="#art5"><span class="toc-num">05.</span> Declaración de Independencia Legal</a>
+            <a href="#art6"><span class="toc-num">06.</span> Custodia Exclusiva de Revisitas</a>
+            <a href="#art7"><span class="toc-num">07.</span> Condiciones del Módulo de Congregación</a>
+            <a href="#art8"><span class="toc-num">08.</span> Copias de Respaldo y Sincronización</a>
+            <a href="#art9"><span class="toc-num">09.</span> Conductas Expresamente Prohibidas</a>
+            <a href="#art10"><span class="toc-num">10.</span> Matriz de Responsabilidades y Obligaciones</a>
+            <a href="#art11"><span class="toc-num">11.</span> Disponibilidad y Cláusula «Tal Cual» (As-Is)</a>
+            <a href="#art12"><span class="toc-num">12.</span> Limitación de Responsabilidad Legal</a>
+            <a href="#art13"><span class="toc-num">13.</span> Propiedad Intelectual y Derechos de Autor</a>
+            <a href="#art14"><span class="toc-num">14.</span> Terminación, Suspensión y Revocación</a>
+            <a href="#art15"><span class="toc-num">15.</span> Marco Jurídico y Resolución de Controversias</a>
+            <a href="#art16"><span class="toc-num">16.</span> Preguntas Frecuentes y Notificaciones</a>
+        </div>
+    </div>
+
+    <!-- ARTÍCULO 1 -->
+    <div class="policy-section" id="art1">
         <div class="section-header">
             <div class="section-num">1</div>
-            <h2>Descripción del Servicio</h2>
+            <h2>Naturaleza del Acuerdo y Aceptación Vinculante</h2>
         </div>
         <div class="section-body">
-            <p>Mi Servicio:Mi Ministerio es una aplicación y herramienta personal diseñada para ayudar a los usuarios a organizar e ingresar de manera limpia sus actividades ministeriales personales, incluyendo registros, estadísticas y seguimiento del servicio.</p>
-            <div class="info-box">
-                <div class="ii">📱</div>
-                <p>La aplicación es <strong>completamente gratuita</strong>, sin anuncios comerciales ni cargos obligatorios. Disponible para dispositivos móviles (iOS y Android).</p>
-            </div>
-            <div class="subsection">
-                <h3>Funcionalidades principales</h3>
-                <ul class="policy-list">
-                    <li><strong>Registro de actividades ministeriales:</strong> Mantén un control detallado de tus horas, colocaciones, revisitas y videos compartidos.</li>
-                    <li><strong>Gestión de territorios:</strong> Organiza mapas, notas e historial de actividades por territorio.</li>
-                    <li><strong>Copias de seguridad en la nube:</strong> Sincroniza tus datos de forma segura y encriptada mediante servicios en la nube compatibles.</li>
-                    <li><strong>Exportación de datos:</strong> Descarga tus datos en formato JSON para análisis personal.</li>
-                    <li><strong>Almacenamiento local:</strong> Todos tus datos se guardan de forma encriptada en tu dispositivo.</li>
-                </ul>
+            <p>El acceso, descarga, instalación, ejecución o interacción con <strong>Mi Servicio: Mi Ministerio</strong> (en adelante, «la Aplicación») implica la aceptación plena, irrestricta y sin reservas de los presentes Términos y Condiciones de Uso. Si en cualquier momento el Usuario no estuviere conforme o en desacuerdo con alguno de los términos aquí consignados, deberá abstenerse de utilizar la Aplicación y proceder a su desinstalación inmediata de cualquier dispositivo móvil o informático bajo su control.</p>
+            <p>Este instrumento legal complementa y opera en estricta coordinación con la <strong>Declaración Oficial de Privacidad y Protección de Datos</strong> del Desarrollador. Ambas piezas jurídicas forman un marco legal único regulador de la relación entre el Usuario y el Desarrollador titular.</p>
+            <div class="highlight-box">
+                <div class="hi">⚖️</div>
+                <p><strong>Fuerza Obligatoria:</strong> Al pulsar "Instalar", "Abrir" o "Continuar", el Usuario perfecciona electrónicamente un acuerdo vinculante con validez jurídica internacional conforme a las normas de comercio electrónico y software vigentes.</p>
             </div>
         </div>
     </div>
 
-    <!-- SECTION 2 -->
-    <div class="policy-section">
+    <!-- ARTÍCULO 2 -->
+    <div class="policy-section" id="art2">
         <div class="section-header">
             <div class="section-num">2</div>
-            <h2>Licencia de Uso y Derechos</h2>
+            <h2>Glosario Operativo y Definiciones Legales</h2>
         </div>
         <div class="section-body">
-            <p>La aplicación Mi Servicio:Mi Ministerio se proporciona bajo una <em>licencia personal, no transferible e intransferible</em> para tu uso exclusivo. Esto significa:</p>
-            <ul class="policy-list">
-                <li><strong>Licencia Personal:</strong> La aplicación es solo para ti. No puedes transferir, vender, regalar ni compartir tu acceso a terceros.</li>
-                <li><strong>No comercial:</strong> La aplicación está prohibida para cualquier uso comercial o de lucro. Es únicamente para gestión personal sin fines de lucro.</li>
-                <li><strong>Sin modificación:</strong> No puedes modificar, descompilar, hacer ingeniería inversa ni alterar el código fuente de la aplicación.</li>
-                <li><strong>Propiedad intelectual:</strong> Todos los derechos de autor, marcas registradas y propiedad intelectual de Mi Servicio:Mi Ministerio pertenecen al desarrollador. Solo adquieres el derecho de uso personal.</li>
-            </ul>
-            <div class="warning-box">
-                <div class="wi">⚠️</div>
-                <p>La distribución no autorizada, venta o alquiler de la aplicación constituye una violación de estos términos y puede resultar en consecuencias legales.</p>
+            <p>Para la correcta interpretación técnica y jurídica de los presentes Términos de Servicio, las partes convienen en atribuir a los siguientes términos el sentido exacto que a continuación se define:</p>
+            
+            <div class="glossary-grid">
+                <div class="glossary-card">
+                    <h4>Aplicación</h4>
+                    <p>El software aplicativo para dispositivos móviles denominado «Mi Servicio: Mi Ministerio», incluyendo su código fuente compilado, interfaz gráfica, librerías accesorias y actualizaciones oficiales.</p>
+                </div>
+                <div class="glossary-card">
+                    <h4>Usuario Final</h4>
+                    <p>Toda persona física que descargue, instale o utilice la Aplicación en sus dispositivos compatibles con fines estrictamente lícitos y no comerciales.</p>
+                </div>
+                <div class="glossary-card">
+                    <h4>Módulo Personal</h4>
+                    <p>Conjunto de herramientas locales destinadas al registro individual de tiempo ministerial, cálculo de promedios, control de metas personales y anotaciones de revisitas.</p>
+                </div>
+                <div class="glossary-card">
+                    <h4>Módulo de Congregación</h4>
+                    <p>Funcionalidad colaborativa opcional habilitada para la visualización y gestión local de asignaciones, programas de reuniones, salidas al ministerio y tableros informativos.</p>
+                </div>
+                <div class="glossary-card">
+                    <h4>Custodia Primaria Local</h4>
+                    <p>Principio de arquitectura informática en virtud del cual los datos se procesan y almacenan en el almacenamiento interno protegido del dispositivo móvil, sin transmisión externa involuntaria.</p>
+                </div>
+                <div class="glossary-card">
+                    <h4>Administrador Local</h4>
+                    <p>Usuario habilitado con credenciales de gestión autorizadas para coordinar asignaciones y publicar avisos legítimos en el Módulo de Congregación.</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- SECTION 3 -->
-    <div class="policy-section">
+    <!-- ARTÍCULO 3 -->
+    <div class="policy-section" id="art3">
         <div class="section-header">
             <div class="section-num">3</div>
-            <h2>Solo para Uso Personal</h2>
+            <h2>Concesión de Licencia Limitada de Software (EULA)</h2>
         </div>
         <div class="section-body">
-            <p>Esta aplicación está destinada para uso estricta y puramente personal, <strong>sin fines comerciales</strong>. El usuario es el único propietario y responsable de sus datos y actividades.</p>
+            <p>El Desarrollador otorga al Usuario una <strong>licencia personal, no exclusiva, intransferible, revocable, no sublicenciable y estrictamente gratuita</strong> para instalar y ejecutar una copia de la Aplicación en dispositivos móviles compatibles que sean de su propiedad o sobre los cuales ostente legítimo control de uso.</p>
+            <p>Esta concesión no constituye en ningún caso venta, cesión ni transmisión de derechos patrimoniales sobre el software. El Usuario expresamente reconoce y acepta que:</p>
             <ul class="policy-list">
-                <li><strong>Uso permitido:</strong> Registrar y gestionar tus propias actividades ministeriales personales, mantener estadísticas personales y planificar tu servicio ministerial.</li>
-                <li><strong>Uso no comercial:</strong> La aplicación está diseñada para fines personales y teocráticos sin fines de lucro. Queda estrictamente prohibido su uso para actividades comerciales o lucrativas.</li>
-                <li><strong>Responsabilidad del usuario:</strong> Tú eres responsable de cualquier actividad realizada con tu cuenta o dispositivo.</li>
+                <li><strong>Prohibición de Comercialización:</strong> Queda terminantemente prohibido vender, arrendar, prestar, sublicenciar, redistribuir con fines de lucro o explotar económicamente la Aplicación o cualquiera de sus componentes.</li>
+                <li><strong>Prohibición de Ingeniería Inversa:</strong> El Usuario no podrá descompilar, desensamblar, aplicar ingeniería inversa, descifrar o intentar extraer el código fuente original de la Aplicación.</li>
+                <li><strong>Prohibición de Modificación y Obras Derivadas:</strong> Queda prohibido alterar, parchear, modificar, traducir o crear obras derivadas basadas en el diseño, arquitectura o código de la Aplicación.</li>
+                <li><strong>Prohibición de Distribución No Autorizada:</strong> La distribución de la Aplicación fuera de las tiendas oficiales reconocidas (Apple App Store, Google Play Store) queda terminantemente prohibida sin autorización previa y por escrito del Desarrollador.</li>
             </ul>
         </div>
     </div>
 
-    <!-- SECTION 4 -->
-    <div class="policy-section">
+    <!-- ARTÍCULO 4 -->
+    <div class="policy-section" id="art4">
         <div class="section-header">
             <div class="section-num">4</div>
-            <h2>Datos y Copias de Seguridad</h2>
+            <h2>Capacidad Jurídica y Declaración de Menores de Edad</h2>
         </div>
         <div class="section-body">
+            <p>Para celebrar el presente acuerdo y utilizar la Aplicación, el Usuario declara bajo protesta de decir verdad que:</p>
             <ul class="policy-list">
-                <li><div><strong>Copias de seguridad opcionales:</strong> La aplicación proporciona funciones para respaldar y sincronizar tus datos de forma segura en servidores en la nube o mediante almacenamiento local.</div></li>
-                <li><div><strong>Seguridad de respaldos:</strong> Todas las transferencias de datos viajan cifradas mediante conexiones seguras (HTTPS/TLS). El desarrollador no comercializa ni comparte tu información personal.</div></li>
-                <li><div><strong>No responsabilidad del desarrollador:</strong> El desarrollador <strong>no se hace responsable</strong> por ninguna pérdida de datos derivada de rotura del dispositivo, fallo del sistema o causas ajenas al servicio.</div></li>
-                <li><div><strong>Responsabilidad del usuario:</strong> Es <strong>responsabilidad total del usuario</strong> gestionar de forma segura sus accesos, credenciales de cuenta y respaldos personales.</div></li>
-                <li><div><strong>Restauración de datos:</strong> La aplicación proporciona herramientas para restaurar datos desde tus respaldos. Sin embargo, en caso de corrupción de archivos o pérdida total, el desarrollador no garantiza recuperación completa.</div></li>
+                <li>Cuenta con plena capacidad jurídica conforme a las leyes de su país de residencia (generalmente mayor de 18 años).</li>
+                <li>En caso de ser un usuario de entre 13 y 17 años de edad, cuenta con el consentimiento previo, informado y expreso de sus padres o tutores legales para descargar y utilizar la herramienta.</li>
+                <li>La Aplicación no está dirigida ni orientada intencionalmente a menores de 13 años (o menor de 16 en el Espacio Económico Europeo), en estricto acatamiento de las directrices COPPA y RGPD-K.</li>
             </ul>
-            <div class="warning-box">
-                <div class="wi">⚠️</div>
-                <p>Se recomienda <strong>realizar respaldos periódicos</strong> en múltiples servicios de nube para crear redundancia y evitar pérdida total de datos ante cualquier eventualidad.</p>
-            </div>
-            <div class="subsection">
-                <h3>Mejores prácticas de seguridad</h3>
-                <ul class="policy-list">
-                    <li>Realiza respaldos semanales como mínimo.</li>
-                    <li>Mantén tus credenciales en un lugar seguro.</li>
-                    <li>Usa contraseñas fuertes y autenticación de dos factores.</li>
-                    <li>Verifica periódicamente que tus respaldos se completaron correctamente.</li>
-                    <li>Considera tener copias de seguridad en múltiples servicios de nube.</li>
-                </ul>
-            </div>
+            <p>Los padres o tutores legales asumen la total responsabilidad por las actividades que los menores a su cargo realicen con la Aplicación instalada en sus dispositivos familiares.</p>
         </div>
     </div>
 
-    <!-- SECTION 5 -->
-    <div class="policy-section">
+    <!-- ARTÍCULO 5 -->
+    <div class="policy-section" id="art5">
         <div class="section-header">
             <div class="section-num">5</div>
-            <h2>Limitación de Responsabilidad</h2>
+            <h2>Declaración de Independencia y Ausencia de Afiliación Institucional</h2>
         </div>
         <div class="section-body">
-            <p>La aplicación se proporciona <em>"tal cual" (as is)</em>, de manera gratuita, sin garantías de ningún tipo —tanto de funcionamiento perpetuo como comercial—.</p>
-            <p>El desarrollador no será legalmente responsable por ningún daño directo o indirecto, pérdida de información temporal o permanente que resulte del uso o la incapacidad de usar la aplicación.</p>
-            <ul class="policy-list">
-                <li>Fallos de sincronización o pérdida de datos en la nube.</li>
-                <li>Incompatibilidad con versiones futuras del sistema operativo Android, iOS o iPadOS.</li>
-                <li>Daños por malware, virus o acceso no autorizado a tu dispositivo.</li>
-                <li>Pérdida de datos por actualizaciones del sistema operativo.</li>
-                <li>Cualquier daño económico, moral o reputacional derivado del uso de la aplicación.</li>
-                <li>Interrupción del servicio debido a razones técnicas, mantenimiento o cambios no previstos.</li>
-            </ul>
-            <div class="info-box">
-                <div class="ii">ℹ️</div>
-                <p>La responsabilidad total del desarrollador, en la medida permitida por la ley, se limita a un reembolso de lo que pagaste por la aplicación (en este caso, cero, porque es gratuita).</p>
+            <div class="warning-card">
+                <div class="wi">ℹ️</div>
+                <div>
+                    <p><strong>Aviso Formal de Deslinde Institucional:</strong> La aplicación <em>Mi Servicio: Mi Ministerio</em> es un desarrollo tecnológico autónomo e independiente creado por Ismael Jair Castro Luna como herramienta auxiliar de gestión personal. <strong>No está patrocinada, respaldada, autorizada, afiliada ni vinculada de forma societaria, legal o formal a ninguna entidad religiosa ni corporación legal oficial</strong>.</p>
+                </div>
             </div>
+            <p>La Aplicación funciona exclusivamente como un organizador logístico y cuaderno digital personal. Cualquier uso que el Usuario realice para dar seguimiento a sus actividades personales es de su exclusiva elección y responsabilidad individual.</p>
         </div>
     </div>
 
-    <!-- SECTION 6 -->
-    <div class="policy-section">
+    <!-- ARTÍCULO 6 -->
+    <div class="policy-section" id="art6">
         <div class="section-header">
             <div class="section-num">6</div>
-            <h2>Privacidad y Protección de Datos</h2>
+            <h2>Deber de Sigilo y Custodia Exclusiva de Registros de Revisitas</h2>
         </div>
         <div class="section-body">
-            <p>Tu privacidad es importante para nosotros. La aplicación fue diseñada con <strong>privacidad por defecto</strong>. Para más detalles sobre cómo manejamos tus datos, por favor consulta nuestra Política de Privacidad.</p>
-            <div class="subsection">
-                <h3>Puntos clave sobre privacidad</h3>
-                <ul class="policy-list">
-                    <li><strong>Almacenamiento local:</strong> Todos tus datos se guardan encriptados en tu dispositivo.</li>
-                    <li><strong>Sin rastreo:</strong> La aplicación no recopila datos de ubicación, analíticas de uso ni información de comportamiento.</li>
-                    <li><strong>Sin publicidad:</strong> No hay anuncios, banners ni rastreadores de terceros.</li>
-                    <li><strong>No compartir datos:</strong> El desarrollador no vende, alquila ni comparte tus datos personales con terceros.</li>
-                    <li><strong>Copias de seguridad opcionales:</strong> Si activas respaldos en servicios en la nube, tus datos se sincronizan directamente con tu cuenta personal de dichos servicios.</li>
-                </ul>
-            </div>
+            <p>Uno de los pilares de la Aplicación es la protección absoluta de la privacidad de terceros. En relación con las notas personales, nombres de personas interesadas, domicilios o registros de revisitas que el Usuario decida ingresar voluntariamente, se establecen las siguientes condiciones irrevocables:</p>
+            <ul class="policy-list">
+                <li><strong>El Usuario como Custodio Exclusivo:</strong> El Usuario actúa en todo momento como el único y exclusivo responsable y custodio de la información registrada. Dichos datos se conservan únicamente en el almacenamiento local de su propio teléfono.</li>
+                <li><strong>Inexistencia de Acceso por el Desarrollador:</strong> El Desarrollador no tiene acceso técnico, conocimiento ni facultades de supervisión sobre los nombres, notas o direcciones que el Usuario anote en su dispositivo.</li>
+                <li><strong>Obligación de Cumplimiento Legal:</strong> El Usuario se compromete a respetar en todo momento las normativas locales sobre privacidad, protección de datos y deber moral de sigilo y confidencialidad respecto a las personas con quienes converse en su ministerio voluntario.</li>
+                <li><strong>Exoneración de Responsabilidad:</strong> El Desarrollador queda total y expresamente exonerado de cualquier reclamo, sanción civil, administrativa o penal derivada del mal uso, divulgación imprudente o pérdida de notas privadas por parte del Usuario.</li>
+            </ul>
         </div>
     </div>
 
-    <!-- SECTION 7 -->
-    <div class="policy-section">
+    <!-- ARTÍCULO 7 -->
+    <div class="policy-section" id="art7">
         <div class="section-header">
             <div class="section-num">7</div>
-            <h2>Actualizaciones y Cambios de la Aplicación</h2>
+            <h2>Condiciones Específicas del Módulo de Congregación</h2>
         </div>
         <div class="section-body">
-            <p>Nos reservamos el derecho de actualizar, modificar o descontinuar la aplicación en cualquier momento sin previo aviso. Aunque intentaremos mantener la aplicación funcional y segura, no podemos garantizar que todo funcione sin cambios.</p>
-            <div class="subsection">
-                <h3>Compatibilidad futura</h3>
-                <ul class="policy-list">
-                    <li><strong>Actualizaciones del SO:</strong> No podemos garantizar que la aplicación será compatible con futuras versiones de Android, iOS o iPadOS.</li>
-                    <li><strong>Discontinuación:</strong> En caso de que la aplicación sea descontinuada, te notificaremos con la máxima anticipación posible.</li>
-                    <li><strong>Mejoras de seguridad:</strong> Realizaremos actualizaciones periódicas para mantener la seguridad de la aplicación.</li>
-                </ul>
+            <p>El Módulo de Congregación es un entorno colaborativo digital opcional concebido para agilizar la comunicación interna y la coordinación de tareas en el ámbito local. Al participar en dicho módulo, los Usuarios y Administradores Locales aceptan las siguientes cláusulas:</p>
+            
+            <div class="scenario-box">
+                <h4>🏛️ Roles de Acceso y Responsabilidad de Contenidos</h4>
+                <p>Los Administradores Locales designados son los únicos encargados de cargar asignaciones, roles de limpieza, programas y avisos en el tablero digital. La veracidad, oportunidad y pertinencia del contenido publicado es responsabilidad exclusiva de dichos administradores comunitarios locales.</p>
             </div>
+
+            <ul class="policy-list">
+                <li><strong>Naturaleza Logística Auxiliar:</strong> El Módulo de Congregación constituye una herramienta puramente logística. No sustituye ni interfiere con las determinaciones, designaciones espirituales o acuerdos formales adoptados por los cuerpos locales respectivos.</li>
+                <li><strong>Confidencialidad de la Información Congregacional:</strong> La información desplegada en el tablero o en los programas es para uso exclusivo de los miembros autorizados de la congregación local. Queda estrictamente prohibido difundir capturas de pantalla, datos de contacto o programas internos fuera del ámbito autorizado.</li>
+                <li><strong>Resguardo de Credenciales:</strong> Los administradores deben custodiar celosamente sus credenciales de acceso para evitar alteraciones no deseadas en el tablero público de la congregación.</li>
+            </ul>
         </div>
     </div>
 
-    <!-- SECTION 8 -->
-    <div class="policy-section">
+    <!-- ARTÍCULO 8 -->
+    <div class="policy-section" id="art8">
         <div class="section-header">
             <div class="section-num">8</div>
-            <h2>Conducta del Usuario y Términos Prohibidos</h2>
+            <h2>Copias de Respaldo, Sincronización y Recuperación de Datos</h2>
         </div>
         <div class="section-body">
-            <p>Al usar esta aplicación, aceptas no:</p>
+            <p>La Aplicación pone a disposición del Usuario mecanismos para salvaguardar su historial de servicio, metas y territorios mediante copias locales o sincronización segura en servidores privados en la nube.</p>
             <ul class="policy-list">
-                <li><strong>Usar la app ilegalmente:</strong> Para cualquier propósito ilegal, fraudulento o que viole leyes locales, nacionales o internacionales.</li>
-                <li><strong>Distribuir sin autorización:</strong> Compartir, vender, regalar o modificar la aplicación sin consentimiento del desarrollador.</li>
-                <li><strong>Dañar sistemas:</strong> Intentar hacer daño, descomponer o infiltrarse en los sistemas o servidores asociados con la aplicación.</li>
-                <li><strong>Acoso o abuso:</strong> Usar la aplicación para acosar, intimidar o abusar de terceros.</li>
-                <li><strong>Contenido ofensivo:</strong> Ingresar, compartir o distribuir contenido ilegal, ofensivo, odioso o discriminatorio.</li>
-                <li><strong>Uso abusivo:</strong> Sobrecargar deliberadamente la aplicación o los servidores de sincronización con tráfico anómalo.</li>
+                <li><strong>Responsabilidad del Respaldo:</strong> Es deber y responsabilidad indelegable del Usuario realizar respaldos periódicos de su información. El Desarrollador no garantiza la existencia de copias de seguridad de datos almacenados exclusivamente en el dispositivo local del Usuario.</li>
+                <li><strong>Custodia de Archivos Exportados:</strong> Cuando el Usuario genera un archivo de respaldo o informe en formato PDF o documento descargable, la custodia, almacenamiento seguro y transferencia de dicho archivo recae enteramente bajo su responsabilidad.</li>
+                <li><strong>Deslinde por Pérdida de Hardware o Fallos de Sistema:</strong> El Desarrollador no se responsabiliza por la pérdida de datos originada por extravío, robo o daño físico del dispositivo móvil, reinstalación del sistema operativo o restauración de fábrica no respaldada previamente por el Usuario.</li>
             </ul>
-            <div class="warning-box">
-                <div class="wi">⚠️</div>
-                <p>El incumplimiento de estos términos puede resultar en la revocación de tu acceso a la aplicación y en acciones legales según corresponda.</p>
-            </div>
         </div>
     </div>
 
-    <!-- SECTION 9 -->
-    <div class="policy-section">
+    <!-- ARTÍCULO 9 -->
+    <div class="policy-section" id="art9">
         <div class="section-header">
             <div class="section-num">9</div>
-            <h2>Derechos de Autor y Propiedad Intelectual</h2>
+            <h2>Conductas Expresamente Prohibidas y Abuso del Servicio</h2>
         </div>
         <div class="section-body">
-            <p>Mi Servicio:Mi Ministerio respeta plenamente los derechos de autor y la propiedad intelectual de terceros. La aplicación es una herramienta de productividad y gestión personal diseñada para facilitar la organización del servicio ministerial.</p>
-            <div class="subsection">
-                <h3>Propiedad de contenidos</h3>
-                <ul class="policy-list">
-                    <li><strong>Herramienta de gestión:</strong> Mi Servicio:Mi Ministerio funciona exclusivamente como una herramienta de organización personal y lector de archivos del usuario, sin distribuir ni vender contenido de terceros.</li>
-                    <li><strong>Aviso de no afiliación:</strong> Mi Servicio:Mi Ministerio es un proyecto de desarrollo independiente y no está patrocinado, afiliado, autorizado ni respaldado por ninguna corporación o organización oficial.</li>
-                    <li><strong>Responsabilidad del usuario:</strong> El usuario es responsable de asegurar que cualquier información o material que gestione mediante la aplicación cumpla con las leyes y derechos aplicables.</li>
-                </ul>
-            </div>
+            <p>Con el fin de preservar la integridad, estabilidad y seguridad jurídica de la plataforma, el Usuario se compromete a no incurrir en ninguna de las siguientes conductas ilícitas o abusivas:</p>
+            <ul class="policy-list">
+                <li><strong>Ataques de Denegación de Servicio o Saturación:</strong> Intentar sobrecargar deliberadamente la infraestructura de servidores de sincronización, realizar peticiones anómalas o emplear scripts automáticos no autorizados.</li>
+                <li><strong>Inyección de Código Malicioso:</strong> Introducir virus, troyanos, gusanos lógicos o cualquier tecnología dañina susceptible de vulnerar la seguridad de la Aplicación o de otros usuarios.</li>
+                <li><strong>Suplantación de Identidad:</strong> Crear cuentas ficticias, falsear identidades o usurpar roles de administración en el Módulo de Congregación.</li>
+                <li><strong>Extracción Masiva de Datos (Scraping):</strong> Utilizar herramientas robotizadas, raspadores de pantalla o analizadores automatizados para recolectar información de la plataforma.</li>
+                <li><strong>Uso para Fines Lucrativos o Spam:</strong> Emplear los tableros informativos o las herramientas de mensajería para difundir publicidad comercial, cadenas o mensajes no deseados.</li>
+            </ul>
         </div>
     </div>
 
-    <!-- SECTION 10 -->
-    <div class="policy-section">
+    <!-- ARTÍCULO 10 -->
+    <div class="policy-section" id="art10">
         <div class="section-header">
             <div class="section-num">10</div>
-            <h2>Cambios a estos Términos</h2>
+            <h2>Matriz de Responsabilidades y Obligaciones</h2>
         </div>
         <div class="section-body">
-            <p>Nos reservamos el derecho de modificar estos términos de uso sin previo aviso. El uso continuado de la aplicación tras cualquier cambio constituye la aceptación tácita de los términos actualizados.</p>
-            <div class="subsection">
-                <h3>Cambios significativos</h3>
-                <p>En caso de cambios significativos que afecten tu privacidad o tus derechos, intentaremos notificarte a través de la aplicación o por correo electrónico a la dirección que proporciones en tu cuenta.</p>
+            <p>Para mayor claridad y transparencia jurídica, el siguiente cuadro comparativo resume las atribuciones, deberes y límites operativos que rigen entre el Desarrollador titular y el Usuario final:</p>
+            
+            <div class="table-responsive">
+                <table class="tos-matrix">
+                    <thead>
+                        <tr>
+                            <th>Área Operativa</th>
+                            <th>Obligación del Desarrollador</th>
+                            <th>Obligación del Usuario Final</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Disponibilidad de la App</strong></td>
+                            <td>Proveer actualizaciones de mantenimiento y corrección técnica diligente.</td>
+                            <td>Mantener su sistema operativo actualizado y compatible.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Custodia de Notas Personales</strong></td>
+                            <td>Garantizar una arquitectura de almacenamiento local aislado y protegido.</td>
+                            <td>Proteger su dispositivo con contraseña, PIN o biometría.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Copias de Seguridad</strong></td>
+                            <td>Facilitar herramientas accesibles de exportación y respaldo seguro.</td>
+                            <td>Realizar copias de respaldo con frecuencia regular y custodiar los archivos generados.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Módulo de Congregación</strong></td>
+                            <td>Proveer infraestructura cifrada y aislamiento estricto entre congregaciones.</td>
+                            <td>Publicar contenidos legítimos y resguardar la confidencialidad de asignaciones.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Costos y Tarifas</strong></td>
+                            <td>Mantener la aplicación totalmente gratuita, sin publicidad de terceros.</td>
+                            <td>Cubrir los costos de su propia conexión a internet móvil o Wi-Fi.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 
-    <!-- SECTION 11 -->
-    <div class="policy-section">
+    <!-- ARTÍCULO 11 -->
+    <div class="policy-section" id="art11">
         <div class="section-header">
             <div class="section-num">11</div>
-            <h2>Jurisdicción y Ley Aplicable</h2>
+            <h2>Disponibilidad del Servicio y Cláusula «Tal Cual» (As-Is)</h2>
         </div>
         <div class="section-body">
-            <p>Estos términos y condiciones se rigen por las leyes de <strong>México</strong>, sin consideración de sus disposiciones sobre conflicto de leyes. Cualquier disputa derivada de estos términos será resuelta conforme a la legislación mexicana.</p>
-            <div class="info-box">
-                <div class="ii">⚖️</div>
-                <p>Si eres residente de otra jurisdicción, es posible que otras leyes también se apliquen a tu uso de la aplicación, especialmente leyes de protección de datos como el GDPR en la Unión Europea.</p>
-            </div>
+            <p>La Aplicación y sus servicios vinculados se entregan y ponen a disposición del Usuario <strong>«TAL CUAL» («AS-IS»)</strong> y <strong>«SEGÚN DISPONIBILIDAD» («AS-AVAILABLE»)</strong>, sin garantías de ninguna especie, ya sean expresas, implícitas o legales, incluyendo, a título meramente enunciativo pero no limitativo, garantías de comerciabilidad, idoneidad para un propósito particular o ausencia de infracciones.</p>
+            <p>El Desarrollador desplegará esfuerzos técnicamente razonables para procurar el funcionamiento continuo y seguro de la Aplicación. Sin embargo, no garantiza que:</p>
+            <ul class="policy-list">
+                <li>El funcionamiento de la Aplicación sea absolutamente ininterrumpido, puntual o libre de errores en todo momento.</li>
+                <li>Los servidores en la nube estén libres de caídas temporales atribuibles a fuerza mayor, labores imprevistas de mantenimiento técnico o fallas en proveedores de telecomunicaciones.</li>
+                <li>La Aplicación resulte compatible de manera perpetua con todas las futuras versiones de hardware o sistemas operativos que los fabricantes lancen al mercado.</li>
+            </ul>
         </div>
     </div>
 
-    <!-- SECTION 12 -->
-    <div class="policy-section">
+    <!-- ARTÍCULO 12 -->
+    <div class="policy-section" id="art12">
         <div class="section-header">
             <div class="section-num">12</div>
-            <h2>Resolución de Disputas y Contacto</h2>
+            <h2>Limitación de Responsabilidad Legal e Indemnidad</h2>
         </div>
         <div class="section-body">
-            <p>Si tienes alguna disputa, reclamo o inquietud sobre estos términos, por favor contáctanos antes de tomar acciones legales. Intentaremos resolver el asunto de buena fe.</p>
-            <div class="subsection">
-                <h3>Pasos para resolver disputas</h3>
-                <ul class="policy-list">
-                    <li><strong>Paso 1:</strong> Envía un correo detallado a ismaeljair22@gmail.com describiendo el problema.</li>
-                    <li><strong>Paso 2:</strong> Esperaremos una respuesta en un plazo de 15 días hábiles.</li>
-                    <li><strong>Paso 3:</strong> Si no se resuelve, ambas partes pueden optar por mediación o arbitraje.</li>
-                    <li><strong>Paso 4:</strong> Solo después de agotados estos recursos se puede proceder con acciones legales formales.</li>
-                </ul>
+            <p>En la máxima medida autorizada por la legislación internacional y local aplicable, el Desarrollador <strong>no será legalmente responsable</strong> ante el Usuario ni ante terceros por ningún daño directo, indirecto, incidental, especial, consecuencial, ejemplar o punitivo, incluyendo de forma no limitativa:</p>
+            <ul class="policy-list">
+                <li>Pérdida de datos ministeriales, registros históricos o configuraciones locales derivadas de la pérdida, robo, avería física o reseteo del dispositivo del Usuario.</li>
+                <li>Interrupciones en la transmisión de datos causadas por intermitencias del proveedor de internet del Usuario.</li>
+                <li>Acceso no autorizado de terceros al dispositivo del Usuario como consecuencia de la falta de bloqueo de pantalla o custodia descuidada de contraseñas.</li>
+            </ul>
+            <div class="policy-subbox">
+                <h4>🛡️ Compromiso de Indemnidad</h4>
+                <p>El Usuario se compromete a mantener indemne y en paz al Desarrollador frente a cualquier reclamación, demanda, investigación, litigio o sanción administrativa que pudiere derivarse del uso ilícito de la Aplicación por parte del Usuario o de la transgresión de los presentes Términos.</p>
             </div>
         </div>
     </div>
 
-    <!-- CONTACT -->
+    <!-- ARTÍCULO 13 -->
+    <div class="policy-section" id="art13">
+        <div class="section-header">
+            <div class="section-num">13</div>
+            <h2>Propiedad Intelectual y Derechos de Autor</h2>
+        </div>
+        <div class="section-body">
+            <p>Todos los derechos de propiedad intelectual, derechos de autor, marcas comerciales, nombres de dominio, logotipos, diseño de interfaz visual, arquitectura técnica y código de <strong>Mi Servicio: Mi Ministerio</strong> son de titularidad exclusiva de <strong>Ismael Jair Castro Luna</strong> o de sus legítimos licenciantes.</p>
+            <p>Nada de lo dispuesto en este contrato concede al Usuario titularidad alguna sobre dichos activos intelectuales, salvo la licencia limitada de uso expresamente reconocida en el Artículo 3. Quedan reservados todos los derechos no concedidos de forma expresa.</p>
+        </div>
+    </div>
+
+    <!-- ARTÍCULO 14 -->
+    <div class="policy-section" id="art14">
+        <div class="section-header">
+            <div class="section-num">14</div>
+            <h2>Terminación, Suspensión y Revocación del Servicio</h2>
+        </div>
+        <div class="section-body">
+            <p>El presente acuerdo surte plenos efectos legales desde el momento en que el Usuario descarga o ejecuta la Aplicación y permanecerá en vigor hasta su terminación formal por cualquiera de las siguientes causas:</p>
+            <ul class="policy-list">
+                <li><strong>Terminación por el Usuario:</strong> El Usuario puede rescindir el presente acuerdo en cualquier instante desinstalando la Aplicación de todos sus dispositivos y solicitando la supresión de cualquier cuenta en la nube asociada.</li>
+                <li><strong>Suspensión o Revocación por el Desarrollador:</strong> El Desarrollador podrá revocar la licencia y bloquear el acceso al Módulo de Congregación de forma inmediata, sin necesidad de resolución judicial previa, si el Usuario incumple cualquiera de las cláusulas de este contrato o incurre en conductas abusivas.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ARTÍCULO 15 -->
+    <div class="policy-section" id="art15">
+        <div class="section-header">
+            <div class="section-num">15</div>
+            <h2>Marco Jurídico, Jurisdicción y Resolución de Controversias</h2>
+        </div>
+        <div class="section-body">
+            <p>Los presentes Términos y Condiciones se regirán e interpretarán de conformidad con las leyes de los <strong>Estados Unidos Mexicanos</strong> y los tratados internacionales de comercio electrónico, propiedad intelectual y derechos del consumidor de software aplicables, sin perjuicio de las normativas obligatorias de orden público que resulten imperativas en el país de residencia del Usuario.</p>
+            <div class="scenario-box">
+                <h4>🤝 Principio de Conciliación de Buena Fe Previa</h4>
+                <p>Las partes convienen expresamente en que, con carácter previo al inicio de cualquier acción judicial formal, intentarán resolver cualquier controversia mediante comunicación directa y amistosa enviando una exposición razonada a <em>ismaeljair22@gmail.com</em>. El Desarrollador responderá en un plazo no mayor a 30 días hábiles con el objetivo de alcanzar una solución justa y equitativa.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ARTÍCULO 16 -->
+    <div class="policy-section" id="art16">
+        <div class="section-header">
+            <div class="section-num">16</div>
+            <h2>Preguntas Frecuentes Legales y Canales de Contacto</h2>
+        </div>
+        <div class="section-body">
+            <p>Respuestas claras a las principales inquietudes jurídicas y operativas sobre el uso de la Aplicación:</p>
+            
+            <details class="tos-faq-item">
+                <summary class="tos-faq-header">¿La aplicación es o será de pago en el futuro?</summary>
+                <div class="tos-faq-body">
+                    No. La aplicación se distribuye como software enteramente gratuito y sin ánimo de lucro, sin publicidad comercial de terceros ni muros de pago obligatorios para las funciones esenciales.
+                </div>
+            </details>
+
+            <details class="tos-faq-item">
+                <summary class="tos-faq-header">¿Quién es el dueño de mis notas y registros de horas?</summary>
+                <div class="tos-faq-body">
+                    Usted es el único y exclusivo propietario de sus datos. La información se almacena localmente en su dispositivo y nunca es vendida, comercializada ni analizada por el Desarrollador.
+                </div>
+            </details>
+
+            <details class="tos-faq-item">
+                <summary class="tos-faq-header">¿Qué ocurre si cambio o extravío mi teléfono celular?</summary>
+                <div class="tos-faq-body">
+                    Si mantenía activada la sincronización segura en la nube o conservaba un archivo de respaldo exportado, podrá restaurar sus datos íntegramente en su nuevo dispositivo. Si los datos se encontraban solo de forma local y no contaba con respaldo, no será posible su recuperación.
+                </div>
+            </details>
+
+            <details class="tos-faq-item">
+                <summary class="tos-faq-header">¿Cómo se garantiza la confidencialidad de mi congregación?</summary>
+                <div class="tos-faq-body">
+                    Cada instancia congregacional opera en un entorno lógico independiente y cifrado. Solo los miembros expresamente validados con su código autorizado pueden visualizar los programas y tableros locales.
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <!-- CONTACT CARD -->
     <div class="contact-card">
-        <h3>¿Tienes alguna pregunta?</h3>
-        <p>Si tienes dudas sobre estas condiciones o cualquier aspecto legal de la aplicación, contáctanos directamente. También puedes revisar nuestra Política de Privacidad.</p>
+        <h3>Canal Oficial de Asistencia Legal y Soporte</h3>
+        <p>Si requiere una aclaración particular sobre estos Términos o desea ejercer alguna consulta jurídica o de derechos de usuario, dirija su solicitud a nuestro canal oficial:</p>
         <div class="contact-btns">
-            <a href="mailto:ismaeljair22@gmail.com" class="btn-email">ismaeljair22@gmail.com</a>
-            <a href="privacy.html" class="btn-privacy">Ver Política de Privacidad</a>
+            <a href="mailto:ismaeljair22@gmail.com" class="btn-primary-action">ismaeljair22@gmail.com</a>
+            <a href="privacy.html" class="btn-outline-action">Consultar Política de Privacidad</a>
         </div>
     </div>
 
@@ -404,8 +594,9 @@
     <div class="footer-links">
         <a href="index.html">Inicio</a>
         <a href="privacy.html">Política de Privacidad</a>
+        <a href="tos.html">Términos de Servicio</a>
     </div>
-    <p>© 2026 Mi Servicio:Mi Ministerio · Desarrollado por Ismael Castro Luna · Sin fines de lucro</p>
+    <p>@2024 Ismael Jair Castro Luna · Todos los derechos reservados</p>
 </div>
 
 </body>
