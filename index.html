@@ -423,13 +423,22 @@
 
         .iphone-screen {
             flex: 1;
-            background: #f8fafc;
+            background: #000000;
             border-radius: 42px;
             overflow: hidden;
             position: relative;
             display: flex;
             flex-direction: column;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
+        }
+
+        .mockup-screen-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+            border-radius: 42px;
         }
 
         .dynamic-island {
@@ -1431,7 +1440,7 @@
         <header class="navbar">
             <a href="#" class="brand-logo">
                 <div class="brand-logo-icon">
-                    <img src="assets/images/nuevo_app_icon.png" alt="Mi Servicio Icono" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=80&q=80';">
+                    <img src="assets/images/icono.png" alt="Mi Servicio Icono" onerror="this.onerror=null; this.src='assets/images/nuevo_app_icon.png';">
                 </div>
                 <span>Mi Servicio<em>: Mi Ministerio</em></span>
             </a>
@@ -1542,64 +1551,7 @@
 
                 <div class="iphone-frame">
                     <div class="iphone-screen">
-                        <div class="dynamic-island">
-                            <div class="dynamic-island-cam"></div>
-                            <div class="dynamic-island-dot"></div>
-                        </div>
-
-                        <!-- Interfaz interna simulada de Mi Servicio: Mi Ministerio -->
-                        <div class="mockup-app-header">
-                            <div>
-                                <div style="font-size:0.68rem; color:#64748b; font-weight:600;">Bienvenido de nuevo</div>
-                                <div class="mockup-app-title">Mi Ministerio</div>
-                            </div>
-                            <div class="mockup-app-month">Octubre 2026</div>
-                        </div>
-
-                        <div class="mockup-body">
-                            <!-- Tarjeta de Horas Principal -->
-                            <div class="mockup-card-main">
-                                <div class="label">Total del Mes</div>
-                                <div class="hours">42h 15m</div>
-                                <div class="mockup-progress-bar">
-                                    <div class="mockup-progress-fill"></div>
-                                </div>
-                                <div class="meta">
-                                    <span>Meta Precursor: 50h</span>
-                                    <span>Faltan 7h 45m</span>
-                                </div>
-                            </div>
-
-                            <!-- Bento Grid Estadísticas -->
-                            <div class="mockup-grid-stats">
-                                <div class="mockup-stat-box">
-                                    <div class="num">18</div>
-                                    <div class="desc">Revisitas Activas</div>
-                                </div>
-                                <div class="mockup-stat-box">
-                                    <div class="num">4</div>
-                                    <div class="desc">Estudios Bíblicos</div>
-                                </div>
-                            </div>
-
-                            <!-- Tarjeta de última revisita -->
-                            <div class="mockup-recent-card">
-                                <div class="mockup-recent-icon">📖</div>
-                                <div class="mockup-recent-text">
-                                    <div class="title">Familia Morales</div>
-                                    <div class="subtitle">Cap. 3 lección Disfrute la Vida · Martes 17:00</div>
-                                </div>
-                            </div>
-
-                            <!-- Tarjeta de Territorio -->
-                            <div class="mockup-recent-card" style="border-left: 4px solid #7b6ef6;">
-                                <div class="mockup-recent-icon" style="background:#f5f3ff; color:#7b6ef6;">🗺️</div>
-                                <div class="mockup-recent-text">
-                                    <div class="title">Territorio Manzana 14</div>
-                                    <div class="subtitle">85% cubierto · Faltan 4 casas</div>
-                                </div>
-                            </div>
-                        </div>
+                        <img src="assets/images/captura_pantalla_principal.png" alt="Mi Servicio: Mi Ministerio en iPhone" class="mockup-screen-img">
                     </div>
                 </div>
             </div>
@@ -1648,7 +1600,7 @@
                         Cronómetro con un toque, registro manual flexible, desglose por días y meses, y cálculo automático para precursores auxiliares y regulares. Envía tu informe mensual a los ancianos en un clic por WhatsApp o correo.
                     </p>
                     <div class="bento-card-photo">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80" alt="Registro y notas organizadas">
+                        <img src="assets/images/captura_servicio.png" alt="Registro y notas organizadas">
                         <span class="overlay-tag">Registro Ágil & Sin Fricciones</span>
                     </div>
                 </div>
@@ -1661,7 +1613,7 @@
                         Navega fácilmente por capítulos y versículos. Subraya pasajes con tus colores preferidos, guarda reflexiones y consulta referencias cruzadas sin salir de la app.
                     </p>
                     <div class="bento-card-photo">
-                        <img src="https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=800&q=80" alt="Lectura de la Biblia personal">
+                        <img src="assets/images/captura_biblia.png" alt="Lectura de la Biblia personal">
                         <span class="overlay-tag">Lectura Cálida & Nocturna</span>
                     </div>
                 </div>
@@ -1674,7 +1626,7 @@
                         Lleva el control de tus asignaciones de territorio. Marca casas "no en casa", vuelve a visitar a personas interesadas y exporta tarjetas de territorio en PDF limpio.
                     </p>
                     <div class="bento-card-photo">
-                        <img src="https://images.unsplash.com/photo-1524813686514-a57563d77d66?auto=format&fit=crop&w=800&q=80" alt="Mapa y organización de calles">
+                        <img src="assets/images/captura_territorios.png" alt="Mapa y organización de calles">
                         <span class="overlay-tag">Mapas y Tarjetas Teocráticas</span>
                     </div>
                 </div>
@@ -1687,7 +1639,7 @@
                         Guarda copias de seguridad directas en tu Google Drive o iCloud personal con cifrado HTTPS/TLS. El desarrollador jamás tiene acceso a tus contactos ni archivos. Si cambias de teléfono, restauras todo en segundos.
                     </p>
                     <div class="bento-card-photo">
-                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80" alt="Cifrado y seguridad digital">
+                        <img src="assets/images/captura_privacidad.png" alt="Cifrado y seguridad digital">
                         <span class="overlay-tag">100% Bajo tu Control</span>
                     </div>
                 </div>
@@ -1709,37 +1661,37 @@
             <div class="gallery-grid">
                 <!-- Foto 1: Estudio Bíblico -->
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=700&q=80" alt="Estudio de la Biblia con café y luz natural">
+                    <img src="assets/images/galeria_1.png" alt="Estudio Personal y Ministerio">
                     <div class="gallery-overlay">
                         <h4>Estudio Personal</h4>
                         <span>Notas claras y versículos subrayados</span>
                     </div>
                 </div>
 
-                <!-- Foto 2: Conversación y Predicación -->
+                <!-- Foto 2: Juegos Bíblicos -->
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?auto=format&fit=crop&w=700&q=80" alt="Conversación amena y compañerismo en el ministerio">
+                    <img src="assets/images/galeria_2.png" alt="Juegos Bíblicos dinámicos">
                     <div class="gallery-overlay">
-                        <h4>De Casa en Casa</h4>
-                        <span>Revisitas ordenadas al instante</span>
+                        <h4>Juegos Bíblicos</h4>
+                        <span>Trivia, crucigramas y aprendizaje dinámico</span>
                     </div>
                 </div>
 
-                <!-- Foto 3: Notas y Cuaderno -->
+                <!-- Foto 3: Seguimiento Fiel -->
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=700&q=80" alt="Escritura ordenada de reflexiones y metas">
+                    <img src="assets/images/galeria_3.png" alt="Seguimiento de revisitas y metas">
                     <div class="gallery-overlay">
                         <h4>Seguimiento Fiel</h4>
                         <span>Preguntas pendientes y lecciones</span>
                     </div>
                 </div>
 
-                <!-- Foto 4: Reflexión y Serenidad -->
+                <!-- Foto 4: Bosquejos Dinámicos -->
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=700&q=80" alt="Libros y estudio teocrático sereno">
+                    <img src="assets/images/galeria_4.jpeg" alt="Bosquejos dinámicos teocráticos">
                     <div class="gallery-overlay">
-                        <h4>Sin Conexión</h4>
-                        <span>Disponible siempre en cualquier rincón</span>
+                        <h4>Bosquejos Dinámicos</h4>
+                        <span>Estructura interactiva para discursos y ministerio</span>
                     </div>
                 </div>
             </div>
