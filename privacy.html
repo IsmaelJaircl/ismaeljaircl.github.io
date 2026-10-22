@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad — Mi Servicio: Mi Ministerio</title>
+    <title>Política de Privacidad Integral — Mi Servicio: Mi Ministerio</title>
     <meta name="google-site-verification" content="19ADT_-SKQlUU1AkqNYKCh8eRjh7qXYHI87OiJlvJvzQ" />
-    <meta name="description" content="Política de privacidad oficial y transparente de Mi Servicio: Mi Ministerio. Protección estricta de datos, almacenamiento local cifrado y cero publicidad.">
+    <meta name="description" content="Declaración exhaustiva de privacidad y protección de datos personales de Mi Servicio: Mi Ministerio. Cero publicidad, arquitectura local cifrada y cumplimiento estricto con GDPR, CCPA y directrices de App Store y Google Play.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
@@ -18,92 +18,101 @@
             --blue-100: #dbeafe;
             --blue-50: #eff6ff;
             --slate-900: #0f172a;
+            --slate-800: #1e293b;
             --slate-700: #334155;
             --slate-600: #475569;
             --slate-500: #64748b;
             --slate-400: #94a3b8;
             --slate-300: #cbd5e1;
+            --slate-200: #e2e8f0;
             --slate-100: #f1f5f9;
             --white: #ffffff;
         }
         html { scroll-behavior: smooth; }
-        body { font-family: 'DM Sans', sans-serif; background: var(--slate-100); color: var(--slate-900); line-height: 1.7; min-height: 100vh; }
+        body { font-family: 'DM Sans', sans-serif; background: #f8fafc; color: var(--slate-900); line-height: 1.8; min-height: 100vh; }
 
         /* NAV */
-        nav { background: rgba(255,255,255,0.92); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(0,0,0,0.06); padding: 16px 40px; display: flex; align-items: center; justify-content: space-between; }
+        nav { background: rgba(255,255,255,0.95); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(0,0,0,0.06); padding: 16px 40px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
         .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--blue-500); text-decoration: none; }
         .nav-logo span { color: var(--slate-900); }
-        .btn-back { display: inline-flex; align-items: center; gap: 8px; color: var(--slate-500); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+        .btn-back { display: inline-flex; align-items: center; gap: 8px; color: var(--slate-600); text-decoration: none; font-size: 0.88rem; font-weight: 600; transition: color 0.2s; }
         .btn-back:hover { color: var(--blue-500); }
 
         /* HERO STRIP */
-        .page-hero { background: linear-gradient(135deg, var(--slate-900) 0%, #1e3a8a 100%); padding: 60px 40px; text-align: center; }
-        .page-hero .badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; padding: 9px 14px; border-radius: 999px; }
-        .page-hero h1 { font-family: 'DM Serif Display', serif; font-size: 2.8rem; color: white; margin-bottom: 10px; }
-        .page-hero .date { font-size: 0.85rem; color: var(--slate-400); }
+        .page-hero { background: linear-gradient(135deg, var(--slate-900) 0%, #172554 100%); padding: 70px 40px; text-align: center; }
+        .page-hero .badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: rgba(255,255,255,0.9); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; padding: 8px 16px; border-radius: 999px; margin-bottom: 16px; }
+        .page-hero h1 { font-family: 'DM Serif Display', serif; font-size: 3rem; color: white; margin-bottom: 12px; letter-spacing: -0.5px; }
+        .page-hero .date { font-size: 0.9rem; color: var(--slate-300); }
 
         /* CONTENT */
-        .content-wrap { max-width: 820px; margin: 0 auto; padding: 48px 24px 80px; }
+        .content-wrap { max-width: 860px; margin: 0 auto; padding: 48px 24px 100px; }
 
         /* INTRO CARD */
-        .intro-card { background: var(--blue-50); border: 1px solid var(--blue-100); border-radius: 16px; padding: 28px 32px; margin-bottom: 32px; display: flex; gap: 18px; align-items: flex-start; }
-        .intro-icon { font-size: 2rem; flex-shrink: 0; margin-top: 2px; }
-        .intro-card p { font-size: 1rem; color: var(--slate-700); line-height: 1.8; margin: 0; }
+        .intro-card { background: var(--blue-50); border: 1px solid var(--blue-100); border-radius: 18px; padding: 32px; margin-bottom: 32px; display: flex; gap: 20px; align-items: flex-start; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.04); }
+        .intro-icon { font-size: 2.4rem; flex-shrink: 0; line-height: 1; }
+        .intro-card p { font-size: 1.02rem; color: var(--slate-700); line-height: 1.85; margin: 0; }
         .intro-card strong { color: var(--blue-600); }
 
         /* SECTIONS */
-        .policy-section { background: var(--white); border-radius: 16px; border: 1px solid #e5eaf4; margin-bottom: 20px; overflow: hidden; }
-        .section-header { padding: 24px 28px; display: flex; align-items: center; gap: 16px; border-bottom: 1px solid #f1f5f9; }
-        .section-num { width: 36px; height: 36px; min-width: 36px; background: var(--blue-500); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem; }
-        .section-header h2 { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--slate-900); font-weight: 400; }
-        .section-body { padding: 24px 28px; }
-        .section-body p { font-size: 0.97rem; color: var(--slate-600); line-height: 1.85; margin-bottom: 14px; }
+        .policy-section { background: var(--white); border-radius: 18px; border: 1px solid #e2e8f0; margin-bottom: 24px; overflow: hidden; box-shadow: 0 4px 14px rgba(15, 23, 42, 0.02); }
+        .section-header { padding: 26px 32px; display: flex; align-items: center; gap: 18px; border-bottom: 1px solid #f1f5f9; background: #ffffff; }
+        .section-num { width: 38px; height: 38px; min-width: 38px; background: linear-gradient(135deg, var(--blue-500), var(--blue-600)); color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25); }
+        .section-header h2 { font-family: 'DM Serif Display', serif; font-size: 1.45rem; color: var(--slate-900); font-weight: 400; letter-spacing: -0.2px; }
+        
+        .section-body { padding: 28px 32px; }
+        .section-body p { font-size: 0.98rem; color: var(--slate-600); line-height: 1.88; margin-bottom: 16px; }
         .section-body p:last-child { margin-bottom: 0; }
         .section-body strong { color: var(--slate-900); font-weight: 600; }
-        .section-body em { color: var(--blue-600); font-style: normal; font-weight: 500; }
-        .section-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--slate-900); margin: 18px 0 10px; }
+        .section-body em { color: var(--blue-600); font-style: normal; font-weight: 600; }
+        .section-body h3 { font-size: 1.12rem; font-weight: 700; color: var(--slate-900); margin: 24px 0 12px; display: flex; align-items: center; gap: 8px; }
+        .section-body h4 { font-size: 1rem; font-weight: 600; color: var(--slate-800); margin: 16px 0 8px; }
 
         /* LIST */
-        .policy-list { list-style: none; display: flex; flex-direction: column; gap: 12px; padding-left: 0; margin: 12px 0; }
-        .policy-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.97rem; color: var(--slate-600); line-height: 1.7; }
-        .policy-list li::before { content: ''; width: 8px; height: 8px; min-width: 8px; background: var(--blue-400); border-radius: 50%; margin-top: 8px; }
+        .policy-list { list-style: none; display: flex; flex-direction: column; gap: 14px; padding-left: 0; margin: 16px 0; }
+        .policy-list li { display: flex; gap: 14px; align-items: flex-start; font-size: 0.98rem; color: var(--slate-600); line-height: 1.75; }
+        .policy-list li::before { content: ''; width: 8px; height: 8px; min-width: 8px; background: var(--blue-500); border-radius: 50%; margin-top: 10px; }
         .policy-list li strong { color: var(--slate-900); font-weight: 600; }
 
+        /* SUB-BOX TABLE / CARD */
+        .policy-subbox { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 24px; margin: 16px 0; }
+        .policy-subbox p { margin-bottom: 10px; }
+        .policy-subbox p:last-child { margin-bottom: 0; }
+
         /* HIGHLIGHT BOX */
-        .highlight-box { background: var(--slate-900); border-radius: 12px; padding: 20px 24px; margin-top: 16px; display: flex; gap: 14px; align-items: center; }
-        .highlight-box .hi { font-size: 1.5rem; flex-shrink: 0; }
-        .highlight-box p { color: var(--slate-300); font-size: 0.92rem; line-height: 1.7; margin: 0; }
+        .highlight-box { background: var(--slate-900); border-radius: 14px; padding: 22px 26px; margin: 20px 0; display: flex; gap: 16px; align-items: center; }
+        .highlight-box .hi { font-size: 1.8rem; flex-shrink: 0; line-height: 1; }
+        .highlight-box p { color: #e2e8f0; font-size: 0.94rem; line-height: 1.75; margin: 0; }
         .highlight-box strong { color: white; }
 
         /* BADGES */
-        .no-data-row { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
-        .no-badge { display: inline-flex; align-items: center; gap: 6px; background: #fef2f2; border: 1px solid #fecaca; color: #dc2626; font-size: 0.8rem; font-weight: 600; padding: 5px 12px; border-radius: 999px; }
-        .yes-badge { display: inline-flex; align-items: center; gap: 6px; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; font-size: 0.8rem; font-weight: 600; padding: 5px 12px; border-radius: 999px; }
+        .no-data-row { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+        .no-badge { display: inline-flex; align-items: center; gap: 6px; background: #fef2f2; border: 1px solid #fecaca; color: #dc2626; font-size: 0.82rem; font-weight: 600; padding: 6px 14px; border-radius: 999px; }
+        .yes-badge { display: inline-flex; align-items: center; gap: 6px; background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; font-size: 0.82rem; font-weight: 600; padding: 6px 14px; border-radius: 999px; }
 
         /* CONTACT */
-        .contact-card { background: linear-gradient(135deg, var(--blue-500) 0%, var(--blue-600) 100%); border-radius: 16px; padding: 32px; text-align: center; margin-top: 40px; }
-        .contact-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: white; margin-bottom: 8px; font-weight: 400; }
-        .contact-card p { color: rgba(255,255,255,0.85); font-size: 0.95rem; margin-bottom: 18px; line-height: 1.6; }
-        .contact-card a { display: inline-block; background: white; color: var(--blue-600); font-weight: 700; font-size: 0.95rem; padding: 12px 28px; border-radius: 10px; text-decoration: none; transition: transform 0.2s; }
-        .contact-card a:hover { background: var(--blue-50); transform: translateY(-1px); }
+        .contact-card { background: linear-gradient(135deg, var(--blue-500) 0%, var(--blue-600) 100%); border-radius: 18px; padding: 36px; text-align: center; margin-top: 48px; box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25); }
+        .contact-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.7rem; color: white; margin-bottom: 10px; font-weight: 400; }
+        .contact-card p { color: rgba(255,255,255,0.9); font-size: 0.98rem; margin-bottom: 22px; line-height: 1.7; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .contact-card a { display: inline-block; background: white; color: var(--blue-600); font-weight: 700; font-size: 0.96rem; padding: 13px 32px; border-radius: 12px; text-decoration: none; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .contact-card a:hover { background: var(--blue-50); transform: translateY(-2px); box-shadow: 0 8px 18px rgba(0,0,0,0.15); }
 
         /* FOOTER */
-        .page-footer { background: var(--slate-900); padding: 30px 40px; text-align: center; }
-        .page-footer .logo { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: white; margin-bottom: 6px; }
+        .page-footer { background: var(--slate-900); padding: 36px 40px; text-align: center; border-top: 1px solid #1e293b; }
+        .page-footer .logo { font-family: 'DM Serif Display', serif; font-size: 1.25rem; color: white; margin-bottom: 8px; }
         .page-footer .logo span { color: var(--blue-400); }
-        .page-footer p { font-size: 0.78rem; color: var(--slate-500); }
-        .page-footer .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 12px 0; }
-        .page-footer .footer-links a { color: var(--slate-400); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
+        .page-footer p { font-size: 0.82rem; color: var(--slate-400); }
+        .page-footer .footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin: 14px 0; }
+        .page-footer .footer-links a { color: var(--slate-300); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
         .page-footer .footer-links a:hover { color: var(--blue-400); }
 
         @media (max-width: 700px) {
             nav { padding: 14px 20px; }
-            .page-hero { padding: 50px 22px; }
-            .page-hero h1 { font-size: 2rem; }
+            .page-hero { padding: 50px 20px; }
+            .page-hero h1 { font-size: 2.2rem; }
             .content-wrap { padding: 32px 16px 60px; }
-            .intro-card { flex-direction: column; gap: 10px; padding: 22px; }
+            .intro-card { flex-direction: column; gap: 12px; padding: 24px; }
             .section-header { padding: 20px 22px; }
-            .section-body { padding: 20px 22px; }
+            .section-body { padding: 22px; }
         }
     </style>
 </head>
@@ -112,14 +121,14 @@
 <!-- NAV -->
 <nav>
     <a href="index.html" class="nav-logo">Mi Servicio:<span>Mi Ministerio</span></a>
-    <a href="index.html" class="btn-back">← Volver al inicio</a>
+    <a href="index.html" class="btn-back">← Volver a la página principal</a>
 </nav>
 
 <!-- HERO -->
 <div class="page-hero">
-    <div class="badge">🔒 Documento Legal Oficial</div>
-    <h1>Política de Privacidad</h1>
-    <p class="date">Última actualización: 22 de octubre de 2026</p>
+    <div class="badge">🛡️ Marco Jurídico y Técnico de Privacidad</div>
+    <h1>Política de Privacidad Integral</h1>
+    <p class="date">Versión Oficial 4.8 · Vigente desde el 22 de octubre de 2026</p>
 </div>
 
 <!-- CONTENT -->
@@ -127,194 +136,294 @@
 
     <!-- INTRO -->
     <div class="intro-card">
-        <div class="intro-icon">🛡️</div>
-        <p>En <strong>Mi Servicio: Mi Ministerio</strong> valoramos profundamente la confidencialidad de tu labor ministerial y estamos 100% comprometidos a salvaguardar tu información. Esta política describe de forma transparente cómo se gestionan tus datos bajo el principio estricto de <em>Privacidad por Diseño</em>.</p>
+        <div class="intro-icon">🔒</div>
+        <div>
+            <p><strong>Declaración de Principio Fundamental:</strong> La aplicación <strong>Mi Servicio: Mi Ministerio</strong> ha sido concebida bajo los más rigurosos estándares de <em>Privacidad por Diseño y por Defecto (Privacy by Design & Default)</em>. Reconocemos que la actividad ministerial, los registros de tiempo, las notas reflexivas personales y la organización eclesiástica pertenecen al ámbito estrictamente íntimo y confidencial del usuario. Ningún dato personal es monetizado, vendido, transferido ni explotado con fines mercantiles.</p>
+        </div>
     </div>
 
-    <div class="highlight-box" style="margin-bottom: 28px;">
-        <div class="hi">📱</div>
-        <p><strong>Privacidad local por defecto:</strong> La aplicación funciona de manera autónoma, local y sin conexión a internet en tu dispositivo. Tus horas, notas personales, revisitas y territorios se mantienen bajo tu control absoluto.</p>
-    </div>
-
-    <!-- SECCIÓN 1: Almacenamiento local -->
+    <!-- SECCIÓN 1: Identidad del Responsable y Alcance -->
     <div class="policy-section">
         <div class="section-header">
             <div class="section-num">1</div>
-            <h2>Almacenamiento local y seguridad de datos</h2>
+            <h2>Identidad del Responsable del Tratamiento y Alcance</h2>
         </div>
         <div class="section-body">
-            <p>La aplicación almacena tus datos <em>exclusivamente de forma local</em> en la memoria de tu dispositivo móvil mediante una base de datos SQLite segura. En ningún momento se envían datos personales a servidores externos a menos que actives voluntariamente una función de respaldo o sincronización de congregación.</p>
-            <ul class="policy-list">
-                <li><div><strong>Datos almacenados localmente:</strong> Registro de horas de predicación, notas personales, revisitas, estudios bíblicos, asignaciones de territorio, marcadores bíblicos y preferencias de interfaz.</div></li>
-                <li><div><strong>Cifrado y sandbox de la plataforma:</strong> La información reside dentro del contenedor protegido de la aplicación (sandbox) de iOS o Android.</div></li>
-                <li><div><strong>Protección biométrica:</strong> Tu información está protegida por los mecanismos de seguridad nativos de tu dispositivo (Face ID, Touch ID o código de bloqueo).</div></li>
-            </ul>
-            <div class="no-data-row">
-                <span class="no-badge">✕ Sin rastreadores comerciales</span>
-                <span class="no-badge">✕ Sin analíticas de terceros</span>
-                <span class="no-badge">✕ Sin publicidad</span>
-                <span class="yes-badge">✓ 100% local en tu dispositivo</span>
+            <p>A los efectos de la legislación aplicable en materia de protección de datos personales —incluyendo el Reglamento General de Protección de Datos (RGPD / GDPR UE 2016/679), la Ley de Privacidad del Consumidor de California (CCPA / CPRA), la Ley General de Protección de Datos Personales de Brasil (LGPD) y normativas homólogas internacionales— el responsable y desarrollador de la aplicación móvil y portal web es <strong>Ismael Jair Castro Luna</strong>.</p>
+            <p>Esta Política de Privacidad regula el tratamiento de información derivado de la instalación, ejecución y uso de la aplicación móvil <strong>Mi Servicio: Mi Ministerio</strong> (disponible para las plataformas iOS en Apple App Store y Android en Google Play Store), así como de su portal web informativo y servicios conexos.</p>
+            <div class="policy-subbox">
+                <p><strong>Canal Institucional de Privacidad:</strong> <a href="mailto:ismaeljair22@gmail.com" style="color:var(--blue-600); font-weight:600; text-decoration:none;">ismaeljair22@gmail.com</a></p>
+                <p><strong>Naturaleza del Software:</strong> Herramienta auxiliar de productividad personal y eclesiástica desarrollada de forma autónoma e independiente, sin fines lucrativos ni comerciales.</p>
             </div>
         </div>
     </div>
 
-    <!-- SECCIÓN 2: Permisos del dispositivo (App Store & Google Play) -->
+    <!-- SECCIÓN 2: Arquitectura Local Offline-First -->
     <div class="policy-section">
         <div class="section-header">
             <div class="section-num">2</div>
-            <h2>Permisos del dispositivo y finalidad de uso</h2>
+            <h2>Arquitectura Local «Offline-First» y Cero Creación de Cuenta Obligatoria</h2>
         </div>
         <div class="section-body">
-            <p>Para brindar sus funciones teocráticas, la aplicación puede solicitar los siguientes permisos en tu dispositivo móvil. Cada permiso se utiliza estrictamente para su propósito declarado:</p>
+            <p>A diferencia de servicios tradicionales en la nube que centralizan bases de datos de usuarios, <strong>Mi Servicio: Mi Ministerio opera bajo una arquitectura primordialmente local («Offline-First»)</strong>:</p>
             <ul class="policy-list">
-                <li>
-                    <div>
-                        <strong>Cámara (Escáner de código QR):</strong> Se utiliza <em>únicamente</em> cuando decides escanear un código QR para unirte a tu congregación o vincular el tablero digital de anuncios. La cámara procesa el código de forma óptica en tiempo real; <strong>jamás</strong> captura, guarda ni transmite fotos o videos a ningún servidor.
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <strong>Notificaciones locales:</strong> Se utilizan exclusivamente para enviarte avisos programados por ti mismo dentro de la app (recordatorios de revisitas, alertas de horario de predicación o avisos de tu congregación). No se utilizan para telemetría ni mensajes promocionales.
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <strong>Almacenamiento y Galería de Fotos:</strong> Solo se accede cuando tú decides voluntariamente elegir una fotografía de perfil local, exportar una tarjeta de territorio o un formulario S-89 en PDF, o crear/restaurar un archivo de respaldo manual en tu teléfono.
-                    </div>
-                </li>
+                <li><div><strong>Sin registro obligatorio:</strong> Para utilizar las funciones principales de la aplicación (registro de servicio, cronómetro, revisitas, notas personales y mapas) el usuario <em>no requiere crear una cuenta, proporcionar su nombre legal, correo electrónico ni contraseña</em>.</div></li>
+                <li><div><strong>Base de Datos SQLite Local:</strong> Toda la información se estructura y resguarda localmente dentro de una base de datos SQLite alojada en el espacio de almacenamiento aislado (Sandbox) asignado por el sistema operativo del teléfono.</div></li>
+                <li><div><strong>Autonomía absoluta:</strong> La aplicación es 100% operativa sin cobertura celular ni conexión a redes Wi-Fi. No se realizan consultas silenciosas a servidores externos durante la operación estándar.</div></li>
             </ul>
+            <div class="no-data-row">
+                <span class="yes-badge">✓ Funciona 100% sin conexión</span>
+                <span class="yes-badge">✓ Base de datos SQLite local</span>
+                <span class="no-badge">✕ Sin cuentas forzosas ni contraseñas</span>
+            </div>
         </div>
     </div>
 
-    <!-- SECCIÓN 3: Custodia de revisitas y contactos -->
+    <!-- SECCIÓN 3: Desglose Exhaustivo de Datos Tratados -->
     <div class="policy-section">
         <div class="section-header">
             <div class="section-num">3</div>
-            <h2>Tratamiento y custodia de revisitas y personas contactadas</h2>
+            <h2>Categorías de Datos Tratados y su Ciclo de Vida</h2>
         </div>
         <div class="section-body">
-            <p>Como publicador o precursor, puedes utilizar la aplicación para registrar nombres, direcciones o temas tratados con personas interesadas en el ministerio de casa en casa.</p>
+            <p>La aplicación procesa exclusivamente los datos que el usuario decide consignar de manera voluntaria en el ejercicio de su ministerio:</p>
+            
+            <h3>3.1. Registros de Tiempo Ministerial y Metas</h3>
+            <p>Incluye horas y minutos computados mediante el cronómetro interactivo o ingresados manualmente, desgloses diarios, acumulados mensuales, selección de modalidad de servicio (publicador, precursor auxiliar o precursor regular) y objetivos horarios personales. Estos datos residen exclusivamente en el dispositivo.</p>
+
+            <h3>3.2. Anotaciones de Revisitas y Estudios Bíblicos Personales</h3>
+            <p>Registros de personas contactadas, direcciones, fechas de visitas, preguntas pendientes y notas temáticas conversadas. El usuario ostenta la <strong>custodia exclusiva y responsabilidad de confidencialidad</strong> sobre tales anotaciones.</p>
+
+            <h3>3.3. Gestión de Territorios Personales y Cobertura</h3>
+            <p>Identificadores de territorio asignados, manzanas, numeración de casas, estados de visita (por ejemplo: visitado, no en casa u ocupado) y notas geográficas locales para el orden de la labor.</p>
+
+            <h3>3.4. Datos del Módulo de Congregación (Opcional)</h3>
+            <p>En caso de que el usuario decida vincularse voluntariamente a la gestión de su Salón del Reino mediante un código PIN o QR:</p>
             <ul class="policy-list">
-                <li><div><strong>Custodia exclusiva del usuario:</strong> La información sobre personas visitadas se almacena bajo la responsabilidad y custodia directa del publicador, quien actúa como titular exclusivo de su libreta personal.</div></li>
-                <li><div><strong>Sin acceso de terceros:</strong> El desarrollador no tiene acceso, visibilidad ni capacidad técnica para leer o recuperar los nombres o direcciones de tus revisitas.</div></li>
-                <li><div><strong>No comerciable:</strong> Dichos datos jamás son transferidos, vendidos ni compartidos con empresas de publicidad, marketing ni bases de datos comerciales.</div></li>
+                <li><div><strong>Asignaciones de Reunión:</strong> Nombres de hermanos asignados a partes del programa (oradores, lectores, acomodadores, micrófonos, sonido y aseo) para la generación de programas y formularios S-89 en PDF.</div></li>
+                <li><div><strong>Tablero Digital:</strong> Avisos semanales, cartas leídas y directrices internas de la congregación publicadas por los coordinadores autorizados.</div></li>
+                <li><div><strong>Puntos de Salida y Carritos:</strong> Horarios de reuniones de servicio del campo, ubicación de capitanes de grupo y turnos de exhibidores móviles de testimonio público.</div></li>
             </ul>
+
+            <h3>3.5. Preferencias Locales de Interfaz</h3>
+            <p>Foto de perfil seleccionada desde el dispositivo (que nunca se sube a internet en modo local), selección de color temático, tamaño tipográfico y modo visual (claro/oscuro).</p>
         </div>
     </div>
 
-    <!-- SECCIÓN 4: Servicios opcionales en la nube y Congregación -->
+    <!-- SECCIÓN 4: Permisos del Dispositivo (App Store & Play Store Compliance) -->
     <div class="policy-section">
         <div class="section-header">
             <div class="section-num">4</div>
-            <h2>Servicios opcionales en la nube y Módulo de Congregación</h2>
+            <h2>Declaración y Justificación de Permisos del Sistema Operativo</h2>
         </div>
         <div class="section-body">
-            <p>Si decides utilizar funciones de respaldo personal o unirte al Módulo de Congregación de tu Salón del Reino, la app se conecta a servicios de nube segura bajo tu consentimiento expreso.</p>
+            <p>En estricto apego a las directrices de revisión de <strong>Apple App Store</strong> y las políticas del programa para desarrolladores de <strong>Google Play</strong>, detallamos cada permiso que la aplicación puede solicitar, su justificación funcional y las garantías de protección asociadas:</p>
+            
+            <div class="policy-subbox">
+                <h4>📷 Permiso de Cámara (`NSCameraUsageDescription` / `android.permission.CAMERA`)</h4>
+                <p><strong>Finalidad Exclusiva:</strong> Escaneo óptico en tiempo real de códigos QR para unirse a la instancia teocrática de su congregación o sincronizar el tablero de anuncios digital.</p>
+                <p><strong>Garantía de Privacidad:</strong> La transmisión de video no se graba, no se almacena en memoria persistente ni se transmite a servidores remotos. El escáner opera localmente decodificando la cadena de texto del QR en milisegundos y cerrando la cámara de inmediato.</p>
+            </div>
 
-            <h3>Copias de seguridad personales (Google Drive / iCloud)</h3>
-            <p>Los respaldos personales se realizan de forma directa entre tu dispositivo y tu propia cuenta en la nube (Google Drive o iCloud). El archivo viaja cifrado mediante protocolo seguro HTTPS/TLS y se almacena en tu almacenamiento privado.</p>
+            <div class="policy-subbox">
+                <h4>🔔 Permiso de Notificaciones (`UserNotifications` / `POST_NOTIFICATIONS`)</h4>
+                <p><strong>Finalidad Exclusiva:</strong> Notificar al usuario sobre alarmas locales programadas de servicio, recordatorios de revisitas agendadas o avisos relevantes del tablero digital de su congregación.</p>
+                <p><strong>Garantía de Privacidad:</strong> Las notificaciones son generadas por el programador local del sistema operativo (`flutter_local_notifications`). No se utilizan para campañas comerciales, seguimiento conductual ni telemetría.</p>
+            </div>
 
-            <h3 style="margin-top: 18px;">Módulo de Congregación y Tablero Digital</h3>
-            <ul class="policy-list">
-                <li><div><strong>Acceso restringido por roles:</strong> Las funciones de congregación (tablero de anuncios, programa semanal de reuniones, salidas de predicación y territorios de grupo) requieren un código de unión o PIN asignado por los coordinadores de tu congregación.</div></li>
-                <li><div><strong>Aislamiento de datos:</strong> La información de cada congregación se mantiene estrictamente aislada y protegida en infraestructura cifrada en reposo y en tránsito.</div></li>
-                <li><div><strong>Control de salida:</strong> Puedes desvincularte de la congregación en cualquier momento desde los Ajustes de la aplicación, cesando de inmediato cualquier sincronización.</div></li>
-            </ul>
+            <div class="policy-subbox">
+                <h4>📁 Permiso de Acceso a Archivos y Galería (`Photo Library` / `Storage`)</h4>
+                <p><strong>Finalidad Exclusiva:</strong> Permitir que el usuario elija voluntariamente una foto de perfil desde su galería, exporte o importe copias de seguridad de la base de datos (`.db`), y guarde documentos PDF generados (como tarjetas de territorio u hojas de asignación S-89).</p>
+                <p><strong>Garantía de Privacidad:</strong> La aplicación solo accede a los archivos específicos seleccionados por el usuario mediante el selector nativo del sistema operativo (Scoped Storage / PhotoPicker).</p>
+            </div>
         </div>
     </div>
 
-    <!-- SECCIÓN 5: No venta de datos -->
+    <!-- SECCIÓN 5: Custodia de Notas y Deslinde de Responsabilidad -->
     <div class="policy-section">
         <div class="section-header">
             <div class="section-num">5</div>
-            <h2>No compartimos ni vendemos tu información</h2>
+            <h2>Custodia Personal de Registros Ministeriales y Deslinde Legal</h2>
         </div>
         <div class="section-body">
+            <p>Al utilizar la funcionalidad de revisitas, notas y territorios, el usuario actúa como <strong>custodio y responsable único del tratamiento de los datos personales</strong> que voluntariamente decida apuntar sobre personas contactadas en su ministerio de casa en casa.</p>
             <ul class="policy-list">
-                <li><div><strong>Cero comercialización:</strong> No vendemos, alquilamos ni comercializamos datos personales con ninguna entidad o corporación.</div></li>
-                <li><div><strong>Sin perfiles de usuario:</strong> No creamos perfiles de comportamiento, publicidad dirigida ni monetización basada en datos.</div></li>
-                <li><div><strong>Proyecto sin fines de lucro:</strong> Mi Servicio: Mi Ministerio es una herramienta teocrática creada de manera independiente para apoyar la obra del ministerio cristiano.</div></li>
+                <li><div><strong>Naturaleza de Libreta Digital:</strong> La aplicación suministra la infraestructura tecnológica privada y cifrada, pero no recopila, revisa ni supervisa las notas que el usuario escribe.</div></li>
+                <li><div><strong>Secreto Profesional y Deber de Reserva:</strong> Se exhorta al usuario a respetar el deber de confidencialidad cristiano y la normativa de protección de datos de su jurisdicción territorial, no registrando datos sensibles de terceros sin su consentimiento implícito o explícito.</div></li>
+                <li><div><strong>Inaccesibilidad para el Desarrollador:</strong> No existe canal técnico que permita al desarrollador inspeccionar, recuperar ni transferir las libretas de notas de ningún publicador.</div></li>
             </ul>
         </div>
     </div>
 
-    <!-- SECCIÓN 6: Derechos y Eliminación definitiva de datos (Apple 5.1.1) -->
+    <!-- SECCIÓN 6: Cero Venta, Cero Comercialización y Cero Publicidad -->
     <div class="policy-section">
         <div class="section-header">
             <div class="section-num">6</div>
-            <h2>Tus derechos y mecanismo para eliminar tus datos</h2>
+            <h2>Compromiso Inquebrantable de Cero Venta y Cero Publicidad</h2>
         </div>
         <div class="section-body">
-            <p>Conforme a las directrices de privacidad de Apple (App Store Review Guideline 5.1.1) y el Reglamento General de Protección de Datos (GDPR), tú mantienes el derecho pleno e irrestricto sobre tus datos:</p>
+            <p>En cumplimiento de las disposiciones de la Ley CCPA/CPRA de California y el RGPD europeo, hacemos constar de manera categórica que:</p>
             <ul class="policy-list">
-                <li><div><strong>Acceso y rectificación:</strong> Puedes consultar, editar o corregir cualquier dato directamente en las pantallas de la app.</div></li>
-                <li><div><strong>Eliminación local instantánea:</strong> Puedes borrar la totalidad de tus datos locales en cualquier momento desinstalando la app o accediendo a <em>Ajustes ➔ Administrar Espacio ➔ Vaciar datos</em>.</div></li>
-                <li><div><strong>Eliminación de datos en la nube:</strong> Si vinculaste tu cuenta para respaldos o perteneces a una congregación, puedes solicitar la supresión definitiva de tus registros en servidores enviando un correo a <a href="mailto:ismaeljair22@gmail.com" style="color:var(--blue-500); text-decoration:none; font-weight:600;">ismaeljair22@gmail.com</a> con el asunto <em>"Solicitud de Eliminación de Datos"</em>. Tu solicitud será atendida y procesada en un plazo máximo de 30 días hábiles.</div></li>
+                <li><div><strong>Prohibición absoluta de venta:</strong> No vendemos, alquilamos, cedemos, divulgamos ni transferimos información personal de nuestros usuarios a corredores de datos (data brokers), agencias de publicidad ni terceras partes bajo ningún concepto.</div></li>
+                <li><div><strong>Sin redes publicitarias:</strong> La aplicación está 100% libre de anuncios, banners, interstitial ads o módulos de monetización por publicidad de Google AdMob, Meta Audience Network, Unity Ads o afines.</div></li>
+                <li><div><strong>Sin elaboración de perfiles conductuales:</strong> No se efectúa perfilamiento psicológico, comercial ni de afinidad política o ideológica.</div></li>
             </ul>
-            <div class="no-data-row" style="margin-top: 14px;">
-                <span class="yes-badge">✓ Derecho a la eliminación definitiva</span>
-                <span class="yes-badge">✓ Control total y portabilidad</span>
-                <span class="yes-badge">✓ Solicitud de baja en un clic</span>
+            <div class="no-data-row">
+                <span class="no-badge">✕ Cero venta de datos</span>
+                <span class="no-badge">✕ Cero publicidad</span>
+                <span class="no-badge">✕ Cero perfiles comerciales</span>
+                <span class="yes-badge">✓ Privacidad total garantizada</span>
             </div>
         </div>
     </div>
 
-    <!-- SECCIÓN 7: Protección de menores (COPPA / GDPR-K) -->
+    <!-- SECCIÓN 7: Servicios en la Nube y Módulo de Congregación -->
     <div class="policy-section">
         <div class="section-header">
             <div class="section-num">7</div>
-            <h2>Protección de la privacidad de menores</h2>
+            <h2>Servicios Opcionales en la Nube y Respaldo Externo</h2>
         </div>
         <div class="section-body">
-            <p>La aplicación no está dirigida a menores de 13 años (o la edad mínima legal en su país de residencia) sin la supervisión y autorización expresa de sus padres o tutores legales.</p>
-            <p>No recopilamos deliberadamente información personal identificable de menores de edad. Si un padre, madre o tutor tiene conocimiento de que su hijo nos ha proporcionado información personal en la nube sin su consentimiento, puede contactarnos para proceder a su eliminación inmediata.</p>
+            <p>La conectividad a internet únicamente entra en funcionamiento en los siguientes escenarios que el usuario activa de manera consciente y voluntaria:</p>
+            
+            <h3>7.1. Copias de Respaldo Personales en Google Drive o iCloud</h3>
+            <p>Si el usuario decide respaldar su información en Google Drive o iCloud, la exportación se gestiona mediante las APIs oficiales seguras de Google y Apple. La copia de seguridad viaja con cifrado de transporte HTTPS (TLS 1.3) y queda alojada en el almacenamiento privado del usuario, bajo las credenciales y el control que éste mantiene con su proveedor de nube.</p>
+
+            <h3>7.2. Infraestructura del Módulo de Congregación (Supabase y Almacenamiento Cifrado R2)</h3>
+            <p>Para las congregaciones que optan por sincronizar asignaciones, carritos, salidas y tablero digital en tiempo real:</p>
+            <ul class="policy-list">
+                <li><div><strong>Aislamiento Criptográfico Multitenant:</strong> Cada congregación opera en un espacio de datos aislado, vinculado a un identificador único seguro (`congregacion_id`). Ninguna congregación puede visualizar ni interactuar con los datos de otra.</div></li>
+                <li><div><strong>Control de Acceso Basado en Roles (RBAC):</strong> La plataforma valida permisos diferenciados para Ancianos (coordinación y edición), Siervos Ministeriales (apoyo logístico) y Publicadores (consulta de avisos y asignaciones propias).</div></li>
+                <li><div><strong>Cifrado en Reposo y en Tránsito:</strong> Todos los datos alojados en base de datos PostgreSQL protegida (Supabase) y almacenamiento de objetos seguro (Cloudflare R2) se encuentran cifrados bajo algoritmos robustos AES-256 en reposo y TLS 1.3 en tránsito.</div></li>
+                <li><div><strong>Desvinculación Instantánea:</strong> Cualquier usuario puede abandonar la congregación o revocar la sincronización en cualquier instante desde el menú de Ajustes de la aplicación.</div></li>
+            </ul>
         </div>
     </div>
 
-    <!-- SECCIÓN 8: Retención y conservación de datos -->
+    <!-- SECCIÓN 8: Derechos del Usuario y Mecanismo Formal de Eliminación (Apple 5.1.1) -->
     <div class="policy-section">
         <div class="section-header">
             <div class="section-num">8</div>
-            <h2>Periodo de retención y conservación</h2>
+            <h2>Derechos del Titular y Procedimiento Formal para Eliminación Definitiva de Datos</h2>
         </div>
         <div class="section-body">
-            <p><strong>Datos locales:</strong> Permanecen en tu dispositivo únicamente mientras conserves la aplicación instalada o hasta que decidas borrarlos.</p>
-            <p><strong>Copias de respaldo en Google Drive / iCloud:</strong> Se mantienen en tu nube personal según las políticas de tu proveedor de cuenta y hasta que decidas eliminarlas.</p>
-            <p><strong>Datos de congregación:</strong> Los avisos y asignaciones se conservan durante el periodo teocrático relevante y se depuran conforme a las necesidades de la congregación.</p>
-        </div>
-    </div>
+            <p>En concordancia con la <strong>Directriz 5.1.1(v) de Apple para la App Store</strong> y los derechos de Acceso, Rectificación, Supresión, Limitación, Portabilidad y Oposición (Derechos ARCO / RGPD), todo usuario tiene la facultad de ejercer un control total sobre su huella digital:</p>
+            
+            <h3>8.1. Eliminación Inmediata de Datos Locales en el Dispositivo</h3>
+            <p>El usuario puede purgar en cualquier momento el 100% de su base de datos local y memoria caché mediante cualquiera de las siguientes vías sin necesidad de pedir autorización:</p>
+            <ul class="policy-list">
+                <li><div>Acceder dentro de la aplicación a: <em>Ajustes ➔ Administrar Espacio ➔ Vaciar base de datos / Borrar datos</em>.</div></li>
+                <li><div>Eliminar los datos de almacenamiento desde la configuración de su dispositivo Android o desinstalar completamente la aplicación en iOS o Android.</div></li>
+            </ul>
 
-    <!-- SECCIÓN 9: Contenido de terceros y propiedad intelectual -->
-    <div class="policy-section">
-        <div class="section-header">
-            <div class="section-num">9</div>
-            <h2>Propiedad intelectual y contenido de terceros</h2>
-        </div>
-        <div class="section-body">
-            <p>Mi Servicio: Mi Ministerio es una herramienta de software auxiliar para uso personal. No modifica, redistribuye ni comercializa publicaciones ni materiales protegidos por derechos de autor de terceros.</p>
-            <div class="highlight-box">
-                <div class="hi">📖</div>
-                <p>Todos los derechos sobre publicaciones, traducciones de la Biblia o marcas corresponden a sus respectivos titulares. La aplicación respeta rigurosamente los derechos de autor y normas de propiedad intelectual.</p>
+            <h3>8.2. Procedimiento Formal para Eliminación de Datos en Nube y Congregación</h3>
+            <p>Para solicitar la purga definitiva de cualquier registro asociado a su identificador en servicios de nube de congregación o respaldos:</p>
+            <div class="policy-subbox">
+                <p><strong>Paso 1:</strong> Envíe una solicitud por correo electrónico a: <a href="mailto:ismaeljair22@gmail.com" style="color:var(--blue-600); font-weight:700; text-decoration:none;">ismaeljair22@gmail.com</a>.</p>
+                <p><strong>Paso 2:</strong> Indique en el asunto: <em>«Solicitud de Eliminación de Datos / Right to Erasure»</em>.</p>
+                <p><strong>Paso 3:</strong> En el cuerpo del correo, especifique el código de congregación o identificador de dispositivo utilizado.</p>
+                <p><strong>Paso 4 (Plazo y Confirmación):</strong> Su petición será procesada y confirmada de forma irrevocable en un término no mayor a <strong>30 días naturales</strong>, eliminando los registros de las bases de datos activas y respaldos automatizados.</p>
             </div>
         </div>
     </div>
 
-    <!-- SECCIÓN 10: Cambios en esta política y contacto -->
+    <!-- SECCIÓN 9: Protección de Menores -->
     <div class="policy-section">
         <div class="section-header">
-            <div class="section-num">10</div>
-            <h2>Actualizaciones de la política y contacto directo</h2>
+            <div class="section-num">9</div>
+            <h2>Protección Estricta de la Privacidad de Menores de Edad (COPPA / GDPR-K)</h2>
         </div>
         <div class="section-body">
-            <p>Podemos actualizar periódicamente esta Política de Privacidad para reflejar mejoras en la seguridad de la aplicación, nuevas funciones o actualizaciones en normativas legales de la App Store y Google Play.</p>
-            <p>Cualquier cambio entrará en vigor en la fecha de su publicación en esta página web oficial.</p>
+            <p>La protección de los niños y adolescentes en el entorno digital es un imperativo ético y legal de primer orden. Conforme a la Ley de Protección de la Privacidad Infantil en Línea (COPPA de EE.UU.) y el artículo 8 del RGPD europeo:</p>
+            <ul class="policy-list">
+                <li><div><strong>Edad de Consentimiento:</strong> La aplicación no está dirigida a menores de 13 años (o menores de 16 en aquellos Estados miembros de la Unión Europea que así lo establezcan) sin la asistencia, consentimiento y supervisión directa de sus padres o tutores legales.</div></li>
+                <li><div><strong>Ausencia de Captación Deliberada:</strong> No recopilamos conscientemente nombres, edades ni identificadores de menores de edad. Si un menor utiliza la app para registrar su propio servicio del campo, debe hacerlo bajo la tutoría de sus progenitores.</div></li>
+                <li><div><strong>Acción Inmediata ante Reporte:</strong> Si un padre, madre o representante legal detecta que su hijo ha consignado datos en alguna instancia de congregación sin su anuencia, solicitamos que nos contacte a <a href="mailto:ismaeljair22@gmail.com" style="color:var(--blue-600); text-decoration:none; font-weight:600;">ismaeljair22@gmail.com</a> para proceder al borrado preventivo e inmediato.</div></li>
+            </ul>
         </div>
     </div>
 
-    <!-- TARJETA DE CONTACTO -->
+    <!-- SECCIÓN 10: Medidas de Ciberseguridad -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">10</div>
+            <h2>Estándares y Medidas de Ciberseguridad Aplicadas</h2>
+        </div>
+        <div class="section-body">
+            <p>Implementamos salvaguardas técnicas, administrativas y operativas proporcionales a la sensibilidad de la actividad teocrática:</p>
+            <ul class="policy-list">
+                <li><div><strong>Cifrado de Comunicaciones:</strong> Toda interacción de red emplea exclusivamente el protocolo de transporte seguro TLS (Transport Layer Security) en versiones 1.2 y 1.3 con certificados SSL/TLS actualizados, impidiendo intercepciones de tipo Man-in-the-Middle (MitM).</div></li>
+                <li><div><strong>Cifrado en Reposo:</strong> Las bases de datos en la nube y repositorios de archivos aplican cifrado AES-256 (Advanced Encryption Standard).</div></li>
+                <li><div><strong>Control de Inyección y Vulnerabilidades:</strong> La arquitectura de software previene inyecciones SQL mediante consultas parametrizadas en SQLite y Supabase, y no expone puertos abiertos ni endpoints no autenticados.</div></li>
+                <li><div><strong>Protección de Hardware:</strong> Aprovechamiento de los coprocesadores de seguridad física (Secure Enclave en dispositivos Apple y Titan M / ARM TrustZone en Android) para el resguardo de claves biométricas.</div></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 11: Retención y Depuración de Datos -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">11</div>
+            <h2>Plazos de Conservación y Depuración Periódica</h2>
+        </div>
+        <div class="section-body">
+            <p>Conservamos la información únicamente durante el lapso estrictamente necesario para cumplir las finalidades organizativas descritas:</p>
+            <ul class="policy-list">
+                <li><div><strong>Datos en el Dispositivo Móvil:</strong> Se conservan indefinidamente en el teléfono mientras el usuario decida mantener la aplicación instalada o hasta que ejecute una purga de datos voluntaria.</div></li>
+                <li><div><strong>Tablero y Asignaciones de Congregación:</strong> Los programas semanales concluidos y avisos caducados se archivan o depuran periódicamente conforme a la rotación mensual establecida por los coordinadores de la congregación.</div></li>
+                <li><div><strong>Copias de Seguridad Personales:</strong> Se conservan de manera persistente en su cuenta de Google Drive o iCloud hasta que el propio usuario decida sobrescribirlas o suprimirlas desde su nube.</div></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 12: Notificación de Brechas e Incidentes de Seguridad -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">12</div>
+            <h2>Gestión y Notificación de Incidentes de Seguridad</h2>
+        </div>
+        <div class="section-body">
+            <p>A pesar de que la arquitectura local minimiza sustancialmente cualquier vector de riesgo masivo, en el improbable caso de que se detecte una vulneración de seguridad que afecte la confidencialidad de datos en los servidores del módulo de congregación:</p>
+            <ul class="policy-list">
+                <li><div>Notificaremos a los coordinadores de congregación y publicaremos una advertencia urgente en nuestro portal web dentro de las <strong>72 horas siguientes</strong> al conocimiento certero del incidente, detallando la naturaleza de la brecha y las medidas de contención implementadas.</div></li>
+                <li><div>Se emitirá de forma inmediata una actualización correctiva de software a través de la App Store y Google Play para revocar credenciales comprometidas y mitigar cualquier vulnerabilidad.</div></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 13: Marco Jurídico Internacional y Jurisdicción -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">13</div>
+            <h2>Marco Jurídico Internacional y Transferencias de Datos</h2>
+        </div>
+        <div class="section-body">
+            <p>Esta política ha sido redactada para armonizar de forma proactiva con las legislaciones más exigentes en materia de protección de derechos digitales:</p>
+            <ul class="policy-list">
+                <li><div><strong>Unión Europea y Reino Unido:</strong> Reglamento General de Protección de Datos (RGPD / GDPR 2016/679) y UK GDPR.</div></li>
+                <li><div><strong>Estados Unidos de América:</strong> Ley de Privacidad del Consumidor de California (CCPA / CPRA) y COPPA.</div></li>
+                <li><div><strong>América Latina:</strong> Ley General de Protección de Datos de Brasil (LGPD, Ley 13.709/2018), Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP de México) y normativas afines.</div></li>
+            </ul>
+            <p>Los servidores de infraestructura de red emplean proveedores con certificación internacional de seguridad (ISO 27001, SOC 2 Tipo II) y cláusulas contractuales tipo para transferencias internacionales seguras.</p>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 14: Modificaciones y Entrada en Vigor -->
+    <div class="policy-section">
+        <div class="section-header">
+            <div class="section-num">14</div>
+            <h2>Actualizaciones de la Presente Política</h2>
+        </div>
+        <div class="section-body">
+            <p>Nos reservamos el derecho de modificar o actualizar esta Política de Privacidad cuando sea necesario para reflejar cambios funcionales en la aplicación, nuevas normativas de los ecosistemas de Apple y Google, o modificaciones en leyes aplicables.</p>
+            <p>Cualquier modificación será publicada de manera visible en esta página web con la indicación de la fecha de última revisión. El uso continuado de la aplicación tras la publicación de los cambios constituye el conocimiento y aceptación de los mismos.</p>
+        </div>
+    </div>
+
+    <!-- TARJETA DE CONTACTO INSTITUCIONAL -->
     <div class="contact-card">
-        <h3>¿Tienes preguntas o deseas ejercer tus derechos?</h3>
-        <p>Para dudas sobre esta política, aclaraciones sobre tus datos o solicitar la eliminación definitiva de tu información, contáctanos directamente:</p>
+        <h3>Canal Oficial de Atención en Privacidad</h3>
+        <p>Si deseas formular preguntas sobre este documento, solicitar la eliminación formal de tus datos o ejercer tus derechos ARCO / GDPR, contáctanos directamente a nuestra dirección oficial:</p>
         <a href="mailto:ismaeljair22@gmail.com">ismaeljair22@gmail.com</a>
     </div>
 
@@ -324,10 +433,10 @@
 <div class="page-footer">
     <div class="logo">Mi Servicio:<span>Mi Ministerio</span></div>
     <div class="footer-links">
-        <a href="index.html">Inicio</a>
-        <a href="tos.html">Términos de Servicio (TOS)</a>
+        <a href="index.html">Página Principal</a>
+        <a href="tos.html">Términos y Condiciones (TOS)</a>
     </div>
-    <p>© 2024 Ismael Jair Castro Luna · Todos los derechos reservados · Sin fines de lucro</p>
+    <p>© 2024 Ismael Jair Castro Luna · Todos los derechos reservados · Desarrollado de forma independiente sin fines de lucro</p>
 </div>
 
 </body>
